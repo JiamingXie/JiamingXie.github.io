@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Introduction to Java]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F09%2F25%2FIntroduction%20to%20Java%2F</url>
+    <content type="text"><![CDATA[Comments in Java First lines are comments, ignored by compiler. Needed for maintenance purposes. Use // for single line, / / for multiline. Over commenting is not good. Must maintain comments as well. 12345//PROGRAM: FirstJavaHello.java/*Known Issues:Revise:*/ Dissecting the program (Java Class) Every code in Java is inside a class. It has a body with {}. The name of the class becomes the name of the application. The file name must be the name of class. javac compiles the .java file and produces .class byte code. 123456789public class HelloWorld&#123; /** * @param args */ public static void main(String[] args) &#123; //TODO Auto-generated method stub System.out.println("Hello World!"); &#125;&#125; Dissecting the program(method main) Java program starts executing with a method called main(). It has a body within {}. It is unique. System.out is an object which knows how to display a character in a terminal. println is the message sent to the System.out object. A Sample123456789101112public class FirstClass&#123; public static void main(String[] args) &#123; int radius=2; double area; final double pi=3.142; area=pi*radius*radius; System.out.print("The area is: "); System.out.print(area); &#125;&#125; We will not change the constant after the programming is done, so we may need an place for input. 1234567891011121314151617181920212223import java.util.Scanner;public class FirstClass&#123; public static void main(String[] args) &#123; //Primitive datatype int radius; // a variable, can hold different value when run double area; final double pi=3.142;//This final is to say it is a constant //object Scanner readInput = new Scanner(System.in); //Scanner is not a java datatype, so if you want to use it, you need to add "new" //It is called reference in this case. System.out.print("Enter the radius:"); radius = readInput.nextInt();//use the reference and send message //by calling a method nextInt() area=pi*radius*radius; System.out.print("The area is: ");//print是不换行的 System.out.print(area); &#125;&#125; Input/Output in JavaInput Operation Copy data from input device Performed by usin methods in library like Scanner package Format specifier specifics to the data type is used. e.g. %d for integer, %f for float Output Operation Display information stored in memory to output device usually a screen. Performed by output methods in System.out package. Format specifier specifics to the data type is used. Use Scanner, System.out packages print, printf, println methods Display information in std output device Syntax: print(FormatControlString); print(FormatControlString,datalist); FormatControlString: Contains characters, format specifier, and escape sequences Datalist: Contains any constants, variables, expressions, and function calls separated by commas 1234567byte myChar='A';byte myNumber= 65;String myString= "Hello How are you";System.out.printf("The value is: %c", myChar);System.out.printf("The value is: %d", myNumber);System.out.printf("%s\n", myString); Escape sequence Special meaning if used in printf() method Causes escape from normal interpretation of format specifier string “\r” moves cursor to the beginning of the next line and overwrite the previous characters.]]></content>
+      <categories>
+        <category>Java for Dummies</category>
+      </categories>
+      <tags>
+        <tag>Coding</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180702]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F07%2F02%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180702%2F</url>
+    <content type="text"><![CDATA[模拟交易的第一天，跌暴……可能是上天的安排…… 但是股票交易员的任务就是把规定量的股票交易完，所以减少损失很重要。 基本知识 9点15到9点25集合竞价，20分以后禁止撤单，所以一般只看20分以后的单子即可 应该关注的指标： 期指：一般期货指数会比大盘要快一点，因为不需要实物交易，两者走势一般相同 个股： 看行业的走势 看大盘的走势 看行业龙头的走势 本身在前两天的顶和底 交易量：看交易量判断是否是好的买入或卖出时机。如果之前有大量的卖出交易，而此刻的卖出交易量小于之前的量，说明可能还没有见底；如果此刻卖出量是最大的，那么是比较好的进场时机。 图为美的(000333)，2点左右的时候卖出量达到最高，是比较好的买入时机，后续有一个小的反弹。 图为工行（601398） 反弹：一般一次反弹回三分之一到二分之一是比较强劲的，BOLL线收拢后一般会有一次比较大的反弹。 背离：如果股价与其他指标（如MACD线，分时DDX）出现背离，即一个顶点趋势与另一个顶点趋势相反，那么可以预测见底或者见顶，一般两到三个为信号。 *分时DDX表示大单的交易数量 日内操作t+0：（只在有仓位时操作） 做t：当天看好某只股票，在开盘时买入，收盘时卖出，可以保持仓位不变；看跌某只股票，在开盘时卖出，收盘时买入。 倒t：当天若看走眼了要迅速割肉离场，以防损失扩大。 中报预披露早的股票 000818 、002240 、002462 、002565 、300001 、603199 中报预披露时间比较早，大盘跌的情况下这6只股票均上涨 比较明显的特征是：集中竞价的时候大家都涨停，然后撤单，最后都是高开（相比前一天） 大盘概览 上证指数跌至2775.56，不会是本周的最低值。 所有行业全线收跌，形势较好的有酿酒行业、医疗行业（跌得比较少） 。 跌得最严重的行业是保险、钢铁、煤炭、券商银行等 。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+</search>
