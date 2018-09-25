@@ -6,7 +6,7 @@
   <link href="/JiamingXie.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/JiamingXie/"/>
-  <updated>2018-09-25T13:00:45.261Z</updated>
+  <updated>2018-09-24T16:25:57.474Z</updated>
   <id>https://github.com/JiamingXie/</id>
   
   <author>
@@ -15,41 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>股市观察日记180706</title>
-    <link href="https://github.com/JiamingXie/2018/09/25/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180706/"/>
-    <id>https://github.com/JiamingXie/2018/09/25/股市观察日记180706/</id>
-    <published>2018-09-25T12:55:15.000Z</published>
-    <updated>2018-09-25T13:00:45.261Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>基本知识</strong></p><ul><li><p>内外盘：</p><ul><li>外盘：买盘比较积极</li><li>内盘：抛盘比较积极</li></ul><p>卖单量一般比买单的量要大（除了一些涨得很多的股）</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvm301gnbnj205o01yt8p.jpg" alt=""></p></li><li><p>挂单的时候要有一些技巧，卖一挂的38.60，还是一单几百手的大单，那么就要挂38.59的，抢先交易。</p></li></ul><p><strong>个股</strong></p><ul><li><p>中航沈飞：比较明显的背离，该卖了。（股价创新高但是MACD下行）虽然涨不动了，但是也不太跌得下去。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvm31hxx9pj20n00su78f.jpg" alt=""></p></li><li><p>东方财富300059：</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvm32vara6j20nk0laq6a.jpg" alt=""></p><p>这只股很强，大盘下跌的时候逆势上扬。下一个回调的时候是买入时机，它是反弹的龙头股。</p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;strong&gt;基本知识&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;内外盘：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;外盘：买盘比较积极&lt;/li&gt;
-&lt;li&gt;内盘：抛盘比较积极&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;卖单量一般比买单的量要大（除了一些涨得很多的股）&lt;/p&gt;
-&lt;p&gt;&lt;img s
-      
-    
-    </summary>
-    
-      <category term="股市观察日记" scheme="https://github.com/JiamingXie/categories/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0/"/>
-    
-    
-      <category term="Stock Analysis" scheme="https://github.com/JiamingXie/tags/Stock-Analysis/"/>
-    
-      <category term="Technical Analysis" scheme="https://github.com/JiamingXie/tags/Technical-Analysis/"/>
-    
-  </entry>
   
   <entry>
     <title>Introduction to Java</title>
@@ -76,6 +41,41 @@
       <category term="Coding" scheme="https://github.com/JiamingXie/tags/Coding/"/>
     
       <category term="Java" scheme="https://github.com/JiamingXie/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>股市观察日记180706</title>
+    <link href="https://github.com/JiamingXie/2018/07/06/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180706/"/>
+    <id>https://github.com/JiamingXie/2018/07/06/股市观察日记180706/</id>
+    <published>2018-07-06T07:40:15.000Z</published>
+    <updated>2018-09-25T13:07:32.061Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>基本知识</strong></p><ul><li><p>内外盘：</p><ul><li>外盘：买盘比较积极</li><li>内盘：抛盘比较积极</li></ul><p>卖单量一般比买单的量要大（除了一些涨得很多的股）</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvm301gnbnj205o01yt8p.jpg" alt=""></p></li><li><p>挂单的时候要有一些技巧，卖一挂的38.60，还是一单几百手的大单，那么就要挂38.59的，抢先交易。</p></li></ul><p><strong>个股</strong></p><ul><li><p>中航沈飞：比较明显的背离，该卖了。（股价创新高但是MACD下行）虽然涨不动了，但是也不太跌得下去。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvm31hxx9pj20n00su78f.jpg" alt=""></p></li><li><p>东方财富300059：</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvm32vara6j20nk0laq6a.jpg" alt=""></p><p>这只股很强，大盘下跌的时候逆势上扬。下一个回调的时候是买入时机，它是反弹的龙头股。</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;基本知识&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;内外盘：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;外盘：买盘比较积极&lt;/li&gt;
+&lt;li&gt;内盘：抛盘比较积极&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;卖单量一般比买单的量要大（除了一些涨得很多的股）&lt;/p&gt;
+&lt;p&gt;&lt;img s
+      
+    
+    </summary>
+    
+      <category term="股市观察日记" scheme="https://github.com/JiamingXie/categories/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0/"/>
+    
+    
+      <category term="Stock Analysis" scheme="https://github.com/JiamingXie/tags/Stock-Analysis/"/>
+    
+      <category term="Technical Analysis" scheme="https://github.com/JiamingXie/tags/Technical-Analysis/"/>
     
   </entry>
   

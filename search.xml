@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[股市观察日记180706]]></title>
-    <url>%2FJiamingXie.github.io%2F2018%2F09%2F25%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180706%2F</url>
-    <content type="text"><![CDATA[基本知识 内外盘： 外盘：买盘比较积极 内盘：抛盘比较积极 卖单量一般比买单的量要大（除了一些涨得很多的股） 挂单的时候要有一些技巧，卖一挂的38.60，还是一单几百手的大单，那么就要挂38.59的，抢先交易。 个股 中航沈飞：比较明显的背离，该卖了。（股价创新高但是MACD下行）虽然涨不动了，但是也不太跌得下去。 东方财富300059： 这只股很强，大盘下跌的时候逆势上扬。下一个回调的时候是买入时机，它是反弹的龙头股。]]></content>
-      <categories>
-        <category>股市观察日记</category>
-      </categories>
-      <tags>
-        <tag>Stock Analysis</tag>
-        <tag>Technical Analysis</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Introduction to Java]]></title>
     <url>%2FJiamingXie.github.io%2F2018%2F09%2F25%2FIntroduction%20to%20Java%2F</url>
     <content type="text"><![CDATA[Comments in Java First lines are comments, ignored by compiler. Needed for maintenance purposes. Use // for single line, / / for multiline. Over commenting is not good. Must maintain comments as well. 12345//PROGRAM: FirstJavaHello.java/*Known Issues:Revise:*/ Dissecting the program (Java Class) Every code in Java is inside a class. It has a body with {}. The name of the class becomes the name of the application. The file name must be the name of class. javac compiles the .java file and produces .class byte code. 123456789public class HelloWorld&#123; /** * @param args */ public static void main(String[] args) &#123; //TODO Auto-generated method stub System.out.println("Hello World!"); &#125;&#125; Dissecting the program(method main) Java program starts executing with a method called main(). It has a body within {}. It is unique. System.out is an object which knows how to display a character in a terminal. println is the message sent to the System.out object. A Sample123456789101112public class FirstClass&#123; public static void main(String[] args) &#123; int radius=2; double area; final double pi=3.142; area=pi*radius*radius; System.out.print("The area is: "); System.out.print(area); &#125;&#125; We will not change the constant after the programming is done, so we may need an place for input. 1234567891011121314151617181920212223import java.util.Scanner;public class FirstClass&#123; public static void main(String[] args) &#123; //Primitive datatype int radius; // a variable, can hold different value when run double area; final double pi=3.142;//This final is to say it is a constant //object Scanner readInput = new Scanner(System.in); //Scanner is not a java datatype, so if you want to use it, you need to add "new" //It is called reference in this case. System.out.print("Enter the radius:"); radius = readInput.nextInt();//use the reference and send message //by calling a method nextInt() area=pi*radius*radius; System.out.print("The area is: ");//print是不换行的 System.out.print(area); &#125;&#125; Input/Output in JavaInput Operation Copy data from input device Performed by usin methods in library like Scanner package Format specifier specifics to the data type is used. e.g. %d for integer, %f for float Output Operation Display information stored in memory to output device usually a screen. Performed by output methods in System.out package. Format specifier specifics to the data type is used. Use Scanner, System.out packages print, printf, println methods Display information in std output device Syntax: print(FormatControlString); print(FormatControlString,datalist); FormatControlString: Contains characters, format specifier, and escape sequences Datalist: Contains any constants, variables, expressions, and function calls separated by commas 1234567byte myChar='A';byte myNumber= 65;String myString= "Hello How are you";System.out.printf("The value is: %c", myChar);System.out.printf("The value is: %d", myNumber);System.out.printf("%s\n", myString); Escape sequence Special meaning if used in printf() method Causes escape from normal interpretation of format specifier string “\r” moves cursor to the beginning of the next line and overwrite the previous characters.]]></content>
@@ -22,6 +10,18 @@
       <tags>
         <tag>Coding</tag>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180706]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F07%2F06%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180706%2F</url>
+    <content type="text"><![CDATA[基本知识 内外盘： 外盘：买盘比较积极 内盘：抛盘比较积极 卖单量一般比买单的量要大（除了一些涨得很多的股） 挂单的时候要有一些技巧，卖一挂的38.60，还是一单几百手的大单，那么就要挂38.59的，抢先交易。 个股 中航沈飞：比较明显的背离，该卖了。（股价创新高但是MACD下行）虽然涨不动了，但是也不太跌得下去。 东方财富300059： 这只股很强，大盘下跌的时候逆势上扬。下一个回调的时候是买入时机，它是反弹的龙头股。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
       </tags>
   </entry>
   <entry>
