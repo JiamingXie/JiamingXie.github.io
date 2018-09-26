@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="Assignment Operator Assigns the value from right operand to the left. ‘=’ operator is used as assignment operator">
+<meta name="description" content="Assignment Operator Assigns the value from right operand to the left. ‘=’ operator is used as assignment operator Variable = Expression A = B; yourSalary= GetYourSalary(); int temp = 55;    Arithmetic">
 <meta name="keywords" content="coding,Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Operators - Assignment, Arithmetic, Relational, Logical">
 <meta property="og:url" content="https://github.com/JiamingXie/2018/09/26/Operators - Assignment, Arithmetic, Relational, Logical/index.html">
 <meta property="og:site_name" content="铭·Ming">
-<meta property="og:description" content="Assignment Operator Assigns the value from right operand to the left. ‘=’ operator is used as assignment operator">
+<meta property="og:description" content="Assignment Operator Assigns the value from right operand to the left. ‘=’ operator is used as assignment operator Variable = Expression A = B; yourSalary= GetYourSalary(); int temp = 55;    Arithmetic">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-26T13:27:09.977Z">
+<meta property="og:updated_time" content="2018-09-26T14:59:03.896Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Operators - Assignment, Arithmetic, Relational, Logical">
-<meta name="twitter:description" content="Assignment Operator Assigns the value from right operand to the left. ‘=’ operator is used as assignment operator">
+<meta name="twitter:description" content="Assignment Operator Assigns the value from right operand to the left. ‘=’ operator is used as assignment operator Variable = Expression A = B; yourSalary= GetYourSalary(); int temp = 55;    Arithmetic">
 
 
 
@@ -413,8 +413,104 @@
         <h1 id="Assignment-Operator"><a href="#Assignment-Operator" class="headerlink" title="Assignment Operator"></a>Assignment Operator</h1><ul>
 <li>Assigns the value from right operand to the left.</li>
 <li>‘=’ operator is used as assignment operator</li>
-<li></li>
+<li>Variable = Expression<ul>
+<li>A = B;</li>
+<li>yourSalary= GetYourSalary();</li>
+<li>int temp = 55;</li>
 </ul>
+</li>
+</ul>
+<h1 id="Arithmetic-Operator"><a href="#Arithmetic-Operator" class="headerlink" title="Arithmetic Operator"></a>Arithmetic Operator</h1><p><strong>Unary</strong>: require only one operand</p>
+<p>+, -</p>
+<p>++ Pre/Post Increment</p>
+<p>– Pre/Post Decrement</p>
+<p><strong>%</strong> Modulus/Remainder: e.g. 99%2=1</p>
+<p><strong>Binary</strong>: require two operands</p>
+<h1 id="Control-Statement"><a href="#Control-Statement" class="headerlink" title="Control Statement"></a>Control Statement</h1><p>Execute different code depending upon circumstances.</p>
+<p><strong>“if”</strong> is one of the control statements.</p>
+<p>There is also another one control statement-<strong>“if…else”, “if…else if….else”</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FirstJavaClass</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> yourAge; <span class="comment">//implicit initializing</span></span><br><span class="line">        <span class="keyword">int</span> myAge = <span class="number">21</span>; <span class="comment">//explicit initializing</span></span><br><span class="line">        </span><br><span class="line">        Scanner readInput= <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.printf(<span class="string">"How old are you?"</span>);</span><br><span class="line">        yourAge=readInput.nextInt();<span class="comment">// Assign the value of next input to readInput.</span></span><br><span class="line">        <span class="keyword">if</span> (yourAge &gt; <span class="number">50</span>)&#123;</span><br><span class="line">            System.out.printf(<span class="string">"You are golden.\n"</span>);</span><br><span class="line">        &#125;<span class="comment">//Even if it is just one line, you'd better add "&#123;&#125;" here.</span></span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.printf(<span class="string">"You are not so golden.\n"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Relational-Operator"><a href="#Relational-Operator" class="headerlink" title="Relational Operator"></a>Relational Operator</h1><p>It defines the relation between operands.</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>==</td>
+<td>Equal</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>Not equal</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>less than</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>more than</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>Less than or equal to</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>More than or equal to</td>
+</tr>
+</tbody>
+</table>
+<p>Every relational expression evaluates to a True or a False.</p>
+<h1 id="Logical-Operators"><a href="#Logical-Operators" class="headerlink" title="Logical Operators"></a>Logical Operators</h1><p>used for multiple conditions in a statement.</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&amp;&amp;</td>
+<td>AND</td>
+</tr>
+<tr>
+<td>\</td>
+<td>\</td>
+<td></td>
+<td>OR</td>
+</tr>
+<tr>
+<td>!</td>
+<td>NOT</td>
+</tr>
+</tbody>
+</table>
+<h1 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h1><p><strong>Demo 1</strong></p>
+<p>It is just the same as the previous one, but let me mention a little bit about this <strong>“args”</strong> in the last line.</p>
+<p>“args”, which comes from <strong>main</strong>, is a command line argument.</p>
+<p>Suppose you run the program from the command. You need to run the folloing code:</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java Helloworld <span class="number">50</span> <span class="number">60</span></span><br></pre></td></tr></table></figure>
+<p>You need to passing some value to it.</p>
+<p>This 50 and 60 will come into the argument.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FirstJavaClass</span></span>&#123;</span><br><span class="line">    <span class="comment">//command line</span></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> yourAge; <span class="comment">//implicit initializing</span></span><br><span class="line">        <span class="keyword">int</span> myAge = <span class="number">21</span>; <span class="comment">//explicit initializing</span></span><br><span class="line">        </span><br><span class="line">        Scanner readInput= <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.printf(<span class="string">"How old are you?"</span>);</span><br><span class="line">        yourAge=readInput.nextInt();<span class="comment">// Assign the value of next input to readInput.</span></span><br><span class="line">        <span class="keyword">if</span> (yourAge &gt; <span class="number">50</span>)&#123;</span><br><span class="line">            System.out.printf(<span class="string">"You are golden.\n"</span>);</span><br><span class="line">        &#125;<span class="comment">//Even if it is just one line, you'd better add "&#123;&#125;" here.</span></span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.printf(<span class="string">"You are not so golden.\n"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.printf(<span class="string">"I told you so"</span>,args[<span class="number">1</span>])</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>This args will contain 50 and 60. args[0]=50, args[1]=60.</p>
+<p><strong>Demo 2</strong></p>
+<p>Write a program which asks the user to enter their age and then you print the following messages, depending upon their age:</p>
+<ul>
+<li><p>If the age is less than 13, then say ‘you are a kid’;</p>
+</li>
+<li><p>if the age is greater than 19, then say ‘you are an adult’;</p>
+</li>
+<li><p>otherwise say ‘you are a teenager’.</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AgeCheck</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> yourAge; </span><br><span class="line">       </span><br><span class="line">        Scanner readInput= <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.printf(<span class="string">"Please enter your age:"</span>);</span><br><span class="line">        yourAge=readInput.nextInt();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//if (yourAge&gt;12 &amp;&amp; yourAge&lt;20)</span></span><br><span class="line">        	<span class="comment">//System.out.printf("You are a teenager.");</span></span><br><span class="line">        <span class="keyword">if</span> (yourAge &lt;= <span class="number">13</span>)&#123;</span><br><span class="line">            System.out.printf(<span class="string">"You are a kid.\n"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (yourAge &gt; <span class="number">19</span>)&#123;</span><br><span class="line">            System.out.printf(<span class="string">"You are an adult.\n"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.printf(<span class="string">"You are a teenager."</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -637,7 +733,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Assignment-Operator"><span class="nav-number">1.</span> <span class="nav-text">Assignment Operator</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Assignment-Operator"><span class="nav-number">1.</span> <span class="nav-text">Assignment Operator</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Arithmetic-Operator"><span class="nav-number">2.</span> <span class="nav-text">Arithmetic Operator</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Control-Statement"><span class="nav-number">3.</span> <span class="nav-text">Control Statement</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Relational-Operator"><span class="nav-number">4.</span> <span class="nav-text">Relational Operator</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Logical-Operators"><span class="nav-number">5.</span> <span class="nav-text">Logical Operators</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Demo"><span class="nav-number">6.</span> <span class="nav-text">Demo</span></a></li></ol></div>
             
 
           </div>
