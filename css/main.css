@@ -1376,7 +1376,7 @@ pre .javascript .function {
   margin-left: 20px;
 }
 .posts-collapse .collection-title small {
-  color: #bbb;
+  color: #191970;
   margin-left: 5px;
 }
 .posts-collapse .collection-title::before {
@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffb152;
+  background: #47ff98;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2410,7 +2410,7 @@ pre .javascript .function {
   margin: 5px 10px;
 }
 .category-all-page .category-list-count {
-  color: #bbb;
+  color: #191970;
 }
 .category-all-page .category-list-count:before {
   display: inline;
