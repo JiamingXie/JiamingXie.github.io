@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Operators - Assignment, Arithmetic, Relational, Logical]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F09%2F26%2FOperators%20-%20Assignment%2C%20Arithmetic%2C%20Relational%2C%20Logical%2F</url>
+    <content type="text"><![CDATA[Assignment Operator Assigns the value from right operand to the left. ‘=’ operator is used as assignment operator]]></content>
+      <categories>
+        <category>Java for Dummies</category>
+      </categories>
+      <tags>
+        <tag>coding</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Data Types - Primitive Data Types, Usage]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F09%2F26%2FData%20Types%20-%20Primitive%20Data%20Types%2C%20Usage%2F</url>
+    <content type="text"><![CDATA[Statements: TokensTokens are the smallest element parsed by the compiler. KeywordsThe reserved words of java language, like 12345678910voidpublicclassfinal.whiledoforifelse You use this words for special purposes. Names (Identifiers)Names are used to identify your program elements. The variable and method names, like radius, pi, println, area, main… 123456789101112public class FirstClass&#123; public static void main(String[] args) &#123; int radius=2; double area; final double pi=3.142; area=pi*radius*radius; System.out.print("The area is: "); System.out.println(area); &#125;&#125; Naming rules and conventions Rules: Any length Must be within a letter May contain digits and underscores Case sensitive Convention: (Not mandatory) Generally variables are lower case characters and numbers Avoid using underscores. Capitalize the first letter of second word if needed: myHeight PunctuationCharacter constantsOne character ‘A’, ‘a’, ‘9’, ‘$’, ‘%’ One character defined character set Must surround by single quotation mark There should be only one character. ‘ab’, ‘abc’ are wrong. String constantsNumeric constantsContiguous sequence of digits Never contains a dollar, comma or space May contain a decimal (dot) e.g. 1023, 5.5 OperatorsAct upon operands Assignment Operators: = Arithmetic Operators: +,-,*,/,% Relational Operators: &lt;, &lt;=, ==, &gt;=, &gt; != White space, Special Symbol1; : , '' [] &#123;&#125; () = ... # Data Types Memory It is like rows of post box (slot) to store data Number of slot is its address where one byte of data can be stored Some logical data value can spam more than one slot When you define a variable, the computer creates a place for it. Data Type Type names a logical meaning to a span of memory You should be able to answer “What is data type?” during an interview. e.g. Int, float etc. Byte: for small numbers and characters (-127 to 128) \Characters are also stored as number. So you can mix number and characters with Byte.* Hence it can alse be printed in number. It is only the matter that how you want to display it. 123456789byte myChar='A';byte myNumber= 65;String myString= "Hello How are you";//You can assign different data type when print the input.System.out.printf("The value is: %c \n", myChar);System.out.printf("The myChar in number is: %d \n", myChar);//Since myChar is a byte, it is stored in number and can be printed in number.System.out.printf("The value is: %d \n", myNumber);System.out.printf("%s\n", myString); Character: To support Unicode Integer: Regular, short and long 1numberOfStars = 10000000000000L; // an L is need at the end Real numbers: Floating and Double Boolean: True or False Variable a place in memory to store a value of certain type that has a name Define a variable: Name and type Optionally can initialize e.g. radius, area, pi 123//data_type variable_name;int value1;int value2, sum; Initializing Variables Declarations create variables, but do not provide a value 123//variable_name=expressionvalue1 = 324;int value2=6; Demo123456789101112131415161718192021222324import java.util.Scanner;public class FirstClass&#123; public static void main(String[] args) &#123; int radius; double area; final double pi=3.142; Scanner readInput = new Scanner(System.in); System.out.print("Enter the radius:"); radius = readInput.nextInt(); area=pi*radius*radius; System.out.print("The area of radius" + radius + "is: " + area); System.out.printf("The area of radius %d is: %5.2f \nI am done.", radius, area); System.out.printf("The percentage of radius to area in %% is %f", pi); //If you want to print a "%", you need to add another "%" before it. &#125;&#125;]]></content>
+      <categories>
+        <category>Java for Dummies</category>
+      </categories>
+      <tags>
+        <tag>coding</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180925]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F09%2F25%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180925%2F</url>
+    <content type="text"><![CDATA[消息面 房地产行业大地震 有媒体报道，监管部门向多省下发函件，要求住建厅对商品房预售许可进行深入研究论证；有传言称广东要取消房地产预售制度。 取消预售制度无疑是“去杠杆”中的一环，此政策将会降低了房企的流动性，从而导致利润下降。 所以昨天外盘中资地产集体暴跌：融信中国下跌10.71%，绿城中国下跌6.22%，碧桂园、华润置地、融创中国下跌超过4%，内资房地产股一天蒸发市值超过600亿港元。今天A股地产也领跌，早盘保利地产、万科A、招商蛇口、新城控股等跌幅超3%。 接下来大的趋势是维稳，稳定房价，所以房价很难会再有像之前一样疯狂的上涨。虽然地产股现在处于估值低位而且业绩不错，之后的投资价值还有待考证。 （吃瓜）刘强东性侵案或有新进展 媒体又爆出了刘强东性侵案的新细节，包括女生的微信求助内容，里面声称被灌醉，并想自杀，且保留了床单。目前检方正在决定是否起诉。 受此消息影响，京东再次暴跌近8%，收24.51。 京东今年以来的股价走势十分疲弱，自今年1月创下50.68美元纪录最高价以来，京东股价跌幅超过50%。京东股价在涉嫌性侵犯事件曝光后（9月之后），跌幅超过20%，市值蒸发约88亿美元(对应约602亿人民币)。 拼多多昨收26.49，与京东的市值差距进一步缩小。 外资加快布局A股市场 去年前10个月，仅有富达中国债券一号私募基金一只基金发行。去年11月到今年9月，外资私募发行已达18只。 据中国基金报统计，截至9月25日，已有贝莱德、富达、瑞银、富敦、英仕曼、惠理、景顺纵横、路博迈、安本、施罗德、安中、元胜、桥水、毕盛等14家外资机构先后获得私募证券投资基金管理人资格，除桥水、毕盛尚未发行产品外，其余12家发行的外资私募基金产品数量达19只产品。 今年6 月 A 股正式纳入 MSCI 新兴市场指数，9 月27日又可能纳入富时罗素国际指数体系，将进一步对外资投资A股形成吸引力。 且现在A股估值处于历史低点，或是布局的好时机。 盘面分析 截止收盘，沪指报2781.14点，跌0.58%，深成指报8353.38点，跌0.66%；创指报1405.81点，跌0.38%。从盘面上看，农服、物流、赛马等板块涨幅居前，机场航运、房地产开发、银行等板块跌幅居前。从技术面上看是比较正常的回调。 今日上涨的股票多为周末有利好的板块：军工、农业、国产软件、电子元件等；油服板块上涨受益于周末原油期货大涨。 后续估计下跌空间不大，但是会回踩2750位置，震荡回调或是入场时机。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Input/Output - Input From User, Formatted Output to the User]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F09%2F25%2FInput%3AOutput%20-%20Input%20From%20User%2C%20Formatted%20Output%20to%20the%20User%2F</url>
+    <content type="text"><![CDATA[Comments in Java First lines are comments, ignored by compiler. Needed for maintenance purposes. Use // for single line, / / for multiline. Over commenting is not good. Must maintain comments as well. 12345//PROGRAM: FirstJavaHello.java/*Known Issues:Revise:*/ Dissecting the program (Java Class) Every code in Java is inside a class. It has a body with {}. The name of the class becomes the name of the application. The file name must be the name of class. javac compiles the .java file and produces .class byte code. 123456789public class HelloWorld&#123; /** * @param args */ public static void main(String[] args) &#123; //TODO Auto-generated method stub System.out.println("Hello World!"); &#125;&#125; Dissecting the program(method main) Java program starts executing with a method called main(). It has a body within {}. It is unique. System.out is an object which knows how to display a character in a terminal. println is the message sent to the System.out object. Demo123456789101112public class FirstClass&#123; public static void main(String[] args) &#123; int radius=2; // create a constant called radius double area; final double pi=3.142; //"final" means pi is a constant. area=pi*radius*radius; System.out.print("The area is: ");// The cursor will not go to the next line System.out.println(area);// The cursor will go to the next line &#125;&#125; We will not change the constant after the programming is done, so we may need an place for input. 1234567891011121314151617181920212223242526import java.util.Scanner;public class FirstClass&#123; public static void main(String[] args) &#123; //Primitive datatype int radius; // a variable, can hold different value when run double area; final double pi=3.142; //object Scanner readInput = new Scanner(System.in); //readInput is any name you want to give to it. //Scanner is not a java datatype. It is a user defined datatype. So if you want to use it, you need to add "new" //System.in is used to reformat what the user inputs through keyborad. //It is called reference in this case. System.out.print("Enter the radius:"); radius = readInput.nextInt();//use the reference and send message //by calling a method nextInt(): "give me the next //integer you have" area=pi*radius*radius; System.out.print("The area is: "); System.out.print(area); &#125;&#125; Input/Output in JavaInput Operation Copy data from input device Performed by usin methods in library like Scanner package Format specifier specifics to the data type is used. e.g. %d for integer, %f for float ##Output Operation Display information stored in memory to output device usually a screen. Performed by output methods in System.out package. Format specifier specifics to the data type is used. Use Scanner, System.out packages print, printf, println methods Display information in std output device Syntax: print(FormatControlString); print(FormatControlString,datalist); FormatControlString: Contains characters, format specifier, and escape sequences Datalist: Contains any constants, variables, expressions, and function calls separated by commas 1234567byte myChar='A';byte myNumber= 65;String myString= "Hello How are you";System.out.printf("The value is: %c", myChar);System.out.printf("The value is: %d", myNumber);System.out.printf("%s\n", myString); Escape sequence Special meaning if used in printf() method Causes escape from normal interpretation of format specifier string “\r” moves cursor to the beginning of the current line and overwrite the previous characters. (Only in a DOS window you can see the effect.) Demo 1234567891011121314151617public class FirstClass&#123; public static void main(String[] args) &#123; System.out.printf("Java is fun."); System.out.printf("\rHello Student"); System.out.printf("\nHello World\n"); //adding "\n" at the beginning-start from the next line System.out.printf("\n"); System.out.printf("First Name \tLast Name\tCity\n"); //"\t" means tab System.out.printf("-----------\t----------\t---\n"); System.out.printf("Bill \tClinton \tHarlem\n"); System.out.printf("\n\n"); System.out.printf("Who said \"Test Scores Can Be Used ....\"\n"); &#125;&#125;]]></content>
+      <categories>
+        <category>Java for Dummies</category>
+      </categories>
+      <tags>
+        <tag>coding</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180711]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F07%2F11%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180711%2F</url>
+    <content type="text"><![CDATA[昨天还在讨论反弹到什么点位的问题，今天就开始暴跌。 上证A股低开2%。 美国对中国征收2000亿美元商品的关税的消息被封锁了，所以很多人都不知道。 股吧里到处都是一脸懵逼的群众，券商的报告也都是在讨论筑底反弹的问题。 9点钟 CN00Y（外资交易中国的指数）开盘暴跌。 9点15分A股开始挂单，暴跌。机构提早知道消息，都在出货了。 表现比较好的只有贵金属板块（避险资产） 。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180710]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F07%2F10%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180710%2F</url>
+    <content type="text"><![CDATA[经过7月9日的普涨以后开始下跌。 预计本周冲刺2850点，若无法冲刺则会继续下跌。 下午回弹收在2827。 多方动能未释放干净，下一阶段（两天）可能冲高至2850后回落。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180709]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F07%2F09%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180709%2F</url>
+    <content type="text"><![CDATA[中航沈飞 600760 分时DDX可以看出来在出货，一直在出（持有股票的人先出了一部分。因为大盘比较好所以拉起来了一些，但是其实还是在出货 。预测第二天会冲高回落（冲一个短期的新高）【钓鱼线】 海特高新 这两兄弟比较像，海特高新也是尾盘时拉升一下，第二天冲短期新高，冲高回落。 但是分时DDX一直在出货。 两支股票都有比较明显的背离。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180706]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F07%2F06%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180706%2F</url>
+    <content type="text"><![CDATA[基本知识 内外盘： 外盘：买盘比较积极 内盘：抛盘比较积极 卖单量一般比买单的量要大（除了一些涨得很多的股） 挂单的时候要有一些技巧，卖一挂的38.60，还是一单几百手的大单，那么就要挂38.59的，抢先交易。 个股 中航沈飞：比较明显的背离，该卖了。（股价创新高但是MACD下行）虽然涨不动了，但是也不太跌得下去。 东方财富300059： 这只股很强，大盘下跌的时候逆势上扬。下一个回调的时候是买入时机，它是反弹的龙头股。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180704]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F07%2F04%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180704%2F</url>
+    <content type="text"><![CDATA[基本知识 筹码表示成交的位置，在该价位成交的量越大，筹码图越高。 筹码较小的位置是比较容易破位的点，需要多加注意。 行业内龙头股之间可能会有非常强的相互作用。一支股票的破位很有可能导致另一只股票也破位（虽然从其他指标判断可能已经跌到底了） 一句话总结 今天的股市大盘不太好，也没有热点。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180703]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F07%2F03%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180703%2F</url>
+    <content type="text"><![CDATA[基本知识 成交量很大但是价格变化不大的时候，说明跌不动了，有人接盘，是买入的信号。 早上开盘半个小时，美的的成交量已经比前两天一整天的都多了，说明跌不动了。 5分钟涨跌幅可以说明盘口的情况。 洗盘：一般出现在股价V型底端，群众恐慌而大量抛售股票，洗掉一大堆不坚定的人。 盘面分析 上午 因为之前涨得比较多，所以现在大盘股在调整（下跌） 创业板块已经跌得差不多了，这几天行情还可以，在慢慢上升中，今天有望收红。 今天的领跌行业是民航、酿酒、家电，都是之前涨得比较多的行业。 创业板和大盘的走势非常相似，但是从大概6月20日开始，创业板开始上升，大盘还在下跌。 图为上证指数，从趋势线可以看出，差不多已经跌到底了（2722左右） 预计创业板会率先开始反弹，下午可以期待一下创业板的龙头股卫宁健康（300253） 在今天之前这只股的涨幅是 涨停 调整。 11:17分左右跟着指数跌了一下，但是量不大，之后开始拉升，下午有希望冲一下【最后没冲上去】 下午 领跌：民航、酿酒、珠宝 券商信托、保险上拉，银行不尴不尬 金融、非银金融： 中信证券、工商银行、建设银行、招商银行、交通银行、浦发银行拉升比较明显 传媒板块拉升：元隆雅图、金逸影视、北京文化涨停。其他传媒股也有比较大的拉升 大盘呈现V型反弹 没有跌破底，且与MACD线出现背离，显示见底的信号，若之后破底的话不好说。白马股补跌严重。 创业板下午爆发三波，最后半个小时有所回落，是爆发的尽头的信号。 创业板指与大盘在下午有脱离的趋势。 个股： 601336 新华保险：保险是今天反弹最早的一个行业 11：20分左右下跌也未跌破最低线，大机构更加倾向于上拉这些股票 。 002371 北方华创：叠加相同行业其他股票后可以发现其他股跟涨这只股票 600760 中航沈飞 关注创业板的领涨股票（下午涨停的股票），基本上相关行业的其他股票都是跟涨这些领涨股。发现特征以后后续可以追涨。 后续： 后续的大盘还需要观望，若不跌破底，则有望反弹，虽然反弹力度并不会很大。 期待一下7月6日川普搞事会对股票造成多大影响。若出台文件比较符合人的预期，那么股市将不会继续下跌。 今天的行情整体上还是比较符合预期的。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180702]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F07%2F02%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180702%2F</url>
+    <content type="text"><![CDATA[模拟交易的第一天，跌暴……可能是上天的安排…… 但是股票交易员的任务就是把规定量的股票交易完，所以减少损失很重要。 基本知识 9点15到9点25集合竞价，20分以后禁止撤单，所以一般只看20分以后的单子即可 应该关注的指标： 期指：一般期货指数会比大盘要快一点，因为不需要实物交易，两者走势一般相同 个股： 看行业的走势 看大盘的走势 看行业龙头的走势 本身在前两天的顶和底 交易量：看交易量判断是否是好的买入或卖出时机。如果之前有大量的卖出交易，而此刻的卖出交易量小于之前的量，说明可能还没有见底；如果此刻卖出量是最大的，那么是比较好的进场时机。 图为美的(000333)，2点左右的时候卖出量达到最高，是比较好的买入时机，后续有一个小的反弹。 图为工行（601398） 反弹：一般一次反弹回三分之一到二分之一是比较强劲的，BOLL线收拢后一般会有一次比较大的反弹。 背离：如果股价与其他指标（如MACD线，分时DDX）出现背离，即一个顶点趋势与另一个顶点趋势相反，那么可以预测见底或者见顶，一般两到三个为信号。 *分时DDX表示大单的交易数量 日内操作t+0：（只在有仓位时操作） 做t：当天看好某只股票，在开盘时买入，收盘时卖出，可以保持仓位不变；看跌某只股票，在开盘时卖出，收盘时买入。 倒t：当天若看走眼了要迅速割肉离场，以防损失扩大。 中报预披露早的股票 000818 、002240 、002462 、002565 、300001 、603199 中报预披露时间比较早，大盘跌的情况下这6只股票均上涨 比较明显的特征是：集中竞价的时候大家都涨停，然后撤单，最后都是高开（相比前一天） 大盘概览 上证指数跌至2775.56，不会是本周的最低值。 所有行业全线收跌，形势较好的有酿酒行业、医疗行业（跌得比较少） 。 跌得最严重的行业是保险、钢铁、煤炭、券商银行等 。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+</search>
