@@ -6,7 +6,7 @@
   <link href="/JiamingXie.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/JiamingXie/"/>
-  <updated>2018-09-26T02:18:08.410Z</updated>
+  <updated>2018-09-25T16:17:20.923Z</updated>
   <id>https://github.com/JiamingXie/</id>
   
   <author>
@@ -15,20 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>股市观察日记180711</title>
-    <link href="https://github.com/JiamingXie/2018/09/26/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180711/"/>
-    <id>https://github.com/JiamingXie/2018/09/26/股市观察日记180711/</id>
-    <published>2018-09-26T02:18:08.000Z</published>
-    <updated>2018-09-26T02:18:08.410Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>股市观察日记180925</title>
@@ -86,6 +72,35 @@
       <category term="coding" scheme="https://github.com/JiamingXie/tags/coding/"/>
     
       <category term="Java" scheme="https://github.com/JiamingXie/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>股市观察日记180711</title>
+    <link href="https://github.com/JiamingXie/2018/07/11/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180711/"/>
+    <id>https://github.com/JiamingXie/2018/07/11/股市观察日记180711/</id>
+    <published>2018-07-11T07:18:08.000Z</published>
+    <updated>2018-09-26T10:25:46.031Z</updated>
+    
+    <content type="html"><![CDATA[<p>昨天还在讨论反弹到什么点位的问题，今天就开始暴跌。 上证A股低开2%。 </p><p><del>美国对中国征收2000亿美元商品的关税的消息被封锁了，所以很多人都不知道。 股吧里到处都是一脸懵逼的群众，券商的报告也都是在讨论筑底反弹的问题。</del></p><p>9点钟 CN00Y（外资交易中国的指数）开盘暴跌。 </p><p>9点15分A股开始挂单，暴跌。机构提早知道消息，都在出货了。</p><p>表现比较好的只有贵金属板块（避险资产） 。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;昨天还在讨论反弹到什么点位的问题，今天就开始暴跌。 上证A股低开2%。 &lt;/p&gt;
+&lt;p&gt;&lt;del&gt;美国对中国征收2000亿美元商品的关税的消息被封锁了，所以很多人都不知道。 股吧里到处都是一脸懵逼的群众，券商的报告也都是在讨论筑底反弹的问题。&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;9点
+      
+    
+    </summary>
+    
+      <category term="股市观察日记" scheme="https://github.com/JiamingXie/categories/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0/"/>
+    
+    
+      <category term="Stock Analysis" scheme="https://github.com/JiamingXie/tags/Stock-Analysis/"/>
+    
+      <category term="Technical Analysis" scheme="https://github.com/JiamingXie/tags/Technical-Analysis/"/>
     
   </entry>
   
