@@ -407,7 +407,7 @@
 
       
         
-          <h1 id="分词-Word-Segmentation"><a href="#分词-Word-Segmentation" class="headerlink" title="分词 Word Segmentation"></a>分词 Word Segmentation</h1><p>jieba中文分词（<a href="https://github.com/fxsjy/jieba）是一款完全开源的分词工具，是现在最主流的分词包之一。">https://github.com/fxsjy/jieba）是一款完全开源的分词工具，是现在最主流的分词包之一。</a></p>
+          <h1 id="分词-Word-Segmentation"><a href="#分词-Word-Segmentation" class="headerlink" title="分词 Word Segmentation"></a>分词 Word Segmentation</h1><p>jieba中文分词是一款完全开源的分词工具，是现在最主流的分词包之一。</p>
 <p>分词阶段的预处理工作主要有两个，一个是分词，一个是去掉<em>停词</em>（stop words）。</p>
 <p>stop_words是一个由停词组成的列表。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">stpwrdpath=<span class="string">' .txt'</span></span><br><span class="line"><span class="keyword">with</span> open(stpwrdpath, <span class="string">'rb'</span>) <span class="keyword">as</span> fp:</span><br><span class="line">    stopword= fp.read().decode(<span class="string">'utf-8'</span>) <span class="comment">#extract stop words</span></span><br><span class="line">stpwrdlst =stopword.splitlines()</span><br></pre></td></tr></table></figure>

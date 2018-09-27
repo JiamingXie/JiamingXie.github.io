@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="分词 Word Segmentationjieba中文分词（https://github.com/fxsjy/jieba）是一款完全开源的分词工具，是现在最主流的分词包之一。 分词阶段的预处理工作主要有两个，一个是分词，一个是去掉停词（stop words）。 stop_words是一个由停词组成的列表。 1234stpwrdpath=&apos; .txt&apos;with open(stpwrdpath, &apos;r">
+<meta name="description" content="分词 Word Segmentationjieba中文分词是一款完全开源的分词工具，是现在最主流的分词包之一。 分词阶段的预处理工作主要有两个，一个是分词，一个是去掉停词（stop words）。 stop_words是一个由停词组成的列表。 1234stpwrdpath=&apos; .txt&apos;with open(stpwrdpath, &apos;rb&apos;) as fp:    stopword= fp.read(">
 <meta name="keywords" content="NLP,Machine Learning">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Natural Language Processing - 使用sklearn进行文本特征提取">
 <meta property="og:url" content="https://github.com/JiamingXie/2018/09/27/Natural Language Processing - Feature Extraction and Selection/index.html">
 <meta property="og:site_name" content="铭·Ming">
-<meta property="og:description" content="分词 Word Segmentationjieba中文分词（https://github.com/fxsjy/jieba）是一款完全开源的分词工具，是现在最主流的分词包之一。 分词阶段的预处理工作主要有两个，一个是分词，一个是去掉停词（stop words）。 stop_words是一个由停词组成的列表。 1234stpwrdpath=&apos; .txt&apos;with open(stpwrdpath, &apos;r">
+<meta property="og:description" content="分词 Word Segmentationjieba中文分词是一款完全开源的分词工具，是现在最主流的分词包之一。 分词阶段的预处理工作主要有两个，一个是分词，一个是去掉停词（stop words）。 stop_words是一个由停词组成的列表。 1234stpwrdpath=&apos; .txt&apos;with open(stpwrdpath, &apos;rb&apos;) as fp:    stopword= fp.read(">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-27T10:53:05.470Z">
+<meta property="og:updated_time" content="2018-09-27T11:38:50.373Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Natural Language Processing - 使用sklearn进行文本特征提取">
-<meta name="twitter:description" content="分词 Word Segmentationjieba中文分词（https://github.com/fxsjy/jieba）是一款完全开源的分词工具，是现在最主流的分词包之一。 分词阶段的预处理工作主要有两个，一个是分词，一个是去掉停词（stop words）。 stop_words是一个由停词组成的列表。 1234stpwrdpath=&apos; .txt&apos;with open(stpwrdpath, &apos;r">
+<meta name="twitter:description" content="分词 Word Segmentationjieba中文分词是一款完全开源的分词工具，是现在最主流的分词包之一。 分词阶段的预处理工作主要有两个，一个是分词，一个是去掉停词（stop words）。 stop_words是一个由停词组成的列表。 1234stpwrdpath=&apos; .txt&apos;with open(stpwrdpath, &apos;rb&apos;) as fp:    stopword= fp.read(">
 
 
 
@@ -410,7 +410,7 @@
       
 
       
-        <h1 id="分词-Word-Segmentation"><a href="#分词-Word-Segmentation" class="headerlink" title="分词 Word Segmentation"></a>分词 Word Segmentation</h1><p>jieba中文分词（<a href="https://github.com/fxsjy/jieba）是一款完全开源的分词工具，是现在最主流的分词包之一。">https://github.com/fxsjy/jieba）是一款完全开源的分词工具，是现在最主流的分词包之一。</a></p>
+        <h1 id="分词-Word-Segmentation"><a href="#分词-Word-Segmentation" class="headerlink" title="分词 Word Segmentation"></a>分词 Word Segmentation</h1><p>jieba中文分词是一款完全开源的分词工具，是现在最主流的分词包之一。</p>
 <p>分词阶段的预处理工作主要有两个，一个是分词，一个是去掉<em>停词</em>（stop words）。</p>
 <p>stop_words是一个由停词组成的列表。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">stpwrdpath=<span class="string">' .txt'</span></span><br><span class="line"><span class="keyword">with</span> open(stpwrdpath, <span class="string">'rb'</span>) <span class="keyword">as</span> fp:</span><br><span class="line">    stopword= fp.read().decode(<span class="string">'utf-8'</span>) <span class="comment">#extract stop words</span></span><br><span class="line">stpwrdlst =stopword.splitlines()</span><br></pre></td></tr></table></figure>
@@ -442,6 +442,12 @@
 <li>SelectPercentile: emoves all but a user-specified highest scoring percentage of features</li>
 </ul>
 <p>Chi-squared: <em>chi2(X,y)</em> computes chi-squared stats between each non-negative feature and class.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> load_iris</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.feature_selection <span class="keyword">import</span> SelectKBest</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.feature_selection <span class="keyword">import</span> chi2</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>iris = load_iris()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>X, y = iris.data, iris.target</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>X.shape</span><br><span class="line">(<span class="number">150</span>, <span class="number">4</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>X_new = SelectKBest(chi2, k=<span class="number">2</span>).fit_transform(X, y)</span><br><span class="line"><span class="comment">#choose the best two features</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>X_new.shape</span><br><span class="line">(<span class="number">150</span>, <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>Chi2 can be changed to other objects:</p>
+<ul>
+<li>regression: f_regression</li>
+<li>classification: chi2/f_classif</li>
+</ul>
 
       
     </div>
