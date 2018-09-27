@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="铭·Ming">
 <meta property="og:description" content="分词 Word Segmentationjieba中文分词（https://github.com/fxsjy/jieba）是一款完全开源的分词工具，是现在最主流的分词包之一。 分词阶段的预处理工作主要有两个，一个是分词，一个是去掉停词（stop words）。 stop_words是一个由停词组成的列表。 1234stpwrdpath=&apos; .txt&apos;with open(stpwrdpath, &apos;r">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-27T10:04:20.646Z">
+<meta property="og:updated_time" content="2018-09-27T10:53:05.470Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Natural Language Processing - 使用sklearn进行文本特征提取">
 <meta name="twitter:description" content="分词 Word Segmentationjieba中文分词（https://github.com/fxsjy/jieba）是一款完全开源的分词工具，是现在最主流的分词包之一。 分词阶段的预处理工作主要有两个，一个是分词，一个是去掉停词（stop words）。 stop_words是一个由停词组成的列表。 1234stpwrdpath=&apos; .txt&apos;with open(stpwrdpath, &apos;r">
@@ -423,13 +423,13 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">nn=[</span><br><span class="line">    <span class="string">"People's Republic of China@中华人民共和国。"</span>,</span><br><span class="line">    <span class="string">"World Economic Forum@世界经济论坛"</span></span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.feature_extraction.text <span class="keyword">import</span> CountVectorizer</span><br><span class="line"><span class="comment">#默认token_pattern=r"(?u)\b\w\w+\b"</span></span><br><span class="line">vectorizer=CountVectorizer(token_pattern=<span class="string">r"(?u)\b[^@]+\b"</span>)</span><br><span class="line">wordFrequencyMatrix = vectorizer.fit_transform(nn)</span><br><span class="line"><span class="keyword">for</span> f <span class="keyword">in</span>  vectorizer.get_feature_names():</span><br><span class="line">    <span class="keyword">print</span> (f)</span><br></pre></td></tr></table></figure>
 <h1 id="逆文档频率-TfidfVectorizer-TfidfTransformer"><a href="#逆文档频率-TfidfVectorizer-TfidfTransformer" class="headerlink" title="逆文档频率 TfidfVectorizer/TfidfTransformer"></a>逆文档频率 TfidfVectorizer/TfidfTransformer</h1><p><strong>Term Frequency (TF)</strong>:</p>
 <p>$$tf(t,d)=\frac{f(t,d)+1}{||x||}$$</p>
-<p>$$f(t,d)$$: frequency of term t in document d</p>
+<p>$f(t,d)$: frequency of term t in document d</p>
 <p>||x||: (Euclidean distance) L2 norm of the count vector.</p>
 <p><strong>Inverse Document Frequency (IDF)</strong>:</p>
 <p>measures how rare or common a word is in a corpus.</p>
 <p>$$idf(t,d)=log\frac{N}{1+|d\ \in\  D :\  t\  \in\ d|}$$</p>
 <p>N: Total # of documents in the corpus</p>
-<p>$$d\ \in\  D :\  t\  \in\ d$$  is the # of ducuments in the corpus that contain the term t.</p>
+<p>$d\ \in\  D :\  t\  \in\ d$  is the # of ducuments in the corpus that contain the term t.</p>
 <p>Words like “I”, “will” contribute little to the classification of  texts. Thus, idf will penalize the importance of this kind of words.</p>
 <p> 如果一类文本（比如说讲篮球赛的文本中过分频繁出现一些词如“篮球”“篮板”等词语）频繁出现一些对文本分类没有贡献的词，那么这类词的重要性会被IDF“惩罚”（penalized）。</p>
 <hr>
@@ -441,7 +441,7 @@
 <li>SelectKBest: removes all but the k highest scoring features</li>
 <li>SelectPercentile: emoves all but a user-specified highest scoring percentage of features</li>
 </ul>
-<p>Chi-squared: <em>chi2(X,y)</em> computes the  </p>
+<p>Chi-squared: <em>chi2(X,y)</em> computes chi-squared stats between each non-negative feature and class.</p>
 
       
     </div>
