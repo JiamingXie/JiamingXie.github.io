@@ -1816,14 +1816,14 @@ pre .javascript .function {
   font-size: 13px;
 }
 .links-of-author a:before {
-  display: inline-block;
+  display: list-item;
   vertical-align: middle;
   margin-right: 3px;
   content: " ";
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff24ff;
+  background: #fe03c3;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2972,7 +2972,7 @@ pre .javascript .function {
 .links-of-blogroll-inline .links-of-blogroll-item {
   margin: 5px 0 0;
   width: 50%;
-  display: inline;
+  display: inline-block;
   width: unset;
 }
 .links-of-blogroll-inline .links-of-blogroll-item a {
