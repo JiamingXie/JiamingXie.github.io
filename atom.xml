@@ -6,7 +6,7 @@
   <link href="/JiamingXie.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/JiamingXie/"/>
-  <updated>2018-09-26T16:23:00.149Z</updated>
+  <updated>2018-09-27T02:59:35.602Z</updated>
   <id>https://github.com/JiamingXie/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Natural Language Processing - CountVectorizer, TfidfVectorizer</title>
+    <link href="https://github.com/JiamingXie/2018/09/27/nlp/"/>
+    <id>https://github.com/JiamingXie/2018/09/27/nlp/</id>
+    <published>2018-09-27T02:58:34.000Z</published>
+    <updated>2018-09-27T02:59:35.602Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Machine Learning" scheme="https://github.com/JiamingXie/categories/Machine-Learning/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>重磅利好？MSCI拟将提高A股纳入因子</title>
