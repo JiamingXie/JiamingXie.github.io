@@ -1808,7 +1808,7 @@ pre .javascript .function {
   margin-top: 20px;
 }
 .links-of-author a {
-  display: list-item;
+  display: block;
   vertical-align: middle;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -1816,14 +1816,14 @@ pre .javascript .function {
   font-size: 13px;
 }
 .links-of-author a:before {
-  display: list-item;
+  display: inline-block;
   vertical-align: middle;
   margin-right: 3px;
   content: " ";
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fe03c3;
+  background: #d4ffff;
 }
 .links-of-blogroll {
   font-size: 13px;
