@@ -6,7 +6,7 @@
   <link href="/JiamingXie.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/JiamingXie/"/>
-  <updated>2018-09-28T00:21:26.631Z</updated>
+  <updated>2018-09-29T13:51:53.546Z</updated>
   <id>https://github.com/JiamingXie/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Operators (Advanced) in Java - Compound Assignment, Increment/Decrement, Operator Precedence</title>
+    <link href="https://github.com/JiamingXie/2018/09/29/Operators%20(Advanced)%20in%20Java%20-%20Compound%20Assignment,%20Increment:Decrement,%20Operator%20Precedence/"/>
+    <id>https://github.com/JiamingXie/2018/09/29/Operators (Advanced) in Java - Compound Assignment, Increment:Decrement, Operator Precedence/</id>
+    <published>2018-09-29T12:13:13.000Z</published>
+    <updated>2018-09-29T13:51:53.546Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Control-Statement-Series-Part-1"><a href="#Control-Statement-Series-Part-1" class="headerlink" title="Control Statement Series Part $1$"></a>Control Statement Series Part $1$</h1><h2 id="Operators-Advanced-in-Java"><a href="#Operators-Advanced-in-Java" class="headerlink" title="Operators (Advanced) in Java"></a>Operators (Advanced) in Java</h2><ul><li><p>Compound assignment operators</p><p>+=, -=, *=, /=, %=</p><p>It is just the combination of operators and assignment operators.</p><p><code>s = s+2</code> → <code>s += 2</code></p><p><code>n1 = n1 * n2</code> → <code>n1 *= n2</code></p><p>… </p></li><li><p>Increment/decrement operators</p><p>++ and –</p><p>If you want to increase by one or decrease by one, then you use “++” or “–”</p><p><code>n += 1</code> → <code>n++</code></p><p><strong><em>n++ has assigned new value to n.</em></strong></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> N1,N2;</span><br><span class="line">N1=<span class="number">9</span>;</span><br><span class="line">System.out.printf(<span class="string">"%d\n"</span>,N1++);<span class="comment">//This statement will first print N1, and then add one to it. Thus, it will show the original value "9".</span></span><br><span class="line">System.out.printf(<span class="string">"%d\n\n"</span>,N1); <span class="comment">//Then in this line, 1 is added up to nine, so it will print 10</span></span><br><span class="line"></span><br><span class="line">N2=<span class="number">9</span>;</span><br><span class="line">System.out.printf(<span class="string">"%d\n"</span>,++N2);<span class="comment">//before printf is executed, N2 will be added up to 1, so it will print 10</span></span><br><span class="line">System.out.printf(<span class="string">"%d\n\n"</span>,N2);<span class="comment">//This line will still print 10</span></span><br></pre></td></tr></table></figure><p>The pre and post ++/– will make the result slightly different.</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> count, loop;</span><br><span class="line">count=<span class="number">9</span>;</span><br><span class="line">loop=++count;</span><br><span class="line"><span class="comment">//Then loop = 10, count=10</span></span><br><span class="line"></span><br><span class="line">count=<span class="number">9</span>;</span><br><span class="line">loop= count++;</span><br><span class="line"><span class="comment">//Then loop=9, count=10</span></span><br></pre></td></tr></table></figure><p>Try the following program by yourself:</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> loop=<span class="number">8</span>, count=<span class="number">15</span>,Num;</span><br><span class="line"></span><br><span class="line">Num= +loop++;<span class="comment">//The old value of loop is assigned to Num</span></span><br><span class="line">System.out.printf(<span class="string">"Num=%d, loop=%d\n"</span>, Num, loop);<span class="comment">//num=8,loop=9</span></span><br><span class="line">Num= ++Num;</span><br><span class="line">System.out.printf(<span class="string">"Num=%d, loop=%d\n"</span>, Num, loop);<span class="comment">//num=9, loop=9</span></span><br><span class="line">Num=count++ + loop;</span><br><span class="line">System.out.printf(<span class="string">"Num=%d, loop=%d\n"</span>, Num, loop);<span class="comment">//num=24=15(old count)+9 , count=16, loop = 9</span></span><br><span class="line">Num= --count+ --loop;</span><br><span class="line">System.out.printf(<span class="string">"Num=%d, loop=%d\n"</span>, Num, loop);<span class="comment">//num=15+8=23, count=15, loop = 8</span></span><br><span class="line">Num= loop + -Num;</span><br><span class="line">System.out.printf(<span class="string">"Num=%d, loop=%d\n"</span>, Num, loop);<span class="comment">//num= 8-23=-15</span></span><br></pre></td></tr></table></figure></li><li><p>Operator precedence</p><ul><li>Plays role in mix of operators in a statement</li><li><strong>Precedence Rule</strong> applies for different operators</li><li><strong>Associative Rule</strong> applies for same operators</li></ul><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvqq13hstwj20oe0g0tct.jpg" alt=""></p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvqq1a2z34j20q40h0adr.jpg" alt=""></p></li></ul><h2 id="Control-Statements-in-Java"><a href="#Control-Statements-in-Java" class="headerlink" title="Control Statements in Java"></a>Control Statements in Java</h2><ul><li>if, if..else</li><li>switch</li><li>?:</li><li>while,do .. while, for loops</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Control-Statement-Series-Part-1&quot;&gt;&lt;a href=&quot;#Control-Statement-Series-Part-1&quot; class=&quot;headerlink&quot; title=&quot;Control Statement Series Part 
+      
+    
+    </summary>
+    
+      <category term="Java for Dummies" scheme="https://github.com/JiamingXie/categories/Java-for-Dummies/"/>
+    
+    
+      <category term="coding" scheme="https://github.com/JiamingXie/tags/coding/"/>
+    
+      <category term="Java" scheme="https://github.com/JiamingXie/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>强者恒强</title>
+    <link href="https://github.com/JiamingXie/2018/09/28/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180928/"/>
+    <id>https://github.com/JiamingXie/2018/09/28/股市观察日记180928/</id>
+    <published>2018-09-28T13:27:25.000Z</published>
+    <updated>2018-09-29T00:20:00.307Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>盘面分析</strong></p><p>沪指收报2821.35点，涨1.06%，成交额1254亿。深成指收报8401.09点，涨0.80%，成交额1378亿。创业板收报1411.34点，涨0.78%，成交额414亿。沪指全周上涨0.85%，深成指跌0.10%，创业板指涨0.02%。沪指本月上涨3.53%，创1月份来最大单月涨幅；深成指跌0.76%，创业板指跌1.66%。</p><p>28日，节前最后一个交易日，两市小幅高开，在北汽新能源板块的带动下，市场一度冲高，但此后大盘随即回落，次新股较昨日显著回暖，市场逐渐企稳，<strong>银行、保险</strong>逐渐活跃，指数稳步上行，午后两市稳步走强，<strong>有色板块</strong>的拉升刺激了主板指数的上行，而以银之杰为首的创业板人气股则带动了一波中小创，市场整体较昨日明显活跃，盘面上看，大盘个股涨多跌少，市场上呈现<strong>权重搭台，题材唱戏</strong>的走势，临近尾盘，指数高位盘整。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvpl7cgim5j218s0j2jym.jpg" alt=""></p><a id="more"></a><p>经过这两周的上涨，大盘可能会进入横盘整理的阶段，震荡期间可以高抛低吸，或者借机入场。</p><p><strong>消息面</strong></p><ul><li><p>李克强：民营经济的管理者、经营者和生产者，都是中国特色社会主义的建设者</p><p>李克强总理9月28日上午在浙江台州主持召开座谈会。李克强说，民营经济和国有经济一样，都是社会主义市场经济的重要组成部分。民营经济的管理者、经营者和生产者，都是中国特色社会主义的建设者。我国的基本经济制度以及社会主义市场经济早已写入宪法。必须坚持“两个毫不动摇”，对各类所有制企业一视同仁，这一点绝不会有任何变化。</p></li><li><p>李克强：下一步要更大力度简政、减税、减费</p><p>李克强28日上午在浙江台州主持召开座谈会。听取企业家关于实体经济发展的意见建议后，李克强明确表示，下一步要更大力度简政、减税、减费。“简政”要继续深化“放管服”改革，降低制度性交易成本。“减税”要加快推进增值税税率“三档变两档”，研究降低增值税税率。“减费”要动真格地降低合规收费，坚决惩治乱收费，同时继续降低企业物流、电力等各类成本。</p></li><li><p>深交所三季报预披露时间表出炉，原来首家披露的公司益生股份已更改。现为炼石有色拔得头筹，将于10月9日披露。原定于10月10日披露的益生股份，现改为10月16日披露。</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;盘面分析&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;沪指收报2821.35点，涨1.06%，成交额1254亿。深成指收报8401.09点，涨0.80%，成交额1378亿。创业板收报1411.34点，涨0.78%，成交额414亿。沪指全周上涨0.85%，深成指跌0.10%，创业板指涨0.02%。沪指本月上涨3.53%，创1月份来最大单月涨幅；深成指跌0.76%，创业板指跌1.66%。&lt;/p&gt;
+&lt;p&gt;28日，节前最后一个交易日，两市小幅高开，在北汽新能源板块的带动下，市场一度冲高，但此后大盘随即回落，次新股较昨日显著回暖，市场逐渐企稳，&lt;strong&gt;银行、保险&lt;/strong&gt;逐渐活跃，指数稳步上行，午后两市稳步走强，&lt;strong&gt;有色板块&lt;/strong&gt;的拉升刺激了主板指数的上行，而以银之杰为首的创业板人气股则带动了一波中小创，市场整体较昨日明显活跃，盘面上看，大盘个股涨多跌少，市场上呈现&lt;strong&gt;权重搭台，题材唱戏&lt;/strong&gt;的走势，临近尾盘，指数高位盘整。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/6a5a25c2gy1fvpl7cgim5j218s0j2jym.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="股市观察日记" scheme="https://github.com/JiamingXie/categories/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0/"/>
+    
+    
+      <category term="Stock Analysis" scheme="https://github.com/JiamingXie/tags/Stock-Analysis/"/>
+    
+      <category term="Technical Analysis" scheme="https://github.com/JiamingXie/tags/Technical-Analysis/"/>
+    
+  </entry>
   
   <entry>
     <title>节前小调</title>

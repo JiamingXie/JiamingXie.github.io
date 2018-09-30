@@ -305,6 +305,351 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/JiamingXie/JiamingXie.github.io/2018/09/29/Operators (Advanced) in Java - Compound Assignment, Increment:Decrement, Operator Precedence/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiaming Xie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/JiamingXie.github.io/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mentality">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/JiamingXie.github.io/2018/09/29/Operators (Advanced) in Java - Compound Assignment, Increment:Decrement, Operator Precedence/" itemprop="url">Operators (Advanced) in Java - Compound Assignment, Increment/Decrement, Operator Precedence</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-29T20:13:13+08:00">
+                2018-09-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/JiamingXie.github.io/categories/Java-for-Dummies/" itemprop="url" rel="index">
+                    <span itemprop="name">Java for Dummies</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/JiamingXie.github.io/2018/09/29/Operators (Advanced) in Java - Compound Assignment, Increment:Decrement, Operator Precedence/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/JiamingXie.github.io/2018/09/29/Operators (Advanced) in Java - Compound Assignment, Increment:Decrement, Operator Precedence/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Control-Statement-Series-Part-1"><a href="#Control-Statement-Series-Part-1" class="headerlink" title="Control Statement Series Part $1$"></a>Control Statement Series Part $1$</h1><h2 id="Operators-Advanced-in-Java"><a href="#Operators-Advanced-in-Java" class="headerlink" title="Operators (Advanced) in Java"></a>Operators (Advanced) in Java</h2><ul>
+<li><p>Compound assignment operators</p>
+<p>+=, -=, *=, /=, %=</p>
+<p>It is just the combination of operators and assignment operators.</p>
+<p><code>s = s+2</code> → <code>s += 2</code></p>
+<p><code>n1 = n1 * n2</code> → <code>n1 *= n2</code></p>
+<p>… </p>
+</li>
+<li><p>Increment/decrement operators</p>
+<p>++ and –</p>
+<p>If you want to increase by one or decrease by one, then you use “++” or “–”</p>
+<p><code>n += 1</code> → <code>n++</code></p>
+<p><strong><em>n++ has assigned new value to n.</em></strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> N1,N2;</span><br><span class="line">N1=<span class="number">9</span>;</span><br><span class="line">System.out.printf(<span class="string">"%d\n"</span>,N1++);<span class="comment">//This statement will first print N1, and then add one to it. Thus, it will show the original value "9".</span></span><br><span class="line">System.out.printf(<span class="string">"%d\n\n"</span>,N1); <span class="comment">//Then in this line, 1 is added up to nine, so it will print 10</span></span><br><span class="line"></span><br><span class="line">N2=<span class="number">9</span>;</span><br><span class="line">System.out.printf(<span class="string">"%d\n"</span>,++N2);<span class="comment">//before printf is executed, N2 will be added up to 1, so it will print 10</span></span><br><span class="line">System.out.printf(<span class="string">"%d\n\n"</span>,N2);<span class="comment">//This line will still print 10</span></span><br></pre></td></tr></table></figure>
+<p>The pre and post ++/– will make the result slightly different.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> count, loop;</span><br><span class="line">count=<span class="number">9</span>;</span><br><span class="line">loop=++count;</span><br><span class="line"><span class="comment">//Then loop = 10, count=10</span></span><br><span class="line"></span><br><span class="line">count=<span class="number">9</span>;</span><br><span class="line">loop= count++;</span><br><span class="line"><span class="comment">//Then loop=9, count=10</span></span><br></pre></td></tr></table></figure>
+<p>Try the following program by yourself:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> loop=<span class="number">8</span>, count=<span class="number">15</span>,Num;</span><br><span class="line"></span><br><span class="line">Num= +loop++;<span class="comment">//The old value of loop is assigned to Num</span></span><br><span class="line">System.out.printf(<span class="string">"Num=%d, loop=%d\n"</span>, Num, loop);<span class="comment">//num=8,loop=9</span></span><br><span class="line">Num= ++Num;</span><br><span class="line">System.out.printf(<span class="string">"Num=%d, loop=%d\n"</span>, Num, loop);<span class="comment">//num=9, loop=9</span></span><br><span class="line">Num=count++ + loop;</span><br><span class="line">System.out.printf(<span class="string">"Num=%d, loop=%d\n"</span>, Num, loop);<span class="comment">//num=24=15(old count)+9 , count=16, loop = 9</span></span><br><span class="line">Num= --count+ --loop;</span><br><span class="line">System.out.printf(<span class="string">"Num=%d, loop=%d\n"</span>, Num, loop);<span class="comment">//num=15+8=23, count=15, loop = 8</span></span><br><span class="line">Num= loop + -Num;</span><br><span class="line">System.out.printf(<span class="string">"Num=%d, loop=%d\n"</span>, Num, loop);<span class="comment">//num= 8-23=-15</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Operator precedence</p>
+<ul>
+<li>Plays role in mix of operators in a statement</li>
+<li><strong>Precedence Rule</strong> applies for different operators</li>
+<li><strong>Associative Rule</strong> applies for same operators</li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvqq13hstwj20oe0g0tct.jpg" alt=""></p>
+<p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvqq1a2z34j20q40h0adr.jpg" alt=""></p>
+</li>
+</ul>
+<h2 id="Control-Statements-in-Java"><a href="#Control-Statements-in-Java" class="headerlink" title="Control Statements in Java"></a>Control Statements in Java</h2><ul>
+<li>if, if..else</li>
+<li>switch</li>
+<li>?:</li>
+<li>while,do .. while, for loops</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/JiamingXie/JiamingXie.github.io/2018/09/28/股市观察日记180928/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiaming Xie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/JiamingXie.github.io/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mentality">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/JiamingXie.github.io/2018/09/28/股市观察日记180928/" itemprop="url">强者恒强</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-28T21:27:25+08:00">
+                2018-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/JiamingXie.github.io/categories/股市观察日记/" itemprop="url" rel="index">
+                    <span itemprop="name">股市观察日记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/JiamingXie.github.io/2018/09/28/股市观察日记180928/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/JiamingXie.github.io/2018/09/28/股市观察日记180928/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><strong>盘面分析</strong></p>
+<p>沪指收报2821.35点，涨1.06%，成交额1254亿。深成指收报8401.09点，涨0.80%，成交额1378亿。创业板收报1411.34点，涨0.78%，成交额414亿。沪指全周上涨0.85%，深成指跌0.10%，创业板指涨0.02%。沪指本月上涨3.53%，创1月份来最大单月涨幅；深成指跌0.76%，创业板指跌1.66%。</p>
+<p>28日，节前最后一个交易日，两市小幅高开，在北汽新能源板块的带动下，市场一度冲高，但此后大盘随即回落，次新股较昨日显著回暖，市场逐渐企稳，<strong>银行、保险</strong>逐渐活跃，指数稳步上行，午后两市稳步走强，<strong>有色板块</strong>的拉升刺激了主板指数的上行，而以银之杰为首的创业板人气股则带动了一波中小创，市场整体较昨日明显活跃，盘面上看，大盘个股涨多跌少，市场上呈现<strong>权重搭台，题材唱戏</strong>的走势，临近尾盘，指数高位盘整。</p>
+<p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvpl7cgim5j218s0j2jym.jpg" alt=""></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/JiamingXie.github.io/2018/09/28/股市观察日记180928/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://github.com/JiamingXie/JiamingXie.github.io/2018/09/27/股市观察日记180927/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1571,319 +1916,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/JiamingXie/JiamingXie.github.io/2018/07/16/股市观察日记180716/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jiaming Xie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/JiamingXie.github.io/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Mentality">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/JiamingXie.github.io/2018/07/16/股市观察日记180716/" itemprop="url">股市观察日记180716</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T15:48:02+08:00">
-                2018-07-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/JiamingXie.github.io/categories/股市观察日记/" itemprop="url" rel="index">
-                    <span itemprop="name">股市观察日记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/JiamingXie.github.io/2018/07/16/股市观察日记180716/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/JiamingXie.github.io/2018/07/16/股市观察日记180716/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>大盘走势分析</strong></p>
-<p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvochow4s7j20ox0dot9g.jpg" alt=""></p>
-<p>上周周五是一个弱震荡，今天是一个分化的走势，强者走强，弱者走弱。主要是权重股在跌，资金流出最多的是权重股（银行、保险、房地产等等）。 </p>
-<p>此时的交易策略是涨了卖出，跌了买入。 </p>
-<p>今天大盘跌到2804的位置反弹了，之后一定会有一个上涨出货的过程。整体来说走势还是比较弱的。 </p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/JiamingXie.github.io/2018/07/16/股市观察日记180716/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/JiamingXie/JiamingXie.github.io/2018/07/12/股市观察日记180712/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jiaming Xie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/JiamingXie.github.io/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Mentality">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/JiamingXie.github.io/2018/07/12/股市观察日记180712/" itemprop="url">股市观察日记180712</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-12T19:44:45+08:00">
-                2018-07-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/JiamingXie.github.io/categories/股市观察日记/" itemprop="url" rel="index">
-                    <span itemprop="name">股市观察日记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/JiamingXie.github.io/2018/07/12/股市观察日记180712/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/JiamingXie.github.io/2018/07/12/股市观察日记180712/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>上行反弹点位预测 2850，若冲破2850则有可能冲击2900，否则会回调。</p>
-<p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvoc7o9lwvj20wb0ddmxy.jpg" alt=""></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1938,7 +1970,7 @@
               
                 <a href="/JiamingXie.github.io/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
