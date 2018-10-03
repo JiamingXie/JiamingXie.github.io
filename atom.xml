@@ -6,7 +6,7 @@
   <link href="/JiamingXie.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/JiamingXie/"/>
-  <updated>2018-09-29T13:51:53.546Z</updated>
+  <updated>2018-10-03T14:07:08.868Z</updated>
   <id>https://github.com/JiamingXie/</id>
   
   <author>
@@ -17,20 +17,58 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Operators (Advanced) in Java - Compound Assignment, Increment/Decrement, Operator Precedence</title>
-    <link href="https://github.com/JiamingXie/2018/09/29/Operators%20(Advanced)%20in%20Java%20-%20Compound%20Assignment,%20Increment:Decrement,%20Operator%20Precedence/"/>
-    <id>https://github.com/JiamingXie/2018/09/29/Operators (Advanced) in Java - Compound Assignment, Increment:Decrement, Operator Precedence/</id>
-    <published>2018-09-29T12:13:13.000Z</published>
-    <updated>2018-09-29T13:51:53.546Z</updated>
+    <title>股市观察日记180724</title>
+    <link href="https://github.com/JiamingXie/2018/10/03/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180724/"/>
+    <id>https://github.com/JiamingXie/2018/10/03/股市观察日记180724/</id>
+    <published>2018-10-03T13:33:36.000Z</published>
+    <updated>2018-10-03T14:07:08.868Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Control-Statement-Series-Part-1"><a href="#Control-Statement-Series-Part-1" class="headerlink" title="Control Statement Series Part $1$"></a>Control Statement Series Part $1$</h1><h2 id="Operators-Advanced-in-Java"><a href="#Operators-Advanced-in-Java" class="headerlink" title="Operators (Advanced) in Java"></a>Operators (Advanced) in Java</h2><ul><li><p>Compound assignment operators</p><p>+=, -=, *=, /=, %=</p><p>It is just the combination of operators and assignment operators.</p><p><code>s = s+2</code> → <code>s += 2</code></p><p><code>n1 = n1 * n2</code> → <code>n1 *= n2</code></p><p>… </p></li><li><p>Increment/decrement operators</p><p>++ and –</p><p>If you want to increase by one or decrease by one, then you use “++” or “–”</p><p><code>n += 1</code> → <code>n++</code></p><p><strong><em>n++ has assigned new value to n.</em></strong></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> N1,N2;</span><br><span class="line">N1=<span class="number">9</span>;</span><br><span class="line">System.out.printf(<span class="string">"%d\n"</span>,N1++);<span class="comment">//This statement will first print N1, and then add one to it. Thus, it will show the original value "9".</span></span><br><span class="line">System.out.printf(<span class="string">"%d\n\n"</span>,N1); <span class="comment">//Then in this line, 1 is added up to nine, so it will print 10</span></span><br><span class="line"></span><br><span class="line">N2=<span class="number">9</span>;</span><br><span class="line">System.out.printf(<span class="string">"%d\n"</span>,++N2);<span class="comment">//before printf is executed, N2 will be added up to 1, so it will print 10</span></span><br><span class="line">System.out.printf(<span class="string">"%d\n\n"</span>,N2);<span class="comment">//This line will still print 10</span></span><br></pre></td></tr></table></figure><p>The pre and post ++/– will make the result slightly different.</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> count, loop;</span><br><span class="line">count=<span class="number">9</span>;</span><br><span class="line">loop=++count;</span><br><span class="line"><span class="comment">//Then loop = 10, count=10</span></span><br><span class="line"></span><br><span class="line">count=<span class="number">9</span>;</span><br><span class="line">loop= count++;</span><br><span class="line"><span class="comment">//Then loop=9, count=10</span></span><br></pre></td></tr></table></figure><p>Try the following program by yourself:</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> loop=<span class="number">8</span>, count=<span class="number">15</span>,Num;</span><br><span class="line"></span><br><span class="line">Num= +loop++;<span class="comment">//The old value of loop is assigned to Num</span></span><br><span class="line">System.out.printf(<span class="string">"Num=%d, loop=%d\n"</span>, Num, loop);<span class="comment">//num=8,loop=9</span></span><br><span class="line">Num= ++Num;</span><br><span class="line">System.out.printf(<span class="string">"Num=%d, loop=%d\n"</span>, Num, loop);<span class="comment">//num=9, loop=9</span></span><br><span class="line">Num=count++ + loop;</span><br><span class="line">System.out.printf(<span class="string">"Num=%d, loop=%d\n"</span>, Num, loop);<span class="comment">//num=24=15(old count)+9 , count=16, loop = 9</span></span><br><span class="line">Num= --count+ --loop;</span><br><span class="line">System.out.printf(<span class="string">"Num=%d, loop=%d\n"</span>, Num, loop);<span class="comment">//num=15+8=23, count=15, loop = 8</span></span><br><span class="line">Num= loop + -Num;</span><br><span class="line">System.out.printf(<span class="string">"Num=%d, loop=%d\n"</span>, Num, loop);<span class="comment">//num= 8-23=-15</span></span><br></pre></td></tr></table></figure></li><li><p>Operator precedence</p><ul><li>Plays role in mix of operators in a statement</li><li><strong>Precedence Rule</strong> applies for different operators</li><li><strong>Associative Rule</strong> applies for same operators</li></ul><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvqq13hstwj20oe0g0tct.jpg" alt=""></p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvqq1a2z34j20q40h0adr.jpg" alt=""></p></li></ul><h2 id="Control-Statements-in-Java"><a href="#Control-Statements-in-Java" class="headerlink" title="Control Statements in Java"></a>Control Statements in Java</h2><ul><li>if, if..else</li><li>switch</li><li>?:</li><li>while,do .. while, for loops</li></ul>]]></content>
+    <content type="html"><![CDATA[<p><strong>大盘</strong></p><p>大盘连涨3天，第一天是金融股涨的，第二天是金融和基建涨的，第三天是基建涨的。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvdvrwrfqj20w80blglv.jpg" alt=""></p><p>保险、券商优先开始回调。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvdw42bxlj213b0kytcu.jpg" alt=""></p><p>到34.14左右量都放出来，其实跌得差不多了。</p><a id="more"></a><p><em>明日走势预测</em></p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvdwnykbyj213f0l1q78.jpg" alt=""></p><p>不会马上下跌，可能要先横一下然后再下跌。</p><p><strong>个股</strong></p><ul><li><p>东方财富依旧很强，最多往回踩一下补上缺口，之后就会上涨。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvdxk9fhej213h0l7td0.jpg" alt=""></p></li><li><p>成都路桥，连板四天，之后可以挂单排队，只要开板买进，之后看到7.3+抛出</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvdygkb6kj20qg0cp74q.jpg" alt=""></p></li><li><p>换手率日渐升高的妖股要非常小心，不可以买入</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvdyrsdjzj20xy0fzq4j.jpg" alt=""></p></li><li><p>前几天因为资金流出一直在跌的美的、格力、五粮液、贵州茅台等白马股开始有资金流入上涨。 </p><p>从前一天的情况可以看出一二，尾盘放量拉升了。 </p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvdza2nshj21370l4gq5.jpg" alt=""></p></li></ul>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h1 id=&quot;Control-Statement-Series-Part-1&quot;&gt;&lt;a href=&quot;#Control-Statement-Series-Part-1&quot; class=&quot;headerlink&quot; title=&quot;Control Statement Series Part 
-      
+      &lt;p&gt;&lt;strong&gt;大盘&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;大盘连涨3天，第一天是金融股涨的，第二天是金融和基建涨的，第三天是基建涨的。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvdvrwrfqj20w80blglv.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;保险、券商优先开始回调。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvdw42bxlj213b0kytcu.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;到34.14左右量都放出来，其实跌得差不多了。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="股市观察日记" scheme="https://github.com/JiamingXie/categories/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0/"/>
+    
+    
+      <category term="Stock Analysis" scheme="https://github.com/JiamingXie/tags/Stock-Analysis/"/>
+    
+      <category term="Technical Analysis" scheme="https://github.com/JiamingXie/tags/Technical-Analysis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Control Statement Series</title>
+    <link href="https://github.com/JiamingXie/2018/09/29/Control%20Statement%20Series/"/>
+    <id>https://github.com/JiamingXie/2018/09/29/Control Statement Series/</id>
+    <published>2018-09-29T12:13:13.000Z</published>
+    <updated>2018-09-30T07:31:52.159Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Operators-Advanced-in-Java"><a href="#Operators-Advanced-in-Java" class="headerlink" title="Operators (Advanced) in Java"></a>Operators (Advanced) in Java</h1><ul><li><p>Compound assignment operators</p><p>+=, -=, *=, /=, %=</p><p>It is just the combination of operators and assignment operators.</p><p><code>s = s+2</code> → <code>s += 2</code></p><p><code>n1 = n1 * n2</code> → <code>n1 *= n2</code></p><p>… </p></li><li><p>Increment/decrement operators</p><p>++ and –</p><p>If you want to increase by one or decrease by one, then you use “++” or “–”</p><p><code>n += 1</code> → <code>n++</code></p><p><strong><em>n++ has assigned new value to n.</em></strong></p><a id="more"></a><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> N1,N2;</span><br><span class="line">N1=<span class="number">9</span>;</span><br><span class="line">System.out.printf(<span class="string">"%d\n"</span>,N1++);<span class="comment">//This statement will first print N1, and then add one to it. Thus, it will show the original value "9".</span></span><br><span class="line">System.out.printf(<span class="string">"%d\n\n"</span>,N1); <span class="comment">//Then in this line, 1 is added up to nine, so it will print 10</span></span><br><span class="line"></span><br><span class="line">N2=<span class="number">9</span>;</span><br><span class="line">System.out.printf(<span class="string">"%d\n"</span>,++N2);<span class="comment">//before printf is executed, N2 will be added up to 1, so it will print 10</span></span><br><span class="line">System.out.printf(<span class="string">"%d\n\n"</span>,N2);<span class="comment">//This line will still print 10</span></span><br></pre></td></tr></table></figure><p>The pre and post ++/– will make the result slightly different.</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> count, loop;</span><br><span class="line">count=<span class="number">9</span>;</span><br><span class="line">loop=++count;</span><br><span class="line"><span class="comment">//Then loop = 10, count=10</span></span><br><span class="line"></span><br><span class="line">count=<span class="number">9</span>;</span><br><span class="line">loop= count++;</span><br><span class="line"><span class="comment">//Then loop=9, count=10</span></span><br></pre></td></tr></table></figure><p>Try the following program by yourself:</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> loop=<span class="number">8</span>, count=<span class="number">15</span>,Num;</span><br><span class="line"></span><br><span class="line">Num= +loop++;<span class="comment">//The old value of loop is assigned to Num</span></span><br><span class="line">System.out.printf(<span class="string">"Num=%d, loop=%d\n"</span>, Num, loop);<span class="comment">//num=8,loop=9</span></span><br><span class="line">Num= ++Num;</span><br><span class="line">System.out.printf(<span class="string">"Num=%d, loop=%d\n"</span>, Num, loop);<span class="comment">//num=9, loop=9</span></span><br><span class="line">Num=count++ + loop;</span><br><span class="line">System.out.printf(<span class="string">"Num=%d, loop=%d\n"</span>, Num, loop);<span class="comment">//num=24=15(old count)+9 , count=16, loop = 9</span></span><br><span class="line">Num= --count+ --loop;</span><br><span class="line">System.out.printf(<span class="string">"Num=%d, loop=%d\n"</span>, Num, loop);<span class="comment">//num=15+8=23, count=15, loop = 8</span></span><br><span class="line">Num= loop + -Num;</span><br><span class="line">System.out.printf(<span class="string">"Num=%d, loop=%d\n"</span>, Num, loop);<span class="comment">//num= 8-23=-15</span></span><br></pre></td></tr></table></figure></li><li><p>Operator precedence</p><ul><li>Plays role in mix of operators in a statement</li><li><strong>Precedence Rule</strong> applies for different operators</li><li><strong>Associative Rule</strong> applies for same operators</li></ul><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvqq13hstwj20oe0g0tct.jpg" alt=""></p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvqq1a2z34j20q40h0adr.jpg" alt=""></p></li></ul><h1 id="Control-Statements-in-Java"><a href="#Control-Statements-in-Java" class="headerlink" title="Control Statements in Java"></a>Control Statements in Java</h1><p>Computer algorithm can be described by using three types of control statement.</p><ul><li><p>Sequence: executed one by one;</p></li><li><p>Selection: executed depending on condition;</p><ul><li><p>if</p></li><li><p>If…else if…else</p></li><li><p>switch</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(ControllingExpression)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">case</span> constant <span class="number">1</span>:</span><br><span class="line">        statement;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> constant <span class="number">2</span>:</span><br><span class="line">        statement;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">   <span class="keyword">case</span> constant n:</span><br><span class="line">        statement;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        statement;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>All “switch” statements can be converted to “if…else…” statements.</strong></p><ul><li>Values for ‘case’: integer or character constants</li><li>Cannot use expressions or ranges</li><li>The order of the ‘case’ statements is unimportant</li><li>The default clause may occur first</li></ul></li><li><p>Conditional operator: ? :</p><p>Usually it is used for <strong>assignment</strong>.</p><p><code>(expression1) ? expression2: expression3;</code></p><p>If expression1 is true, expression2 will be evaluated, or expression3 will be evaluated.</p></li></ul></li><li><p>Repetition</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Operators-Advanced-in-Java&quot;&gt;&lt;a href=&quot;#Operators-Advanced-in-Java&quot; class=&quot;headerlink&quot; title=&quot;Operators (Advanced) in Java&quot;&gt;&lt;/a&gt;Operators (Advanced) in Java&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Compound assignment operators&lt;/p&gt;
+&lt;p&gt;+=, -=, *=, /=, %=&lt;/p&gt;
+&lt;p&gt;It is just the combination of operators and assignment operators.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;s = s+2&lt;/code&gt; → &lt;code&gt;s += 2&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;n1 = n1 * n2&lt;/code&gt; → &lt;code&gt;n1 *= n2&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;… &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Increment/decrement operators&lt;/p&gt;
+&lt;p&gt;++ and –&lt;/p&gt;
+&lt;p&gt;If you want to increase by one or decrease by one, then you use “++” or “–”&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;n += 1&lt;/code&gt; → &lt;code&gt;n++&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;n++ has assigned new value to n.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
     
     </summary>
     
@@ -267,20 +305,23 @@
   </entry>
   
   <entry>
-    <title>股市观察日记180717</title>
-    <link href="https://github.com/JiamingXie/2018/07/17/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180717/"/>
-    <id>https://github.com/JiamingXie/2018/07/17/股市观察日记180717/</id>
-    <published>2018-07-17T08:02:16.000Z</published>
-    <updated>2018-09-27T12:17:02.878Z</updated>
+    <title>股市观察日记180828</title>
+    <link href="https://github.com/JiamingXie/2018/08/28/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180828/"/>
+    <id>https://github.com/JiamingXie/2018/08/28/股市观察日记180828/</id>
+    <published>2018-08-28T08:00:43.000Z</published>
+    <updated>2018-10-03T15:05:17.601Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>上午</strong></p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvocwy4vd3j20ei0ec74t.jpg" alt=""></p><p>这里是一个机会，但是并不知道大盘后市会怎么走，所以买入的话会有一定风险。 </p><p>国旅（601888）和机场（600009）的乖离率BIAS太高了，不宜入场，可以回调以后入场。</p><a id="more"></a><p><strong>下午</strong></p><p>横盘了，横得越久越危险。大家都是被套了不愿意走。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvocxvh6wdj206k082glg.jpg" alt=""></p><p>第三天了，一旦股民开始止损，会有一个稍大幅的下跌，然后再上升，表示量放干净了。 </p><p>短期内（至少五天），大盘不会出现一模一样的走势，昨天是下+横，今天应该不会是下+横。 </p><p>从日线看是一个短期的顶部。观察一下昨天涨的板块，消费、医药等，今天都在跌，这是一个回调的过程；但是昨天跌的板块，今天也没涨起来，所以今天整体是一个下跌的态势。之后强势的股可能会反弹。 </p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvocyp3pktj20qf09raah.jpg" alt=""></p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvocyylfosj20rg09p0tf.jpg" alt=""></p><p>今天的底部差不多是四天前阳线的开盘价，大家都在等这个底部，没有跌下去，之后反弹加速的时候就应该意识到可以追涨了。</p><p><strong>基本知识</strong></p><ul><li><p>追涨的时候要关注龙头股，去看五分钟涨跌幅榜里面的股票。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvoczy365nj20r80bz74n.jpg" alt=""></p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvod04mincj20rc0c3wev.jpg" alt=""></p></li><li><p>还可以关注的股票有“挖坑的股票”，两点的这个坑是哪支股票挖出来的，还得填回去。 </p><p>绿线完全放完的时候可以进场。 </p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvod19wjnhj20qz0c20ta.jpg" alt=""></p></li><li><p>也可以关注一些走势和大盘向逆的股票。大盘下跌之前已经起来了，说明比较强势。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvod1upfejj20r60c5q3m.jpg" alt=""></p></li><li><p>昨天跌但是今天不跌的股票，明天很有可能会上涨，因为今天大盘跌了，它却没有跌，那么明天如果大盘不跌，它就会上涨。比如说保险板块今天是横盘，表现比大盘好，是被大盘拖累的。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvod2r6972j20q20fiq3u.jpg" alt=""></p></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>今天是实习的最后一天了…… </p><p>一般1点40分左右的上突，都没什么好事儿。 </p><p>相当于强上，然后就被套了，接下来的走势比较不乐观。 </p><p>没有热点板块带动，上涨无力.</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvfkg8fb6j20ru0egmxo.jpg" alt=""></p><p>接下来这一波，本来应该期待的是拉一根阳线补上缺口，现在看照日内走势并不是非常乐观，可能要再缓一缓。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvfkwkm0kj20wa0fqgma.jpg" alt=""></p><a id="more"></a><p><strong>看一下中线的分析：</strong></p><p>1号阴线本来是算是一个回踩但是后面又创了一个新低，说明1号阴线踩下的不是底部，2号到4号的底部比上1和3的差值已经缩小了，量能上看也大幅度缩小。 </p><p>接下来是两根中阳线，如果本周能够收复3号阳线的失地，那么这根阴线就算消化完了，否则不乐观。 </p><p>估计之后的走势会先上突补上缺口，补上缺口以后马上下来踩稳，不要低过阴线的开盘价，那么算回踩成功。 </p><p>如果补上缺口还硬向上突，量能又不够，那么久很容易哐叽，下来更惨，可能支撑位都踩不住。 </p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvfmejmexj20ql0f10tb.jpg" alt=""></p><hr><p>今天的大盘走势很有趣，下午1点40分上突的时候，预计接下来的走势不太乐观。 </p><p>但是后面下跌到0.35%左右就止跌了，这个时候走势开始分化。这个时候要分析是谁往上走了，是谁往下走了。 </p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvfms2tm9j20q809v74q.jpg" alt=""></p><p>宏观分析一下，这两天的涨势是谁带起来的，金融、止跌的白马、科技股。这几个板块这几天轮流上涨，现在有点乏力了。</p><hr><p>让我们来看一下老大哥 </p><p>之前在大盘还在跌的时候就开始上攻，让大盘有三天上涨的行情，之后开始横盘，这几天股市涨得比较多，但是铁建也没涨多少。 </p><p>下午的时候需要有股站出来，这只股就是基建股。因为基建股差不多休息好了。 </p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvfnhyywvj20qh0cqq3e.jpg" alt=""></p><p>预计明天早上会上冲破一个前高到11块，靠惯性再上突一下然后收个小阳线。（其他个股和大盘明天还会下跌。）</p><hr><p>如何看出老大哥要出马了？ </p><p>大盘下跌的时候，铁建反其道而行之向上突了一下，再结合之前的日级别走向和基建龙头的身份，这一上突就是在指明它就是铁建的大哥，后续果然强势上涨。 </p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvfnz8kekj20rn0asaap.jpg" alt=""></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;上午&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/6a5a25c2gy1fvocwy4vd3j20ei0ec74t.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;这里是一个机会，但是并不知道大盘后市会怎么走，所以买入的话会有一定风险。 &lt;/p&gt;
-&lt;p&gt;国旅（601888）和机场（600009）的乖离率BIAS太高了，不宜入场，可以回调以后入场。&lt;/p&gt;
+      &lt;p&gt;今天是实习的最后一天了…… &lt;/p&gt;
+&lt;p&gt;一般1点40分左右的上突，都没什么好事儿。 &lt;/p&gt;
+&lt;p&gt;相当于强上，然后就被套了，接下来的走势比较不乐观。 &lt;/p&gt;
+&lt;p&gt;没有热点板块带动，上涨无力.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvfkg8fb6j20ru0egmxo.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;接下来这一波，本来应该期待的是拉一根阳线补上缺口，现在看照日内走势并不是非常乐观，可能要再缓一缓。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvfkwkm0kj20wa0fqgma.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -294,49 +335,21 @@
   </entry>
   
   <entry>
-    <title>股市观察日记180716</title>
-    <link href="https://github.com/JiamingXie/2018/07/16/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180716/"/>
-    <id>https://github.com/JiamingXie/2018/07/16/股市观察日记180716/</id>
-    <published>2018-07-16T07:48:02.000Z</published>
-    <updated>2018-09-27T12:17:07.033Z</updated>
+    <title>股市观察日记180823</title>
+    <link href="https://github.com/JiamingXie/2018/08/23/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180823/"/>
+    <id>https://github.com/JiamingXie/2018/08/23/股市观察日记180823/</id>
+    <published>2018-08-23T07:55:15.000Z</published>
+    <updated>2018-10-03T14:58:47.679Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>大盘走势分析</strong></p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvochow4s7j20ox0dot9g.jpg" alt=""></p><p>上周周五是一个弱震荡，今天是一个分化的走势，强者走强，弱者走弱。主要是权重股在跌，资金流出最多的是权重股（银行、保险、房地产等等）。 </p><p>此时的交易策略是涨了卖出，跌了买入。 </p><p>今天大盘跌到2804的位置反弹了，之后一定会有一个上涨出货的过程。整体来说走势还是比较弱的。 </p><a id="more"></a><p><strong>上午</strong></p><p>大盘上午走出V形走势。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvocbq6bwaj20ef0azmxh.jpg" alt=""></p><p>大约10点50分时开始反弹 </p><p>行业龙头股（涨势较好）的股票可以看准买入时机 。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvoccj1txyj20ep0ba0t0.jpg" alt=""></p><p>宋城演艺上午的时候逆势上涨，10点26分开始随着大盘回调，到10点52分左右到达低点，是一个买入机会。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvocd1x3zsj205u0ekwed.jpg" alt=""></p><p>从交易量来看放量很健康，上午的交易量已经和之前一整天的相当。</p><p>对于其他的龙头股也可以用相同的方法操作。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvocdlgf07j20el0ar74g.jpg" alt=""></p><p><strong>如何判断大盘要反弹了？ </strong></p><p><strong>信号一</strong>：出现背离了，MACD底部向上，但是股价下跌。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvocee32y8j20cp0dojro.jpg" alt=""></p><p><strong>信号二</strong>：看领跌的股票何时止跌。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvocf39jq6j20dy0b2glq.jpg" alt=""></p><p>从之前的vol可以看出量没有放完，后面继续放量，但是股价没有再继续下跌了，说明跌不动了。 </p><p><strong>信号三</strong>：看期指会更明显。（期指的反应一般比较早）</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvocgf95u7j20n50ebwez.jpg" alt=""></p><p>开盘的时候往上冲了五格左右，之后向下跌的速度明显比较小，跌到五格的时候大概就可以判断已经跌不动了，是反弹的信号。 </p><p><strong><em>此时挑选一些涨势比较强的，逆势上涨的股票买入（大盘下跌时是机会），宋城演艺、珀莱雅等。</em></strong></p><p><strong>大盘走势分析</strong></p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvochow4s7j20ox0dot9g.jpg" alt=""></p><p>上周周五是一个弱震荡，今天是一个分化的走势，强者走强，弱者走弱。主要是权重股在跌，资金流出最多的是权重股（银行、保险、房地产等等）。 </p><p>此时的交易策略是涨了卖出，跌了买入。 </p><p>今天大盘跌到2804的位置反弹了，之后一定会有一个上涨出货的过程。整体来说走势还是比较弱的。 </p><p><strong>明日预测</strong></p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvocjh2iwhj20rw08zmxt.jpg" alt=""></p><p>现在大盘走向非常像一个喇叭口，多空势均力敌，当有一个新消息进来以后平衡会被打破。</p><p>预测明天会跌到2790左右的位置。 </p><p>如果明天指数可以在半个小时到一个小时内恢复到2821左右，即前两天被套的人全部解套，那么大盘明天可能走出上涨的趋势，否则前两天的人会选择止损跑路，那么大盘会继续下跌。 </p><p><strong>基本知识</strong></p><p>下单的时候要时刻紧盯盘口动向，如果有比较明显的大单砸盘，想快人一步的话就必须先下手往更低的位置挂一档。 </p><p>如果有比较突然的上涨或者下跌，要快速撤单并重新挂单。 </p><p><strong>个股</strong></p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvockm34u5j20ic0f174r.jpg" alt=""></p><p>突然下跌但是DDX非常健康，MACD也形成金叉，交易量不大，是买入的机会.</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvoclbtepvj20i90ew0t9.jpg" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;大盘走势分析&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/6a5a25c2gy1fvochow4s7j20ox0dot9g.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;上周周五是一个弱震荡，今天是一个分化的走势，强者走强，弱者走弱。主要是权重股在跌，资金流出最多的是权重股（银行、保险、房地产等等）。 &lt;/p&gt;
-&lt;p&gt;此时的交易策略是涨了卖出，跌了买入。 &lt;/p&gt;
-&lt;p&gt;今天大盘跌到2804的位置反弹了，之后一定会有一个上涨出货的过程。整体来说走势还是比较弱的。 &lt;/p&gt;
-    
-    </summary>
-    
-      <category term="股市观察日记" scheme="https://github.com/JiamingXie/categories/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0/"/>
-    
-    
-      <category term="Stock Analysis" scheme="https://github.com/JiamingXie/tags/Stock-Analysis/"/>
-    
-      <category term="Technical Analysis" scheme="https://github.com/JiamingXie/tags/Technical-Analysis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>股市观察日记180712</title>
-    <link href="https://github.com/JiamingXie/2018/07/12/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180712/"/>
-    <id>https://github.com/JiamingXie/2018/07/12/股市观察日记180712/</id>
-    <published>2018-07-12T11:44:45.000Z</published>
-    <updated>2018-09-27T11:47:31.701Z</updated>
-    
-    <content type="html"><![CDATA[<p>上行反弹点位预测 2850，若冲破2850则有可能冲击2900，否则会回调。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvoc7o9lwvj20wb0ddmxy.jpg" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<p>市场情绪低迷，交易量持续萎缩。（昨天创下熔断后最少交易量） </p><p>天量见天价，地量见地价。这个底不知道是不是真的底，但是貌似主力是认可中长线底部的。 </p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvfh87gvoj20s009pmxo.jpg" alt=""></p><p>由于交易量过小，下午这种急速拉升是非常容易的。稍微有一点儿资金就会涨，但是不容易跌，因为深度套牢的股民很多，没有人卖。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;上行反弹点位预测 2850，若冲破2850则有可能冲击2900，否则会回调。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/6a5a25c2gy1fvoc7o9lwvj20wb0ddmxy.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
+        &lt;p&gt;市场情绪低迷，交易量持续萎缩。（昨天创下熔断后最少交易量） &lt;/p&gt;
+&lt;p&gt;天量见天价，地量见地价。这个底不知道是不是真的底，但是貌似主力是认可中长线底部的。 &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/6a5a25c2gy1
       
     
     </summary>
@@ -351,21 +364,21 @@
   </entry>
   
   <entry>
-    <title>股市观察日记180711</title>
-    <link href="https://github.com/JiamingXie/2018/07/11/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180711/"/>
-    <id>https://github.com/JiamingXie/2018/07/11/股市观察日记180711/</id>
-    <published>2018-07-11T07:18:08.000Z</published>
-    <updated>2018-09-26T10:25:46.031Z</updated>
+    <title>股市观察日记180816</title>
+    <link href="https://github.com/JiamingXie/2018/08/16/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180816/"/>
+    <id>https://github.com/JiamingXie/2018/08/16/股市观察日记180816/</id>
+    <published>2018-08-16T08:52:47.000Z</published>
+    <updated>2018-10-03T14:54:48.838Z</updated>
     
-    <content type="html"><![CDATA[<p>昨天还在讨论反弹到什么点位的问题，今天就开始暴跌。 上证A股低开2%。 </p><p><del>美国对中国征收2000亿美元商品的关税的消息被封锁了，所以很多人都不知道。 股吧里到处都是一脸懵逼的群众，券商的报告也都是在讨论筑底反弹的问题。</del></p><p>9点钟 CN00Y（外资交易中国的指数）开盘暴跌。 </p><p>9点15分A股开始挂单，暴跌。机构提早知道消息，都在出货了。</p><p>表现比较好的只有贵金属板块（避险资产） 。</p>]]></content>
+    <content type="html"><![CDATA[<p>昨天指数跌得厉害但是交易量非常小，看得出是权重股带头砸指数。 </p><p>一般这种情况下第二天都是低开走势。这与之前有几天的走势是非常相似的。 </p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvfcz9nzmj20xl0bx0uk.jpg" alt=""></p><p>这个时候注意不可以再进货，反弹的时候反而是出货的机会。因为之后几天还会有跌势。 </p><p>今天的低开是意料之中，但是没有想到低开这么多，接下来就是看2691这个点位能否撑住，若撑不住之后的走势则不乐观。 </p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvfd5d89dj20ri0e6q3r.jpg" alt=""></p><p>早上回踩1691的地方是确认，做空期货的空方需在此平仓，因为将迎来反弹。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;昨天还在讨论反弹到什么点位的问题，今天就开始暴跌。 上证A股低开2%。 &lt;/p&gt;
-&lt;p&gt;&lt;del&gt;美国对中国征收2000亿美元商品的关税的消息被封锁了，所以很多人都不知道。 股吧里到处都是一脸懵逼的群众，券商的报告也都是在讨论筑底反弹的问题。&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;9点
+        &lt;p&gt;昨天指数跌得厉害但是交易量非常小，看得出是权重股带头砸指数。 &lt;/p&gt;
+&lt;p&gt;一般这种情况下第二天都是低开走势。这与之前有几天的走势是非常相似的。 &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvfcz
       
     
     </summary>
@@ -380,23 +393,22 @@
   </entry>
   
   <entry>
-    <title>股市观察日记180710</title>
-    <link href="https://github.com/JiamingXie/2018/07/10/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180710/"/>
-    <id>https://github.com/JiamingXie/2018/07/10/股市观察日记180710/</id>
-    <published>2018-07-10T07:16:30.000Z</published>
-    <updated>2018-09-26T02:17:33.173Z</updated>
+    <title>股市观察日记180814</title>
+    <link href="https://github.com/JiamingXie/2018/08/14/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180814/"/>
+    <id>https://github.com/JiamingXie/2018/08/14/股市观察日记180814/</id>
+    <published>2018-08-14T07:48:00.000Z</published>
+    <updated>2018-10-03T14:52:22.737Z</updated>
     
-    <content type="html"><![CDATA[<p>经过7月9日的普涨以后开始下跌。 </p><p>预计本周冲刺2850点，若无法冲刺则会继续下跌。 </p><p>下午回弹收在2827。</p><p>多方动能未释放干净，下一阶段（两天）可能冲高至2850后回落。 </p>]]></content>
+    <content type="html"><![CDATA[<p>今天大盘的走势算是比较不健康的。 </p><p>早盘上突两次（而且非常急，图线非常陡峭），后面就开始一轮急跌。 </p><p>下午一直横盘，横盘时间过长，需要选择方向。两点钟之前上突一次，让下跌更容易。 </p><p>大概2点多的时候上突两次，看第三次动作，上突成功，说明基本企稳。 </p><p>不过由于之前上突了一次，之后可能还会有反复。 </p><p>本周接下来的行情很有可能会反复踩稳这个短期底部。 </p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvfalt7ifj21320ef3zk.jpg" alt=""></p><p>今天“作”出来的这几下上突还有待消化。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;经过7月9日的普涨以后开始下跌。 &lt;/p&gt;
-&lt;p&gt;预计本周冲刺2850点，若无法冲刺则会继续下跌。 &lt;/p&gt;
-&lt;p&gt;下午回弹收在2827。&lt;/p&gt;
-&lt;p&gt;多方动能未释放干净，下一阶段（两天）可能冲高至2850后回落。 &lt;/p&gt;
-
+        &lt;p&gt;今天大盘的走势算是比较不健康的。 &lt;/p&gt;
+&lt;p&gt;早盘上突两次（而且非常急，图线非常陡峭），后面就开始一轮急跌。 &lt;/p&gt;
+&lt;p&gt;下午一直横盘，横盘时间过长，需要选择方向。两点钟之前上突一次，让下跌更容易。 &lt;/p&gt;
+&lt;p&gt;大概2点多的时候上突两次，看第三次动作，上突成功，
       
     
     </summary>
@@ -411,21 +423,49 @@
   </entry>
   
   <entry>
-    <title>股市观察日记180709</title>
-    <link href="https://github.com/JiamingXie/2018/07/09/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180709/"/>
-    <id>https://github.com/JiamingXie/2018/07/09/股市观察日记180709/</id>
-    <published>2018-07-09T07:07:46.000Z</published>
-    <updated>2018-09-26T01:11:00.706Z</updated>
+    <title>股市观察日记180810</title>
+    <link href="https://github.com/JiamingXie/2018/08/10/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180810/"/>
+    <id>https://github.com/JiamingXie/2018/08/10/股市观察日记180810/</id>
+    <published>2018-08-10T08:39:40.000Z</published>
+    <updated>2018-10-03T14:45:17.020Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>中航沈飞</strong> 600760</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvmo5cfvroj20vs1484dt.jpg" alt=""></p><p>分时DDX可以看出来在出货，一直在出（持有股票的人先出了一部分。因为大盘比较好所以拉起来了一些，但是其实还是在出货 。预测第二天会冲高回落（冲一个短期的新高）【钓鱼线】 </p><p><strong>海特高新</strong></p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvmo6ux5yhj212210ogwe.jpg" alt=""></p><p>这两兄弟比较像，海特高新也是尾盘时拉升一下，第二天冲短期新高，冲高回落。 但是分时DDX一直在出货。</p><p><strong><em>两支股票都有比较明显的背离。</em></strong></p>]]></content>
+    <content type="html"><![CDATA[<p><strong>大盘</strong></p><p>看IF的线，第一下上冲，第二下上冲的尖儿太明显了，第三下说明上冲的意愿还是挺明显的，下跌空间不会太大。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvf1syn5aj21340ebt9g.jpg" alt=""></p><p>如果下去可以一跌到位，那么之后的形式会比较乐观。 </p><p>如果不到位的话走势反而不健康。 </p><a id="more"></a><p>三次上突失败，接下来就是下行两次，震荡踩实。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvf2catl5j212n0ea3zd.jpg" alt=""></p><p><strong>炒股只炒龙头股的原因</strong></p><p>带动板块上升，个股不涨了它还会涨；带动板块回调，个股不跌了它还会继续跌。上下的浮动也随之增大。 </p><p>看下图，板块涨的时候它不涨，后板块突第二下的时候意思了一下，但是DDX已经向下了，一直在出，接下来就看什么时候开始带头砸盘了。 </p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvf377axjj20rl0fdjs9.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;大盘&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;看IF的线，第一下上冲，第二下上冲的尖儿太明显了，第三下说明上冲的意愿还是挺明显的，下跌空间不会太大。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvf1syn5aj21340ebt9g.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;如果下去可以一跌到位，那么之后的形式会比较乐观。 &lt;/p&gt;
+&lt;p&gt;如果不到位的话走势反而不健康。 &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="股市观察日记" scheme="https://github.com/JiamingXie/categories/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0/"/>
+    
+    
+      <category term="Stock Analysis" scheme="https://github.com/JiamingXie/tags/Stock-Analysis/"/>
+    
+      <category term="Technical Analysis" scheme="https://github.com/JiamingXie/tags/Technical-Analysis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>股市观察日记180806</title>
+    <link href="https://github.com/JiamingXie/2018/08/06/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180806/"/>
+    <id>https://github.com/JiamingXie/2018/08/06/股市观察日记180806/</id>
+    <published>2018-08-06T06:38:10.000Z</published>
+    <updated>2018-10-03T14:39:26.522Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天的大盘依然是非常惨烈。已破两年半最低点，之后可能会到三年最低点。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvewr2uakj20xp09njrx.jpg" alt=""></p><p>基建、金融股走势还算健康，还有上涨空间。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvewwp1hej20s00ezaau.jpg" alt=""></p><p>其实这一波指数应该已经跌到位了，但是看白马股还完全没有停下来的意思。之后估计会有一段时间的杀跌和超跌。 </p><p>8月底出年报，如果收益及增长符合预期，那么可以止跌。如果收益不符合预期，那么还要继续下跌。 </p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;strong&gt;中航沈飞&lt;/strong&gt; 600760&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/6a5a25c2gy1fvmo5cfvroj20vs1484dt.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;分时DDX可以看出来
+        &lt;p&gt;今天的大盘依然是非常惨烈。已破两年半最低点，之后可能会到三年最低点。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvewr2uakj20xp09njrx.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;基建、金
       
     
     </summary>
@@ -440,90 +480,80 @@
   </entry>
   
   <entry>
-    <title>股市观察日记180706</title>
-    <link href="https://github.com/JiamingXie/2018/07/06/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180706/"/>
-    <id>https://github.com/JiamingXie/2018/07/06/股市观察日记180706/</id>
-    <published>2018-07-06T07:40:15.000Z</published>
-    <updated>2018-09-25T13:07:32.061Z</updated>
+    <title>股市观察日记180802</title>
+    <link href="https://github.com/JiamingXie/2018/08/02/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180802/"/>
+    <id>https://github.com/JiamingXie/2018/08/02/股市观察日记180802/</id>
+    <published>2018-08-02T08:34:32.000Z</published>
+    <updated>2018-10-03T14:37:23.186Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>基本知识</strong></p><ul><li><p>内外盘：</p><ul><li>外盘：买盘比较积极</li><li>内盘：抛盘比较积极</li></ul><p>卖单量一般比买单的量要大（除了一些涨得很多的股）</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvm301gnbnj205o01yt8p.jpg" alt=""></p></li><li><p>挂单的时候要有一些技巧，卖一挂的38.60，还是一单几百手的大单，那么就要挂38.59的，抢先交易。</p></li></ul><p><strong>个股</strong></p><ul><li><p>中航沈飞：比较明显的背离，该卖了。（股价创新高但是MACD下行）虽然涨不动了，但是也不太跌得下去。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvm31hxx9pj20n00su78f.jpg" alt=""></p></li><li><p>东方财富300059：</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvm32vara6j20nk0laq6a.jpg" alt=""></p><p>这只股很强，大盘下跌的时候逆势上扬。下一个回调的时候是买入时机，它是反弹的龙头股。</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>通常情况下，只要上涨放量回调缩量，上升趋势就能够得以延续；如果与之相反，回调放量上涨却缩量，就应该谨慎对待了。 </p><p>缩量上涨期间应该卖出股票锁定部分利润。 </p><p>上升期的后期的股价大幅下跌后往往会有反弹，这可能是更大更活跃卖盘将持续出现的一个迹象。 </p><p>在1的位置大盘见顶 </p><p>2的位置大盘见底 </p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvev05oxjj20r90an756.jpg" alt=""></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;strong&gt;基本知识&lt;/strong&gt;&lt;/p&gt;
+        &lt;p&gt;通常情况下，只要上涨放量回调缩量，上升趋势就能够得以延续；如果与之相反，回调放量上涨却缩量，就应该谨慎对待了。 &lt;/p&gt;
+&lt;p&gt;缩量上涨期间应该卖出股票锁定部分利润。 &lt;/p&gt;
+&lt;p&gt;上升期的后期的股价大幅下跌后往往会有反弹，这可能是更大更活跃卖盘将持续出现的一个迹象。 &lt;
+      
+    
+    </summary>
+    
+      <category term="股市观察日记" scheme="https://github.com/JiamingXie/categories/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0/"/>
+    
+    
+      <category term="Stock Analysis" scheme="https://github.com/JiamingXie/tags/Stock-Analysis/"/>
+    
+      <category term="Technical Analysis" scheme="https://github.com/JiamingXie/tags/Technical-Analysis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>股市观察日记180801</title>
+    <link href="https://github.com/JiamingXie/2018/08/01/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180801/"/>
+    <id>https://github.com/JiamingXie/2018/08/01/股市观察日记180801/</id>
+    <published>2018-08-01T08:15:20.000Z</published>
+    <updated>2018-10-03T14:34:12.978Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天的早盘走势和前天非常像 </p><p>两天很少会有一模一样的走势，所以尾盘会和之前的反着走，有一个加速下跌的过程. </p><p>顶部正式确认，开始回调，所以尾盘不是买入机会，要等机会。 </p><a id="more"></a><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvveqxamdyj20rt0e7wfq.jpg" alt=""></p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvver44hm7j20r90fkt9h.jpg" alt=""></p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvver9yoouj20rd0fiq3q.jpg" alt=""></p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvverezugxj20rn0e6my0.jpg" alt=""></p><p>果然不出所料，尾盘下跌。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天的早盘走势和前天非常像 &lt;/p&gt;
+&lt;p&gt;两天很少会有一模一样的走势，所以尾盘会和之前的反着走，有一个加速下跌的过程. &lt;/p&gt;
+&lt;p&gt;顶部正式确认，开始回调，所以尾盘不是买入机会，要等机会。 &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="股市观察日记" scheme="https://github.com/JiamingXie/categories/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0/"/>
+    
+    
+      <category term="Stock Analysis" scheme="https://github.com/JiamingXie/tags/Stock-Analysis/"/>
+    
+      <category term="Technical Analysis" scheme="https://github.com/JiamingXie/tags/Technical-Analysis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>股市观察日记180731</title>
+    <link href="https://github.com/JiamingXie/2018/07/31/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180731/"/>
+    <id>https://github.com/JiamingXie/2018/07/31/股市观察日记180731/</id>
+    <published>2018-07-31T08:25:29.000Z</published>
+    <updated>2018-10-03T14:29:31.736Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>大盘</strong></p><ul><li><p><strong>上证指数</strong> </p><p>差不多已经调整到位了，早上把昨天尾盘拉升的部分消化掉了，低点是进场机会。 </p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvveld1wv0j204y04aa9v.jpg" alt=""></p></li><li><p><strong>创业板</strong></p><p>反弹的意愿很强烈。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvelsyo2sj207808aa9z.jpg" alt=""></p></li></ul><a id="more"></a><p><strong>个股</strong></p><p>概念股 </p><p>低位没有筹码，换手率高 </p><p>没有业绩，MACD背离，必定跌破最低点 </p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvemrku5wj20y00fg75v.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;大盘&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;内外盘：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;外盘：买盘比较积极&lt;/li&gt;
-&lt;li&gt;内盘：抛盘比较积极&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;卖单量一般比买单的量要大（除了一些涨得很多的股）&lt;/p&gt;
-&lt;p&gt;&lt;img s
-      
-    
-    </summary>
-    
-      <category term="股市观察日记" scheme="https://github.com/JiamingXie/categories/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0/"/>
-    
-    
-      <category term="Stock Analysis" scheme="https://github.com/JiamingXie/tags/Stock-Analysis/"/>
-    
-      <category term="Technical Analysis" scheme="https://github.com/JiamingXie/tags/Technical-Analysis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>股市观察日记180704</title>
-    <link href="https://github.com/JiamingXie/2018/07/04/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180704/"/>
-    <id>https://github.com/JiamingXie/2018/07/04/股市观察日记180704/</id>
-    <published>2018-07-04T07:52:55.000Z</published>
-    <updated>2018-09-25T12:54:53.474Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>基本知识</strong></p><ul><li><p><strong>筹码</strong>表示成交的位置，在该价位成交的量越大，筹码图越高。 </p><p>筹码较小的位置是比较容易破位的点，需要多加注意。 </p><p>行业内龙头股之间可能会有非常强的相互作用。一支股票的破位很有可能导致另一只股票也破位（虽然从其他指标判断可能已经跌到底了） </p></li></ul><p><strong>一句话总结</strong></p><p>今天的股市大盘不太好，也没有热点。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;strong&gt;基本知识&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;筹码&lt;/strong&gt;表示成交的位置，在该价位成交的量越大，筹码图越高。 &lt;/p&gt;
-&lt;p&gt;筹码较小的位置是比较容易破位的点，需要多加注意。 &lt;/p&gt;
-&lt;p&gt;行业内龙头股之间可能会有非
-      
-    
-    </summary>
-    
-      <category term="股市观察日记" scheme="https://github.com/JiamingXie/categories/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0/"/>
-    
-    
-      <category term="Stock Analysis" scheme="https://github.com/JiamingXie/tags/Stock-Analysis/"/>
-    
-      <category term="Technical Analysis" scheme="https://github.com/JiamingXie/tags/Technical-Analysis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>股市观察日记180703</title>
-    <link href="https://github.com/JiamingXie/2018/07/03/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180703/"/>
-    <id>https://github.com/JiamingXie/2018/07/03/股市观察日记180703/</id>
-    <published>2018-07-03T07:38:10.000Z</published>
-    <updated>2018-09-26T15:55:06.430Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>基本知识</strong></p><ul><li><p>成交量很大但是价格变化不大的时候，说明跌不动了，有人接盘，是买入的信号。 </p><p>早上开盘半个小时，美的的成交量已经比前两天一整天的都多了，说明跌不动了。 </p></li><li><p>5分钟涨跌幅可以说明盘口的情况。</p></li><li><p><strong>洗盘</strong>：一般出现在股价V型底端，群众恐慌而大量抛售股票，洗掉一大堆不坚定的人。</p></li></ul><a id="more"></a><p><strong>盘面分析</strong></p><p><strong><em>上午</em></strong></p><ul><li><p>因为之前涨得比较多，所以现在大盘股在调整（下跌）</p></li><li><p>创业板块已经跌得差不多了，这几天行情还可以，在慢慢上升中，今天有望收红。</p></li><li><p>今天的领跌行业是民航、酿酒、家电，都是之前涨得比较多的行业。</p></li><li><p>创业板和大盘的走势非常相似，但是从大概6月20日开始，创业板开始上升，大盘还在下跌。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvm2ned8wpj215w0t8q54.jpg" alt=""></p><p>图为上证指数，从趋势线可以看出，差不多已经跌到底了（2722左右） </p><p>预计创业板会率先开始反弹，下午可以期待一下创业板的龙头股卫宁健康（300253） </p><p>在今天之前这只股的涨幅是 涨停 调整。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvm2or3i5jj20oc0i876z.jpg" alt=""></p><p>11:17分左右跟着指数跌了一下，但是量不大，之后开始拉升，下午有希望冲一下【最后没冲上去】</p></li></ul><p><strong><em>下午</em></strong></p><ul><li><p>领跌：民航、酿酒、珠宝 </p><p>券商信托、保险上拉，银行不尴不尬</p><p>金融、非银金融： 中信证券、工商银行、建设银行、招商银行、交通银行、浦发银行拉升比较明显 </p><p>传媒板块拉升：元隆雅图、金逸影视、北京文化涨停。其他传媒股也有比较大的拉升</p></li><li><p>大盘呈现V型反弹 </p><p>没有跌破底，且与MACD线出现背离，显示见底的信号，若之后破底的话不好说。白马股补跌严重。</p><p>创业板下午爆发三波，最后半个小时有所回落，是爆发的尽头的信号。 </p><p>创业板指与大盘在下午有脱离的趋势。 </p></li><li><p>个股：</p><ul><li><p>601336 新华保险：保险是今天反弹最早的一个行业 </p><p>11：20分左右下跌也未跌破最低线，大机构更加倾向于上拉这些股票 。</p></li><li><p>002371 北方华创：叠加相同行业其他股票后可以发现其他股跟涨这只股票</p></li><li><p>600760 中航沈飞 </p><p>关注创业板的领涨股票（下午涨停的股票），基本上相关行业的其他股票都是跟涨这些领涨股。发现特征以后后续可以追涨。</p></li></ul></li><li><p>后续：</p><ul><li>后续的大盘还需要观望，若不跌破底，则有望反弹，虽然反弹力度并不会很大。</li><li>期待一下7月6日川普搞事会对股票造成多大影响。若出台文件比较符合人的预期，那么股市将不会继续下跌。</li><li>今天的行情整体上还是比较符合预期的。</li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;基本知识&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;成交量很大但是价格变化不大的时候，说明跌不动了，有人接盘，是买入的信号。 &lt;/p&gt;
-&lt;p&gt;早上开盘半个小时，美的的成交量已经比前两天一整天的都多了，说明跌不动了。 &lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;上证指数&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;差不多已经调整到位了，早上把昨天尾盘拉升的部分消化掉了，低点是进场机会。 &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/6a5a25c2gy1fvveld1wv0j204y04aa9v.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;5分钟涨跌幅可以说明盘口的情况。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;洗盘&lt;/strong&gt;：一般出现在股价V型底端，群众恐慌而大量抛售股票，洗掉一大堆不坚定的人。&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;创业板&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;反弹的意愿很强烈。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvelsyo2sj207808aa9z.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
     
@@ -539,18 +569,22 @@
   </entry>
   
   <entry>
-    <title>股市观察日记180702</title>
-    <link href="https://github.com/JiamingXie/2018/07/02/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180702/"/>
-    <id>https://github.com/JiamingXie/2018/07/02/股市观察日记180702/</id>
-    <published>2018-07-02T07:40:35.000Z</published>
-    <updated>2018-09-26T15:55:12.859Z</updated>
+    <title>股市观察日记180726</title>
+    <link href="https://github.com/JiamingXie/2018/07/26/%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180726/"/>
+    <id>https://github.com/JiamingXie/2018/07/26/股市观察日记180726/</id>
+    <published>2018-07-26T08:19:47.000Z</published>
+    <updated>2018-10-03T14:24:35.494Z</updated>
     
-    <content type="html"><![CDATA[<p>模拟交易的第一天，暴跌……可能是上天的安排……</p><p>但是股票交易员的任务就是把规定量的股票交易完，所以减少损失很重要。</p><a id="more"></a><p><strong>基本知识</strong></p><ul><li><p>9点15到9点25集合竞价，20分以后禁止撤单，所以一般只看20分以后的单子即可</p></li><li><p>应该关注的指标：</p><ul><li><p><strong>期指</strong>：一般期货指数会比大盘要快一点，因为不需要实物交易，两者走势一般相同</p></li><li><p><strong>个股</strong>：</p><ul><li>看行业的走势</li><li>看大盘的走势</li><li>看行业龙头的走势</li><li>本身在前两天的顶和底</li></ul></li><li><p><strong>交易量</strong>：看交易量判断是否是好的买入或卖出时机。如果之前有大量的卖出交易，而此刻的卖出交易量小于之前的量，说明可能还没有见底；如果此刻卖出量是最大的，那么是比较好的进场时机。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvkwci1y5kj20e00k3jto.jpg" alt=""></p><p>图为美的(000333)，2点左右的时候卖出量达到最高，是比较好的买入时机，后续有一个小的反弹。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvkwcy96t0j20ac0iujt3.jpg" alt=""></p><p>图为工行（601398）</p></li><li><p><strong>反弹</strong>：一般一次反弹回三分之一到二分之一是比较强劲的，BOLL线收拢后一般会有一次比较大的反弹。</p></li><li><p><strong>背离</strong>：如果股价与其他指标（如MACD线，分时DDX）出现背离，即一个顶点趋势与另一个顶点趋势相反，那么可以预测见底或者见顶，一般两到三个为信号。 </p><p>*分时DDX表示大单的交易数量</p></li><li><p><strong>日内操作t+0</strong>：（只在有仓位时操作）</p><ul><li>做t：当天看好某只股票，在开盘时买入，收盘时卖出，可以保持仓位不变；看跌某只股票，在开盘时卖出，收盘时买入。</li><li>倒t：当天若看走眼了要迅速割肉离场，以防损失扩大。</li></ul></li></ul></li></ul><p><strong>中报预披露早的股票</strong></p><p>000818 、002240 、002462 、002565 、300001 、603199 </p><p>中报预披露时间比较早，大盘跌的情况下这6只股票均上涨 </p><p>比较明显的特征是：集中竞价的时候大家都涨停，然后撤单，最后都是高开（相比前一天） </p><p><strong>大盘概览</strong></p><p>上证指数跌至2775.56，不会是本周的最低值。</p><p>所有行业全线收跌，形势较好的有酿酒行业、医疗行业（跌得比较少） 。</p><p>跌得最严重的行业是保险、钢铁、煤炭、券商银行等 。</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>大盘</strong></p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvveev0vi6j202i06dgld.jpg" alt=""></p><p>创业板只欠一跌 ，预计会拉一根比较长的下影线，最低点出现在上午。</p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvefbl8obj21310ag3yx.jpg" alt=""></p><p>看期指，IF（沪深300）创下最低点但是IC（中证500）已经止跌了，说明会优先弹起。</p><p>今天的大盘弱震荡收盘，预计明天也不会太强，向上微微收阳。</p><a id="more"></a><p><strong>个股</strong></p><ul><li><p>300144 </p><p>今天会拉一根下影线收在5日均线上，洗盘，让昨天没有跑掉的人今天跑掉。如果没有拉出下影线走势就非常不健康了，可能要跌到20日均线位置。 </p><p>前天下拉，踩五日线，昨天上攻失败，今天往下再踩一下，确认。之后向上突破。 </p><p><img src="http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvehphhlzj20qh0cnt9a.jpg" alt=""></p></li></ul>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;模拟交易的第一天，暴跌……可能是上天的安排……&lt;/p&gt;
-&lt;p&gt;但是股票交易员的任务就是把规定量的股票交易完，所以减少损失很重要。&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;大盘&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/6a5a25c2gy1fvveev0vi6j202i06dgld.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;创业板只欠一跌 ，预计会拉一根比较长的下影线，最低点出现在上午。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/6a5a25c2gy1fvvefbl8obj21310ag3yx.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;看期指，IF（沪深300）创下最低点但是IC（中证500）已经止跌了，说明会优先弹起。&lt;/p&gt;
+&lt;p&gt;今天的大盘弱震荡收盘，预计明天也不会太强，向上微微收阳。&lt;/p&gt;
     
     </summary>
     

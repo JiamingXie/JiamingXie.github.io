@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Operators (Advanced) in Java - Compound Assignment, Increment/Decrement, Operator Precedence]]></title>
-    <url>%2FJiamingXie.github.io%2F2018%2F09%2F29%2FOperators%20(Advanced)%20in%20Java%20-%20Compound%20Assignment%2C%20Increment%3ADecrement%2C%20Operator%20Precedence%2F</url>
-    <content type="text"><![CDATA[Control Statement Series Part $1$Operators (Advanced) in Java Compound assignment operators +=, -=, *=, /=, %= It is just the combination of operators and assignment operators. s = s+2 → s += 2 n1 = n1 * n2 → n1 *= n2 … Increment/decrement operators ++ and – If you want to increase by one or decrease by one, then you use “++” or “–” n += 1 → n++ n++ has assigned new value to n. 12345678int N1,N2;N1=9;System.out.printf("%d\n",N1++);//This statement will first print N1, and then add one to it. Thus, it will show the original value "9".System.out.printf("%d\n\n",N1); //Then in this line, 1 is added up to nine, so it will print 10N2=9;System.out.printf("%d\n",++N2);//before printf is executed, N2 will be added up to 1, so it will print 10System.out.printf("%d\n\n",N2);//This line will still print 10 The pre and post ++/– will make the result slightly different. 12345678int count, loop;count=9;loop=++count;//Then loop = 10, count=10count=9;loop= count++;//Then loop=9, count=10 Try the following program by yourself: 123456789101112int loop=8, count=15,Num;Num= +loop++;//The old value of loop is assigned to NumSystem.out.printf("Num=%d, loop=%d\n", Num, loop);//num=8,loop=9Num= ++Num;System.out.printf("Num=%d, loop=%d\n", Num, loop);//num=9, loop=9Num=count++ + loop;System.out.printf("Num=%d, loop=%d\n", Num, loop);//num=24=15(old count)+9 , count=16, loop = 9Num= --count+ --loop;System.out.printf("Num=%d, loop=%d\n", Num, loop);//num=15+8=23, count=15, loop = 8Num= loop + -Num;System.out.printf("Num=%d, loop=%d\n", Num, loop);//num= 8-23=-15 Operator precedence Plays role in mix of operators in a statement Precedence Rule applies for different operators Associative Rule applies for same operators Control Statements in Java if, if..else switch ?: while,do .. while, for loops]]></content>
+    <title><![CDATA[股市观察日记180724]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F10%2F03%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180724%2F</url>
+    <content type="text"><![CDATA[大盘 大盘连涨3天，第一天是金融股涨的，第二天是金融和基建涨的，第三天是基建涨的。 保险、券商优先开始回调。 到34.14左右量都放出来，其实跌得差不多了。 明日走势预测 不会马上下跌，可能要先横一下然后再下跌。 个股 东方财富依旧很强，最多往回踩一下补上缺口，之后就会上涨。 成都路桥，连板四天，之后可以挂单排队，只要开板买进，之后看到7.3+抛出 换手率日渐升高的妖股要非常小心，不可以买入 前几天因为资金流出一直在跌的美的、格力、五粮液、贵州茅台等白马股开始有资金流入上涨。 从前一天的情况可以看出一二，尾盘放量拉升了。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Control Statement Series]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F09%2F29%2FControl%20Statement%20Series%2F</url>
+    <content type="text"><![CDATA[Operators (Advanced) in Java Compound assignment operators +=, -=, *=, /=, %= It is just the combination of operators and assignment operators. s = s+2 → s += 2 n1 = n1 * n2 → n1 *= n2 … Increment/decrement operators ++ and – If you want to increase by one or decrease by one, then you use “++” or “–” n += 1 → n++ n++ has assigned new value to n. 12345678int N1,N2;N1=9;System.out.printf("%d\n",N1++);//This statement will first print N1, and then add one to it. Thus, it will show the original value "9".System.out.printf("%d\n\n",N1); //Then in this line, 1 is added up to nine, so it will print 10N2=9;System.out.printf("%d\n",++N2);//before printf is executed, N2 will be added up to 1, so it will print 10System.out.printf("%d\n\n",N2);//This line will still print 10 The pre and post ++/– will make the result slightly different. 12345678int count, loop;count=9;loop=++count;//Then loop = 10, count=10count=9;loop= count++;//Then loop=9, count=10 Try the following program by yourself: 123456789101112int loop=8, count=15,Num;Num= +loop++;//The old value of loop is assigned to NumSystem.out.printf("Num=%d, loop=%d\n", Num, loop);//num=8,loop=9Num= ++Num;System.out.printf("Num=%d, loop=%d\n", Num, loop);//num=9, loop=9Num=count++ + loop;System.out.printf("Num=%d, loop=%d\n", Num, loop);//num=24=15(old count)+9 , count=16, loop = 9Num= --count+ --loop;System.out.printf("Num=%d, loop=%d\n", Num, loop);//num=15+8=23, count=15, loop = 8Num= loop + -Num;System.out.printf("Num=%d, loop=%d\n", Num, loop);//num= 8-23=-15 Operator precedence Plays role in mix of operators in a statement Precedence Rule applies for different operators Associative Rule applies for same operators Control Statements in JavaComputer algorithm can be described by using three types of control statement. Sequence: executed one by one; Selection: executed depending on condition; if If…else if…else switch 1234567891011121314switch(ControllingExpression)&#123; case constant 1: statement; break; case constant 2: statement; break; case constant n: statement; break; default: statement;&#125; All “switch” statements can be converted to “if…else…” statements. Values for ‘case’: integer or character constants Cannot use expressions or ranges The order of the ‘case’ statements is unimportant The default clause may occur first Conditional operator: ? : Usually it is used for assignment. (expression1) ? expression2: expression3; If expression1 is true, expression2 will be evaluated, or expression3 will be evaluated. Repetition]]></content>
       <categories>
         <category>Java for Dummies</category>
       </categories>
@@ -106,6 +118,186 @@
       <tags>
         <tag>coding</tag>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180828]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F08%2F28%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180828%2F</url>
+    <content type="text"><![CDATA[今天是实习的最后一天了…… 一般1点40分左右的上突，都没什么好事儿。 相当于强上，然后就被套了，接下来的走势比较不乐观。 没有热点板块带动，上涨无力. 接下来这一波，本来应该期待的是拉一根阳线补上缺口，现在看照日内走势并不是非常乐观，可能要再缓一缓。 看一下中线的分析： 1号阴线本来是算是一个回踩但是后面又创了一个新低，说明1号阴线踩下的不是底部，2号到4号的底部比上1和3的差值已经缩小了，量能上看也大幅度缩小。 接下来是两根中阳线，如果本周能够收复3号阳线的失地，那么这根阴线就算消化完了，否则不乐观。 估计之后的走势会先上突补上缺口，补上缺口以后马上下来踩稳，不要低过阴线的开盘价，那么算回踩成功。 如果补上缺口还硬向上突，量能又不够，那么久很容易哐叽，下来更惨，可能支撑位都踩不住。 今天的大盘走势很有趣，下午1点40分上突的时候，预计接下来的走势不太乐观。 但是后面下跌到0.35%左右就止跌了，这个时候走势开始分化。这个时候要分析是谁往上走了，是谁往下走了。 宏观分析一下，这两天的涨势是谁带起来的，金融、止跌的白马、科技股。这几个板块这几天轮流上涨，现在有点乏力了。 让我们来看一下老大哥 之前在大盘还在跌的时候就开始上攻，让大盘有三天上涨的行情，之后开始横盘，这几天股市涨得比较多，但是铁建也没涨多少。 下午的时候需要有股站出来，这只股就是基建股。因为基建股差不多休息好了。 预计明天早上会上冲破一个前高到11块，靠惯性再上突一下然后收个小阳线。（其他个股和大盘明天还会下跌。） 如何看出老大哥要出马了？ 大盘下跌的时候，铁建反其道而行之向上突了一下，再结合之前的日级别走向和基建龙头的身份，这一上突就是在指明它就是铁建的大哥，后续果然强势上涨。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180823]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F08%2F23%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180823%2F</url>
+    <content type="text"><![CDATA[市场情绪低迷，交易量持续萎缩。（昨天创下熔断后最少交易量） 天量见天价，地量见地价。这个底不知道是不是真的底，但是貌似主力是认可中长线底部的。 由于交易量过小，下午这种急速拉升是非常容易的。稍微有一点儿资金就会涨，但是不容易跌，因为深度套牢的股民很多，没有人卖。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180816]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F08%2F16%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180816%2F</url>
+    <content type="text"><![CDATA[昨天指数跌得厉害但是交易量非常小，看得出是权重股带头砸指数。 一般这种情况下第二天都是低开走势。这与之前有几天的走势是非常相似的。 这个时候注意不可以再进货，反弹的时候反而是出货的机会。因为之后几天还会有跌势。 今天的低开是意料之中，但是没有想到低开这么多，接下来就是看2691这个点位能否撑住，若撑不住之后的走势则不乐观。 早上回踩1691的地方是确认，做空期货的空方需在此平仓，因为将迎来反弹。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180814]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F08%2F14%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180814%2F</url>
+    <content type="text"><![CDATA[今天大盘的走势算是比较不健康的。 早盘上突两次（而且非常急，图线非常陡峭），后面就开始一轮急跌。 下午一直横盘，横盘时间过长，需要选择方向。两点钟之前上突一次，让下跌更容易。 大概2点多的时候上突两次，看第三次动作，上突成功，说明基本企稳。 不过由于之前上突了一次，之后可能还会有反复。 本周接下来的行情很有可能会反复踩稳这个短期底部。 今天“作”出来的这几下上突还有待消化。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180810]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F08%2F10%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180810%2F</url>
+    <content type="text"><![CDATA[大盘 看IF的线，第一下上冲，第二下上冲的尖儿太明显了，第三下说明上冲的意愿还是挺明显的，下跌空间不会太大。 如果下去可以一跌到位，那么之后的形式会比较乐观。 如果不到位的话走势反而不健康。 三次上突失败，接下来就是下行两次，震荡踩实。 炒股只炒龙头股的原因 带动板块上升，个股不涨了它还会涨；带动板块回调，个股不跌了它还会继续跌。上下的浮动也随之增大。 看下图，板块涨的时候它不涨，后板块突第二下的时候意思了一下，但是DDX已经向下了，一直在出，接下来就看什么时候开始带头砸盘了。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180806]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F08%2F06%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180806%2F</url>
+    <content type="text"><![CDATA[今天的大盘依然是非常惨烈。已破两年半最低点，之后可能会到三年最低点。 基建、金融股走势还算健康，还有上涨空间。 其实这一波指数应该已经跌到位了，但是看白马股还完全没有停下来的意思。之后估计会有一段时间的杀跌和超跌。 8月底出年报，如果收益及增长符合预期，那么可以止跌。如果收益不符合预期，那么还要继续下跌。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180802]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F08%2F02%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180802%2F</url>
+    <content type="text"><![CDATA[通常情况下，只要上涨放量回调缩量，上升趋势就能够得以延续；如果与之相反，回调放量上涨却缩量，就应该谨慎对待了。 缩量上涨期间应该卖出股票锁定部分利润。 上升期的后期的股价大幅下跌后往往会有反弹，这可能是更大更活跃卖盘将持续出现的一个迹象。 在1的位置大盘见顶 2的位置大盘见底]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180801]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F08%2F01%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180801%2F</url>
+    <content type="text"><![CDATA[今天的早盘走势和前天非常像 两天很少会有一模一样的走势，所以尾盘会和之前的反着走，有一个加速下跌的过程. 顶部正式确认，开始回调，所以尾盘不是买入机会，要等机会。 果然不出所料，尾盘下跌。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180731]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F07%2F31%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180731%2F</url>
+    <content type="text"><![CDATA[大盘 上证指数 差不多已经调整到位了，早上把昨天尾盘拉升的部分消化掉了，低点是进场机会。 创业板 反弹的意愿很强烈。 个股 概念股 低位没有筹码，换手率高 没有业绩，MACD背离，必定跌破最低点]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180726]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F07%2F26%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180726%2F</url>
+    <content type="text"><![CDATA[大盘 创业板只欠一跌 ，预计会拉一根比较长的下影线，最低点出现在上午。 看期指，IF（沪深300）创下最低点但是IC（中证500）已经止跌了，说明会优先弹起。 今天的大盘弱震荡收盘，预计明天也不会太强，向上微微收阳。 个股 300144 今天会拉一根下影线收在5日均线上，洗盘，让昨天没有跑掉的人今天跑掉。如果没有拉出下影线走势就非常不健康了，可能要跌到20日均线位置。 前天下拉，踩五日线，昨天上攻失败，今天往下再踩一下，确认。之后向上突破。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180725]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F07%2F25%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180725%2F</url>
+    <content type="text"><![CDATA[今天的医疗股非常强势。 创业板，缺根儿阴线，之后反弹。 下面来比对两只涨势都非常不错的股票. 这只股一开始就拉上来将近7个点，后续有些许乏力 通策医疗的走势则更加健康，今天有希望涨停。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180723]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F07%2F23%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180723%2F</url>
+    <content type="text"><![CDATA[基本知识 如果一支股票的的卖盘很多但是卖盘很少，但是股价却不怎么下跌，则说明这支股票会上涨。 大盘&amp;个股 把成都银行拉了一个板，其他银行股跟着涨，拉动大盘上升，其他个股都没什么动静。 量在早上放出来了，换手率有25%（妖股一般都是早上放量） 这是一支比较典型的突破股。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180720]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F07%2F20%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180720%2F</url>
+    <content type="text"><![CDATA[大盘 今天的大盘以震荡为主，人民币跌破6.8。 今天的盘面非常少见，下午开始上拉金融股。 保险是龙头，新华保险是龙头里的龙头。保险是最早开始反弹的板块，日线级别也还有上升空间。 *如何看龙头股是否适合追涨？ 今天的领涨板块是软件、电子信息。 首先股票和大盘都得有上涨空间，【分时】其次是看到大盘、股票在无量回调的时候（下跌但是没有量），就说明可以买入了。 个股 东方财富 这支股票可以考虑逢低买入。 现在一直在横走震荡，形成了一个三角形，之后非常有可能向上突破。是创业板的领头股票。 上午才说要突破呢，下午就突破了。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180719]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F07%2F19%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180719%2F</url>
+    <content type="text"><![CDATA[大盘 今天的走势比较健康，早上涨了一下该跌就跌下去了，预计下午踩一下2768~2770点位，之后反弹。 之前几天一直在回调，把五天前的那根大阳线调整回去了，是比较好的买入时机。 下午13：20分左右，期货指数创了一个新低，但是指数没有创新低，这是一个底部信号。 个股 风华高科000636 这只股虽然是妖股，但是基本面不错。 有一个小的窗口，把窗口封上以后下跌到低点是买点。 前一天跌，消耗多方能量，今天早上多方能量耗尽（量放出来了但是股价变化不大），可以考虑大概到21.4的位置进场。 一心堂002727 这只股的走势比较理想 大盘跌，它也跟着跌，但是先于大盘弹起了。 买点的位置在32.92到33.09之间，10日线33左右，之后如果跟着大盘再跌一下就低点买进，否则就应该直接买进。 东方财富300059 创业板大跌的时候依旧非常强势，是有可能带领创业板反弹的龙头股，长线依旧看好。 600009上海机场 十日均线60.26，马上要到了；bias也下来了；MACD背离；是买入时机。 601888中国国旅 早上有两个卖点，长线可以布局，短线还需观察。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180718]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F07%2F18%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180718%2F</url>
+    <content type="text"><![CDATA[基本知识 期货交易： IF 沪深300 IH 上证50 IC 中证500 看好权重股但是不知道大盘走势的情况下可以做多上证50，做空沪深300 大盘 今天的大盘走势非常不健康，早上三次试图突破都失败了。下午的一次向上冲刺是诱多，之后就开始下跌（一般这种行情之后都是一个大阴），大概回调到昨天均线的位置。 调整结束后是买入时机。 预计大盘明天会继续下跌，今天早上的多头力量没有放干净，下跌位置大概在5天前开盘的位置2770左右，如果跌破的话非常不乐观，未跌破的话可以考虑抄底。 个股 北方华创 前两天形成双顶（短线），之后的走势应该会向下突破。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
       </tags>
   </entry>
   <entry>
