@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[股市观察日记180724]]></title>
-    <url>%2FJiamingXie.github.io%2F2018%2F10%2F03%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180724%2F</url>
-    <content type="text"><![CDATA[大盘 大盘连涨3天，第一天是金融股涨的，第二天是金融和基建涨的，第三天是基建涨的。 保险、券商优先开始回调。 到34.14左右量都放出来，其实跌得差不多了。 明日走势预测 不会马上下跌，可能要先横一下然后再下跌。 个股 东方财富依旧很强，最多往回踩一下补上缺口，之后就会上涨。 成都路桥，连板四天，之后可以挂单排队，只要开板买进，之后看到7.3+抛出 换手率日渐升高的妖股要非常小心，不可以买入 前几天因为资金流出一直在跌的美的、格力、五粮液、贵州茅台等白马股开始有资金流入上涨。 从前一天的情况可以看出一二，尾盘放量拉升了。]]></content>
-      <categories>
-        <category>股市观察日记</category>
-      </categories>
-      <tags>
-        <tag>Stock Analysis</tag>
-        <tag>Technical Analysis</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Control Statement Series]]></title>
     <url>%2FJiamingXie.github.io%2F2018%2F09%2F29%2FControl%20Statement%20Series%2F</url>
     <content type="text"><![CDATA[Operators (Advanced) in Java Compound assignment operators +=, -=, *=, /=, %= It is just the combination of operators and assignment operators. s = s+2 → s += 2 n1 = n1 * n2 → n1 *= n2 … Increment/decrement operators ++ and – If you want to increase by one or decrease by one, then you use “++” or “–” n += 1 → n++ n++ has assigned new value to n. 12345678int N1,N2;N1=9;System.out.printf("%d\n",N1++);//This statement will first print N1, and then add one to it. Thus, it will show the original value "9".System.out.printf("%d\n\n",N1); //Then in this line, 1 is added up to nine, so it will print 10N2=9;System.out.printf("%d\n",++N2);//before printf is executed, N2 will be added up to 1, so it will print 10System.out.printf("%d\n\n",N2);//This line will still print 10 The pre and post ++/– will make the result slightly different. 12345678int count, loop;count=9;loop=++count;//Then loop = 10, count=10count=9;loop= count++;//Then loop=9, count=10 Try the following program by yourself: 123456789101112int loop=8, count=15,Num;Num= +loop++;//The old value of loop is assigned to NumSystem.out.printf("Num=%d, loop=%d\n", Num, loop);//num=8,loop=9Num= ++Num;System.out.printf("Num=%d, loop=%d\n", Num, loop);//num=9, loop=9Num=count++ + loop;System.out.printf("Num=%d, loop=%d\n", Num, loop);//num=24=15(old count)+9 , count=16, loop = 9Num= --count+ --loop;System.out.printf("Num=%d, loop=%d\n", Num, loop);//num=15+8=23, count=15, loop = 8Num= loop + -Num;System.out.printf("Num=%d, loop=%d\n", Num, loop);//num= 8-23=-15 Operator precedence Plays role in mix of operators in a statement Precedence Rule applies for different operators Associative Rule applies for same operators Control Statements in JavaComputer algorithm can be described by using three types of control statement. Sequence: executed one by one; Selection: executed depending on condition; if If…else if…else switch 1234567891011121314switch(ControllingExpression)&#123; case constant 1: statement; break; case constant 2: statement; break; case constant n: statement; break; default: statement;&#125; All “switch” statements can be converted to “if…else…” statements. Values for ‘case’: integer or character constants Cannot use expressions or ranges The order of the ‘case’ statements is unimportant The default clause may occur first Conditional operator: ? : Usually it is used for assignment. (expression1) ? expression2: expression3; If expression1 is true, expression2 will be evaluated, or expression3 will be evaluated. Repetition]]></content>
@@ -244,6 +232,18 @@
     <title><![CDATA[股市观察日记180725]]></title>
     <url>%2FJiamingXie.github.io%2F2018%2F07%2F25%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180725%2F</url>
     <content type="text"><![CDATA[今天的医疗股非常强势。 创业板，缺根儿阴线，之后反弹。 下面来比对两只涨势都非常不错的股票. 这只股一开始就拉上来将近7个点，后续有些许乏力 通策医疗的走势则更加健康，今天有希望涨停。]]></content>
+      <categories>
+        <category>股市观察日记</category>
+      </categories>
+      <tags>
+        <tag>Stock Analysis</tag>
+        <tag>Technical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股市观察日记180724]]></title>
+    <url>%2FJiamingXie.github.io%2F2018%2F07%2F24%2F%E8%82%A1%E5%B8%82%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0180724%2F</url>
+    <content type="text"><![CDATA[大盘 大盘连涨3天，第一天是金融股涨的，第二天是金融和基建涨的，第三天是基建涨的。 保险、券商优先开始回调。 到34.14左右量都放出来，其实跌得差不多了。 明日走势预测 不会马上下跌，可能要先横一下然后再下跌。 个股 东方财富依旧很强，最多往回踩一下补上缺口，之后就会上涨。 成都路桥，连板四天，之后可以挂单排队，只要开板买进，之后看到7.3+抛出 换手率日渐升高的妖股要非常小心，不可以买入 前几天因为资金流出一直在跌的美的、格力、五粮液、贵州茅台等白马股开始有资金流入上涨。 从前一天的情况可以看出一二，尾盘放量拉升了。]]></content>
       <categories>
         <category>股市观察日记</category>
       </categories>
