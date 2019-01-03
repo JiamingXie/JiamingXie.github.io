@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/JiamingXie.github.io/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/JiamingXie.github.io/lib/pace/pace-theme-big-counter.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/JiamingXie.github.io/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/JiamingXie.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/JiamingXie.github.io/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/JiamingXie.github.io/images/apple-touch-icon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/JiamingXie.github.io/images/favicon-32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/JiamingXie.github.io/images/favicon-16x16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/JiamingXie.github.io/images/favicon.ico?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="coding,Java," />
+
+
+
+
+
+  <link rel="alternate" href="/JiamingXie.github.io/atom.xml" title="Mentality" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="Exception Handling (Advanced)Java bundles the information regarding that exception in a class which are derived from Throwable, it then creates that object and throws to the offending methods which ca">
+<meta name="keywords" content="coding,Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Input&#x2F;Output &amp; Collection">
+<meta property="og:url" content="https://github.com/JiamingXie/2018/11/27/Input:Output & Collection/index.html">
+<meta property="og:site_name" content="Mentality">
+<meta property="og:description" content="Exception Handling (Advanced)Java bundles the information regarding that exception in a class which are derived from Throwable, it then creates that object and throws to the offending methods which ca">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-12-04T11:43:37.357Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Input&#x2F;Output &amp; Collection">
+<meta name="twitter:description" content="Exception Handling (Advanced)Java bundles the information regarding that exception in a class which are derived from Throwable, it then creates that object and throws to the offending methods which ca">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/JiamingXie.github.io/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://github.com/JiamingXie/2018/11/27/Input:Output & Collection/"/>
+
+
+
+
+
+  <title>Input/Output & Collection | Mentality</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/JiamingXie.github.io/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mentality</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">精诚所至，金石为开</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/JiamingXie.github.io/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/JiamingXie.github.io/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/JiamingXie.github.io/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/JiamingXie.github.io/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/JiamingXie.github.io/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/JiamingXie/JiamingXie.github.io/2018/11/27/Input:Output & Collection/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiaming Xie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/JiamingXie.github.io/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mentality">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Input/Output & Collection</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-27T08:37:33+08:00">
+                2018-11-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/JiamingXie.github.io/categories/Java-for-Dummies/" itemprop="url" rel="index">
+                    <span itemprop="name">Java for Dummies</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/JiamingXie.github.io/2018/11/27/Input:Output & Collection/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/JiamingXie.github.io/2018/11/27/Input:Output & Collection/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Exception-Handling-Advanced"><a href="#Exception-Handling-Advanced" class="headerlink" title="Exception Handling (Advanced)"></a>Exception Handling (Advanced)</h1><p>Java bundles the information regarding that exception in a class which are derived from <strong>Throwable</strong>, it then creates that object and throws to the offending methods which caused it.</p>
+<p>Java allows ways to <strong>catch</strong> such exception object in your code to handle in graceful way or throw back to the method which called your method.</p>
+<p>If you don’t do exception handling, then you need to consider all the exception conditions. Use <code>try</code> and <code>catch</code> to design your program.</p>
+<p>All Java exceptions extends the class Throwable. Error and Exception are two subclasses of Throwable. </p>
+<p>Error: You rarely do anything with Error as they are internal java resource error</p>
+<p>Exception: You generally deal with Exception and its subclasses <code>RunTimeException</code> and <code>IOException</code>.</p>
+<ul>
+<li><p><code>RunTimeException</code> : Happens due to error in your code-array out of bounds, type mismatch etc.</p>
+</li>
+<li><p><code>IOException</code>: Out of your code. BAD URL or a file read.</p>
+</li>
+</ul>
+<p>All exceptions derived from <code>Error</code> and <code>RunTimeException</code> are called <u>unchecked exceptions</u>.</p>
+<p>All other exceptions like <code>IOException</code> are called <u>checked exceptions</u> and Java enforces you that you handle them in some way.</p>
+<hr>
+<p>Five keywords used in Java for exception:</p>
+<p>try: block for offending code</p>
+<p>catch: block to catch exception</p>
+<p>throw: to throw exception manually. Java throws system generated exception automatically.</p>
+<p>throws: use to describe a method which throws an exception out.</p>
+<p>finally: block executed after try with our without catch.</p>
+<hr>
+<p><strong>checked exception</strong>: Strictly enforced by java. If a method throws checked exception then, you could:</p>
+<ol>
+<li>Either catch the exception and handle in some way, or</li>
+<li>You can simply declare it using <strong>throws</strong> and let it pass through your method, or</li>
+<li>You can map it to your own exception class</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">method-type method-name(parameters) <span class="keyword">throws</span> exception-list&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> method1&#123;</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">    method2();</span><br><span class="line">&#125;<span class="keyword">catch</span>(Exception e)&#123;</span><br><span class="line">    </span><br><span class="line">&#125;&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">method2</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">    method3();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">method3</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> Exception();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getInput</span><span class="params">(Scanner in)</span> <span class="keyword">throws</span> NullPointerException</span>&#123;</span><br><span class="line">    <span class="keyword">int</span> userChoice=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(in==<span class="keyword">null</span>)&#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> NullPointerException(<span class="string">"Null Scanner"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="string">"Please enter a value between 1 and 5"</span>);</span><br><span class="line">    userChoice=integer.parseInt(in.next());</span><br><span class="line">    <span class="keyword">return</span> userChoice;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        getInput(inputReader);</span><br><span class="line">    &#125;<span class="keyword">catch</span>(NullPointerException e)&#123;</span><br><span class="line">        System.out.println(<span class="string">"Message:"</span> + e.getMessage());</span><br><span class="line">        System.out.println(<span class="string">"Stack Trace"</span>+ e.printStackTrace());</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>You can only throw only those exceptions which you have declared in the <code>throws</code> clause of method declaration or the subclass of that exception.</li>
+<li>If you cannot find a suitable exception class in the library, you can create your own exception.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//write your own exception</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyOutOfRangeException</span> <span class="keyword">extends</span> <span class="title">Exception</span></span>&#123;</span><br><span class="line">    MyOutOfRangeException(String message)&#123;</span><br><span class="line">        <span class="keyword">super</span>(message);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getInput</span><span class="params">(Scanner in)</span> <span class="keyword">throws</span> NullPointerException, MyOutOfRangeException</span>&#123;</span><br><span class="line">    <span class="keyword">int</span> userChoice=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(in==<span class="keyword">null</span>)&#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> NullPointerException(<span class="string">"Null Scanner"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="string">"Please enter a value between 1 and 5"</span>);</span><br><span class="line">    userChoice=integer.parseInt(in.next());</span><br><span class="line">    <span class="keyword">if</span>(userChoice&lt;<span class="number">1</span> || userChoice&gt;<span class="number">5</span>)&#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> MyOutOfRangeException(<span class="string">"Please enter a value between 1 and 5"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> userChoice;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Java-Input-Output"><a href="#Java-Input-Output" class="headerlink" title="Java Input/Output"></a>Java Input/Output</h1><p>A lot is done for us by the API: <code>java.lang.package</code>. It contains three predefined <code>public static stream</code> variables, <strong>in, out, and err.</strong></p>
+<p><strong>System.out</strong> and <strong>System.in</strong> refers to standard output(screen/console), and standard input(keyboard).</p>
+<p>File Class: import it from java.io</p>
+<p>Use this to work with the disk file in operating system. It has many useful methods which will allow you to work on a file.</p>
+<ul>
+<li>Find out if it exists using <code>exists</code> method</li>
+<li>Find out if you can read or write using <code>canRead</code> , <code>canWrite</code></li>
+<li>Delete the file using <code>delete</code></li>
+<li>Find the size using <code>length</code></li>
+<li>Find it’s full path with <code>getPath</code></li>
+</ul>
+<p>You typically use <strong>File</strong> class in conjuction with other classes.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">File myFile = <span class="keyword">new</span> File(fileName);</span><br><span class="line"><span class="keyword">if</span>(myFile.exists())&#123;</span><br><span class="line">    System.out.println(<span class="string">"File name is:"</span> + myFile.getName());</span><br><span class="line">    System.out.println(<span class="string">"File is: "</span>+ myFile.getAbsolutePath());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>You can use File class with Scanner just like you used System.in</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Scanner readInput;</span><br><span class="line"><span class="keyword">try</span>&#123;readInput = <span class="keyword">new</span> Scanner(<span class="keyword">new</span> File(fileName));</span><br><span class="line">   <span class="keyword">while</span>(readInput.hasNextLine())</span><br><span class="line">   &#123;System.out.println(readInput.nextLine());</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//start with most specific to most general exception</span></span><br><span class="line"><span class="keyword">catch</span>(FileNotFoundException e)&#123;</span><br><span class="line">    System.out.println(<span class="string">"File: "</span> +fileName + <span class="string">"not found"</span>);</span><br><span class="line">&#125;<span class="comment">//end catch</span></span><br><span class="line"><span class="keyword">catch</span>(IOException e)&#123;</span><br><span class="line">    System.out.println(<span class="string">"Error Reading from file: "</span>+fileName +e.getMessage());</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span>(Exception e)&#123;</span><br><span class="line">    System.out.println(e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>There are many choices for I/O in JAVA. Java and most other I/O are stream-based. A <strong>stream</strong> is really a connection to a <em>source</em> of information or to a <em>destination</em> of information.</p>
+<p>An input stream may be associated with a keyboard or a disk file, and an output stream may be associated with a screen or a disk file.</p>
+<p>A program can have <strong>multiple streams</strong>: console, disk files, keyboard, sockets, memory, strings</p>
+<p><strong>What do you do with stream?</strong> You first <strong>open</strong> the stream use the stream to read data sequentially, write or both, and then finally <strong>close</strong> them.</p>
+<p>There are two types of streams in Java:</p>
+<p>​    <strong>Byte</strong> streams to read/write binary data</p>
+<p>​    <strong>Character</strong> streams to read/write Unicode characters</p>
+<ul>
+<li><p><strong>Byte stream</strong>: There are two abstract classes on top: <strong>InputSteam</strong> and <strong>OutputStream</strong>. There are many concrete classes which implements the behavior to read and write.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//How big is the file?</span></span><br><span class="line">InputStream inStream;</span><br><span class="line">inStream = <span class="keyword">new</span> FileInputStream(args[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> total=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span>(inStream.read()!=-<span class="number">1</span>)</span><br><span class="line">    total++;</span><br><span class="line">System.out.println(total + <span class="string">"bytes"</span>);</span><br><span class="line">inStream.close();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>System.in</strong> , <strong>System.out</strong> and <strong>System.err</strong> are predefined byte stream.</p>
+</li>
+<li><p><strong>Character stream</strong>: There are two abstract classes on top: <strong>Reader</strong> and <strong>Writer</strong>. There are many concrete classes which implement the behavior to read and write.</p>
+</li>
+</ul>
+<hr>
+<p><strong>Text File I/O using Character Stream</strong>:</p>
+<p><strong>Output</strong>: Use <strong>PrintWriter</strong>, <strong>FileWriter</strong>(FileOutputStream)</p>
+<p><strong>Input</strong>: Use <strong>BufferedReader</strong>, <strong>FileReader</strong></p>
+<p>You will use sets two of classes for easier reading and writing.</p>
+<ul>
+<li><p><strong>Buffered</strong> Reading/Writing: In most system including Java most of the time, the input/output streams are buffered before it is physically written into the disk file.</p>
+<p>By doing this OS conserves the overhead, as accessing disk is inefficient compare with memory(RAM) access.</p>
+</li>
+<li><p><strong>Stream Names</strong>： Java needs to work with the <strong>OS</strong> while dealing with streams. [Your program connects to OS by JDK]</p>
+<p>Every file has two names: <strong>input final.txt</strong> is what OS uses while <strong>inputStream</strong> is what Java uses.</p>
+</li>
+</ul>
+<ul>
+<li><p>Use stream which can be used for Input e.g. FileReader</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FileReader fileReader = <span class="keyword">new</span> FileReader(<span class="string">"filename"</span>);</span><br><span class="line"><span class="comment">//input OS filename</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>“filename” name of OS file (store in your hard drive)</p>
+</li>
+<li><p>going forward your code will only use <strong>fileReader</strong></p>
+</li>
+<li><p><strong>FileReader</strong> provides a way to read an integer at a time.</p>
+</li>
+<li><p>If it goes to the last character of the text file, the xx.read() will be -1.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fint readInput= ileReader.read();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FileReader fileReader = <span class="keyword">new</span> FileReader(<span class="string">"input_final.txt"</span>);</span><br><span class="line"><span class="keyword">int</span> readInput;</span><br><span class="line"><span class="keyword">while</span>((readInput=fileReader.read())!=-<span class="number">1</span>)</span><br><span class="line">    System.out.println(<span class="string">"Byte: "</span>+readInput+<span class="string">"\tChar:"</span> (<span class="keyword">char</span>)readInput);<span class="comment">//Change byte to ASCII code</span></span><br></pre></td></tr></table></figure>
+<p>Reading from Input Stream: Using <strong>BufferedReader</strong></p>
+<p>Use .readLine to read a line into a String (.read() for single char)</p>
+<p>No methods to read numbers, so, use <strong>Tokenizer</strong> to parse String.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    FileReader fileReader = <span class="keyword">new</span> FileReader(<span class="string">"input_final.txt"</span>);</span><br><span class="line">    BufferedReader finallnStream = <span class="keyword">new</span> BufferedReader(fileReader);</span><br><span class="line">    String s;</span><br><span class="line">    <span class="keyword">while</span>((s=finallnStream.readLine())!=<span class="keyword">null</span>)&#123;</span><br><span class="line">        System.out.println(s);</span><br><span class="line">    &#125;</span><br><span class="line">    finallnStream.close; <span class="comment">//remember to close it</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(Exception e)&#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>Reading from console(System.in)</strong>: Console provides byte of stream so, reading from Console, i.e. System.in requires you to <u>read characters</u>. (one at a time).</p>
+<p>This will change the byte stream to character stream and read each individual character</p>
+<p><code>InputStreamReader cReader=new InputStreamReader(System.in)</code></p>
+<p>You need a BufferReader to read like tokens(individual unit)</p>
+<p><code>BufferdReader tokenReader = new BufferedReader(cReader)</code></p>
+<p>Read a line(token) : there are methods for word and char</p>
+<p><code>String getLine = tokenReader.readLine();</code></p>
+<p>You can parse numbers from these using parse methods of each type, i.e.</p>
+<p><code>int myInt=Integer.parseInt(getLine);</code></p>
+<p><strong>Writing to Console(System.out)</strong>: Good thing is System.out already defined to print numbers and strings.</p>
+<p>System.in should be used with Scanner, but System.out can be used individually.</p>
+<hr>
+<p><strong>Tokenizer</strong>: Most of the time, reading a line is not what you want. However, you want to extract individual elements from it. For that Java provides tokenizer concept.</p>
+<p>Use <code>StreamTokenizer</code> to read from a stream and <code>StringTokenizer</code> to extract the tokens from a string in your program.</p>
+<p>Steps in using <code>StreamTokenizer</code>:</p>
+<p>You need to first create a tokenizer and connect with <code>BufferedReader</code>. Then loop through to get first token, translate the token to your appropriate data and use it, and continue until there is no token left.</p>
+<p>When you call the tokenizer method <code>nextToken</code>, it returns a flag about the next token:</p>
+<p><strong>TT_EOF</strong>: indicates that the next token is the end of file</p>
+<p><strong>TT_EOL</strong>: indicates the next token is the end of the line</p>
+<p><strong>TT_WORD</strong>: indicates the next token is a word</p>
+<p><strong>TT_NUMBER</strong>: indicates the next token is a number</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">StreamTokenizer myTokenizer = <span class="keyword">new</span> StreamTokenizer(bufferedReader);</span><br><span class="line"><span class="comment">//start to get next token</span></span><br><span class="line">nextToken = myTokenizer.nextToken();<span class="comment">//it returns a flag previously mentioned</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(nextToken!=StreamTokenizer.TT_EOF)&#123;</span><br><span class="line">    <span class="keyword">if</span>(nextToken!=StreamTokenizer:TT_EOL &amp;&amp; nextToken == StreamTokenizer.TT_WORD)&#123;</span><br><span class="line">        strToken = myTokenizer.sval;<span class="comment">//used to parse the variable</span></span><br><span class="line">        System.out.println(<span class="string">"Found a string:"</span> + strToken);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(nextToken!=StreamTokenizer.TT_EOL &amp;&amp; nextToken == StreamTokenizer.TT_NUMBER)&#123;</span><br><span class="line">        numberToken=myTokenizer.nval;</span><br><span class="line">        System.out.println(<span class="string">"Found a number: "</span>+ numberToken);</span><br><span class="line">    &#125;</span><br><span class="line">    nextToken = myTokenizer.nextToken();<span class="comment">//keep on going to the next one</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Using <code>StringTokenizer</code>: StringTokenizer allows you to parse a string in different tokens. It has an easier way to specify delimiters - compared with <code>StreamTokenizer</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String getLine = <span class="string">"This is, \n a string. with four delimeters"</span>;</span><br><span class="line"><span class="comment">//create a tokenizer with multiple delimiters</span></span><br><span class="line">StringTokenizer parseWords = <span class="keyword">new</span> StringTokenizer(getLine,<span class="string">"\n.,"</span>);</span><br><span class="line"><span class="keyword">while</span>(parseWords.hasMoreTokens())&#123;</span><br><span class="line">    System.out.println(parseWords.nextToken());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>StringTokenizer can also be used with console <strong>System.in</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Scanner keyboard = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">String getUserInput = keyboard.nextLine();</span><br><span class="line"><span class="comment">//create a tokenizer with multiple delimiters</span></span><br><span class="line">StringTokenizer parseUserInput = <span class="keyword">new</span> StringTokenizer(getUserInput,<span class="string">"\n.,"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(parseUserInput.hasMoreTokens())&#123;</span><br><span class="line">    System.out.println(parseUserInput.nextToken());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>Output Using String</strong>: Similar to Input Stream. Here also we have two names: <code>outputStream</code> in the program and the physical file name used by OS: <code>output-final.txt</code></p>
+<p>You typically connect a text file to a stream for writing: </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">FileOutputStream txtStream = <span class="keyword">new</span> FileOutputStream(<span class="string">"f.txt"</span>);<span class="comment">//OS name</span></span><br><span class="line"></span><br><span class="line">PrintWriter textPrintStream = <span class="keyword">new</span> PritWriter(txtStream);</span><br></pre></td></tr></table></figure>
+<p>Use println, print, format, flush, close of PrintWriter</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">PrintWriter textPrintStream = <span class="keyword">null</span>;<span class="comment">//do this out of try and catch because you need to close it</span></span><br><span class="line">String outfileName = <span class="string">"output-final.txt"</span>;</span><br><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    textPrintStream = <span class="keyword">new</span> PrintWriter(<span class="keyword">new</span> FileOutputStream(outfileName));</span><br><span class="line">    textPrintStream.println(<span class="string">"This output will go to the file"</span> + outfileName);</span><br><span class="line">    textPrintStream.write(<span class="string">"This is Final Grade \n"</span>);</span><br><span class="line">&#125;<span class="keyword">catch</span>(FileNotFoundException e)&#123;</span><br><span class="line">    System.out.println(<span class="string">"Error opening the file"</span> + outfileName + <span class="string">"\n"</span> + e.getMessage());</span><br><span class="line">    System.exit(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line">textPrintStream.close();</span><br><span class="line">System.out.println(outfileName + <span class="string">"been written and closed."</span>);</span><br></pre></td></tr></table></figure>
+<h1 id="Collection-Generics"><a href="#Collection-Generics" class="headerlink" title="Collection/ Generics"></a>Collection/ Generics</h1><h2 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h2><p><strong>Java Data Structures:</strong> Java provides systematic way of organizing collections of data. </p>
+<p><strong>Array</strong>: An array is a collection of objects in Java.Array name is reference to the actual object itself. </p>
+<p><strong>Array of primitive data types:</strong> </p>
+<p><code>int [] myIntArray = new int[4]; //is array of 4 integer</code></p>
+<p><strong>Array of objects:</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Box [] myBoxArray = <span class="keyword">new</span> Box[<span class="number">10</span>];</span><br><span class="line"><span class="comment">// is array of 10 Box objects – Java objects</span></span><br><span class="line">myBoxArray[<span class="number">0</span>] = <span class="keyword">new</span> Box(<span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line">myBoxArray[<span class="number">1</span>] = <span class="keyword">new</span> Box(<span class="number">5</span> <span class="number">10</span>);</span><br><span class="line">myBoxArray[<span class="number">1</span>] = <span class="keyword">new</span> Box(“I am fancy”);</span><br><span class="line">myBoxArray[<span class="number">1</span>] = <span class="keyword">new</span> Box(<span class="number">20</span>, <span class="number">30</span>,“I am fat and fancy”); </span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>Java provides an <strong>Array</strong> class which provides static methods to manipulate the array-for both primitive and ref. </p>
+<ul>
+<li>sort(): for sorting </li>
+<li>binarySearch(): for efficient searching Java Arrays: </li>
+</ul>
+<p>Java Arrays:</p>
+<ul>
+<li>are type safe</li>
+<li>simple implementation</li>
+<li>easy to manipulate</li>
+<li>good to store collection of primitive and references </li>
+</ul>
+<p>However, they are not most efficient: </p>
+<ul>
+<li>Size is constant </li>
+<li>Inserting and deleting elements are costly </li>
+</ul>
+<p>Java provides even richer set of data structures to store <strong>collection</strong> of primitive data and references. </p>
+<p>For example <strong>ArrayList</strong> class:A program written to use ArralyList collection would look like this: </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ArrayList listOfValues = <span class="keyword">new</span> ArrayList(); listOfValues.add(<span class="string">"John"</span>); </span><br><span class="line">listOfValues.add(<span class="string">"Jack"</span>); </span><br><span class="line">listOfValues.add(<span class="string">"Jill"</span>); </span><br><span class="line">System.out.println(listOfValues); </span><br><span class="line">System.out.println(<span class="string">"3:"</span>+ listOfValues.get(<span class="number">2</span>));</span><br></pre></td></tr></table></figure>
+<p>It looks like array, however, it is much more flexible – as you notice <strong>the size grows dynamically.</strong> </p>
+<p>Java provides a unified architecture for representing and manipulating collections through <em>collections framework</em>, which contains the following: </p>
+<ul>
+<li><strong>Interfaces</strong>: Abstract data types that represent collections. </li>
+<li><strong>Implementations</strong>: Concrete implementations of the collection interfaces.</li>
+<li><strong>Algorithms</strong>: Methods that perform useful computation like; searching and sorting which work on all implementations of collection interface in a polymorphic way. </li>
+</ul>
+<p><strong>Benefits of Java Collection Framework</strong>: </p>
+<ul>
+<li>Reduces your programming effort </li>
+<li>Increases speed and quality of your program </li>
+<li>Allows interoperability among unrelated APIs </li>
+<li>Shorter learning curve</li>
+<li>Shorter design time for new APIs</li>
+<li>Fosters OOP by software reuse</li>
+</ul>
+<p><strong>Java Collection Interfaces</strong>: Primary means by which<br>collections are manipulated</p>
+<ul>
+<li>Collection: Just group of objects without any assumptions made about the order of the collection, or whether duplicates are allowed or not. </li>
+<li>Set: No duplicate elements are permitted and may not be ordered </li>
+<li>List: Ordered collection, duplicates are permitted </li>
+<li>Map: Key value pair. Each key can only map to one value, no ordering </li>
+<li>SortedSet: Elements are automatically sorted, either in their natural ordering or by a Comparator object</li>
+<li>SortedMap: Mappings are automatically sorted by key, either in their natural ordering or by a Comparator object </li>
+</ul>
+<p>Methods Implemented with Collection Interface acts on individual elements:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">public</span> Iterator <span class="title">iterator</span><span class="params">()</span></span>;</span><br><span class="line"><span class="keyword">public</span> Object[] toArray();</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">size</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">contains</span><span class="params">(Object o)</span></span>; </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">add</span><span class="params">(Object o)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">remove</span><span class="params">(Object elem)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object o)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>Methods Implemented with Collection Interface acts on bulk of elements:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">containsAll</span><span class="params">(Collection coll)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">addAll</span><span class="params">(Collection coll)</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">removeAll</span><span class="params">(Collection coll)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">retainAll</span><span class="params">(Collection coll)</span></span></span><br><span class="line"><span class="function"><span class="comment">//Removes from the collection all</span></span></span><br><span class="line"><span class="function"><span class="comment">//elements that are not elements of coll </span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span> <span class="comment">//Remove all elements from this collection</span></span></span><br></pre></td></tr></table></figure>
+<p>Java collection framework provides many Implementation (<strong>concrete</strong>) Classes, for example:</p>
+<ul>
+<li>ArrayList: Resizable-array implementation of the list interface.</li>
+<li>LinkedList: Doubly-linked list implementation of the list interface. Better if frequent insertion and deletion is needed. </li>
+<li>HashSet: Hash table implementation of the Set Interface. </li>
+<li>TreeSet: Tree implementation of of SortedSet Interface. </li>
+<li>HashMap: Hash map implementation of the Map interface. </li>
+<li>TreeMap: Tree implementation of SortedMap Interface </li>
+</ul>
+<p>Using Collections: <strong>List</strong> </p>
+<p>List is an <strong>ordered Collection</strong> which <strong>allows duplicate</strong> elements. Just like array, element index starts at 0.<br> <strong>List</strong> interface adds several methods for an ordered collection </p>
+<p>Implementation:<br><strong>ArrayList</strong>: a resizable-array implementation. Simple to use.  Good for frequent scanning, but, not for frequent add/delete </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">ArrayList listOfValues = <span class="keyword">new</span> ArrayList();</span><br><span class="line"><span class="comment">//or List listOfValues = new ArrayList(); </span></span><br><span class="line">listOfValues.add(<span class="string">"John"</span>); </span><br><span class="line">listOfValues.add(<span class="string">"Jack"</span>); </span><br><span class="line">listOfValues.add(<span class="string">"Jill"</span>); </span><br><span class="line">System.out.println(listOfValues);</span><br><span class="line"></span><br><span class="line">System.out.println(<span class="string">"3: "</span> + listOfValues.get(<span class="number">2</span>));</span><br><span class="line"></span><br><span class="line">listOfValues.add(<span class="keyword">new</span> NewBox(<span class="number">10</span>)); </span><br><span class="line">listOfValues.add(<span class="keyword">new</span> NewBox(<span class="number">20</span>)); </span><br><span class="line">listOfValues.add(<span class="keyword">new</span> NewBox(<span class="number">30</span>)); System.out.println(listOfValues);</span><br></pre></td></tr></table></figure>
+<p><strong>LinkedList</strong>: Uses a doubly-linked list for storage. Not good for frequent scanning, however, good for frequent add/delete </p>
+<p>LinkedList is a doubly linked list so you have more methods available as:</p>
+<p>getFirst(), getLast(), removeFirst(), removeLast()</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">LinkedList linkedListValues = <span class="keyword">new</span> LinkedList();</span><br><span class="line">lnkedListValues.addFirst(<span class="string">"John"</span>); linkedListValues.addLast(<span class="string">"Jill"</span>); linkedListValues.addFirst(<span class="string">"Jack"</span>); linkedListValues.add(<span class="string">"Kerry"</span>); linkedListValues.addLast(<span class="string">"Sarah"</span>);</span><br><span class="line"></span><br><span class="line">System.out.println(linkedListValues)</span><br></pre></td></tr></table></figure>
+<p><strong>Set</strong>: The Set interface extends the Collection interface.</p>
+<ul>
+<li>does not allow duplicates (contains no new methods) </li>
+<li>Two Set objects are equal, if they contain same elements. </li>
+<li>Null is a valid entry (only one null entry is allowed)</li>
+<li>Objects added to Set, must have <strong>equals()</strong> defined </li>
+</ul>
+<p><strong>SortedSet</strong>: Extends Set. Elements are ordered in a specific order. <em>Natural order</em> implemented by <em>Comparable interface</em>. Change ordering by using a <em>Comparator</em> object. </p>
+<p>Two general purpose implementation:</p>
+<p><strong>HashSet</strong>: Stores its elements in a hash table and is fast.</p>
+<p>Use it for duplicate free set. The objects stored in this set should implement hashCode() method-one is provided by Object may not be optimal. Objects are not physically sorted. </p>
+<p><strong>Hash Function</strong>: Provide unique integers for each object. <u>Each hash integer must map to the same object</u>, and if two objects are equal (using equals method) then they must return same integer. </p>
+<p><strong>TreeSet</strong>: Ordered set uses tree for storage. It allows elements to be added, or removed at any location by following an order.</p>
+<p>Implements Set, provides an ordered set (uses tree for storage). Add/remove from any location, ordering is preserved.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">add</span><span class="params">(Object obj)</span></span>; </span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">remove</span><span class="params">(Object obj)</span></span>; </span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">contains</span><span class="params">(Object obj)</span></span>; </span><br><span class="line"><span class="function">Iterator <span class="title">iterator</span><span class="params">()</span></span>;</span><br><span class="line">Object[] toArray();</span><br></pre></td></tr></table></figure>
+<p><strong>TreeSet</strong> allows you to defined your own sorting through an <strong>Comparator</strong> object passed during creation.</p>
+<hr>
+<p>Implement <strong>Comparable</strong> Interface: If you want to provide a natural ordering for your object. You must implement compareTo(Object o) method. This method should return a +ve, zero, -ve number if this object is less, equal or greater than the Object passed. </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">NewBox</span> <span class="keyword">implements</span> <span class="title">Comparable</span></span>&#123;</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Object o)</span> </span>&#123; <span class="comment">//compares area </span></span><br><span class="line">	<span class="keyword">int</span> area1 = ((NewBox)o).height * ((NewBox)o).width; </span><br><span class="line">     <span class="keyword">int</span> area2 = height * width; </span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> ( area1 &lt; area2 ) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"> <span class="keyword">else</span> <span class="keyword">if</span> ( area1 &gt; area2 ) <span class="keyword">return</span> -<span class="number">1</span>; </span><br><span class="line">     <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125; &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">NewBox box1 = <span class="keyword">new</span> NewBox(<span class="string">"New Box 3"</span>, <span class="number">10</span>, <span class="number">20</span>); </span><br><span class="line">NewBox box2 = <span class="keyword">new</span> NewBox(<span class="string">"New Box 4"</span>, <span class="number">20</span>, <span class="number">28</span>); </span><br><span class="line">NewBox box3 = <span class="keyword">new</span> NewBox(<span class="string">"New Box 2"</span>, <span class="number">20</span>, <span class="number">20</span>); </span><br><span class="line">NewBox box4 = <span class="keyword">new</span> NewBox(<span class="string">"New Box 1"</span>, <span class="number">25</span>, <span class="number">20</span>);</span><br><span class="line"></span><br><span class="line">NewBox[] lotsOfBoxes = <span class="keyword">new</span> NewBox[] &#123;box1, box2, box3, box4&#125;; <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; lotsOfBoxes.length; i++)</span><br><span class="line">	System.out.println(lotsOfBoxes[i].getBoxName());</span><br><span class="line"></span><br><span class="line">Arrays.sort(lotsOfBoxes); <span class="comment">//sort natually - provided by the object </span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; lotsOfBoxes.length; i++)</span><br><span class="line">	System.out.println(lotsOfBoxes[i].getBoxName() + <span class="string">" Area:"</span>+ lotsOfBoxes[i].getHeight() * lotsOfBoxes[i].getWidth());</span><br></pre></td></tr></table></figure>
+<p>However, you may need better sorting, like alphabetical, then implement <strong>Comparator</strong></p>
+<p>Using <strong>Comparator</strong> Interface: Implement this interface if you want to provide your own comparison.<br><strong>Comparator</strong> requires you to implement method: <strong>compare()</strong> and optionally <strong>equals()</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CompareBoxNames</span> <span class="keyword">implements</span> <span class="title">Comparator</span> </span>&#123; </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Object s1, Object s2)</span> </span>&#123; <span class="comment">//required </span></span><br><span class="line">	String str1 = ((NewBox)s1).getBoxName();</span><br><span class="line">	String str2 = ((NewBox)s2).getBoxName();</span><br><span class="line">	<span class="keyword">return</span> (str1.compareTo(str2)) ; &#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object s1, Object s2)</span> </span>&#123; <span class="comment">//optional </span></span><br><span class="line">    String str1 = ((NewBox)s1).getBoxName();</span><br><span class="line">	String str2 = ((NewBox)s2).getBoxName();</span><br><span class="line">	<span class="keyword">return</span> (str1.equalsIgnoreCase(str2));</span><br><span class="line">&#125; &#125;</span><br></pre></td></tr></table></figure>
+<p>Application:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">NewBox box1 = <span class="keyword">new</span> NewBox(<span class="string">"New Box 3"</span>, <span class="number">10</span>, <span class="number">20</span>); </span><br><span class="line">NewBox box2 = <span class="keyword">new</span> NewBox(<span class="string">"New Box 4"</span>, <span class="number">20</span>, <span class="number">28</span>); </span><br><span class="line">NewBox box3 = <span class="keyword">new</span> NewBox(<span class="string">"New Box 2"</span>, <span class="number">20</span>, <span class="number">20</span>); </span><br><span class="line">NewBox box4 = <span class="keyword">new</span> NewBox(<span class="string">"New Box 1"</span>, <span class="number">25</span>, <span class="number">20</span>);</span><br><span class="line"></span><br><span class="line">NewBox[] lotsOfBoxes = <span class="keyword">new</span> NewBox[] &#123;box1, box2, box3, box4&#125;; <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; lotsOfBoxes.length; i++)</span><br><span class="line">	System.out.println(lotsOfBoxes[i].getBoxName());</span><br><span class="line"></span><br><span class="line">Arrays.sort(lotsOfBoxes, <span class="keyword">new</span> CompareBoxNames()); </span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; lotsOfBoxes.length; i++)</span><br><span class="line">    System.out.println(lotsOfBoxes[i].getBoxName());</span><br></pre></td></tr></table></figure>
+<p>This can easily be used by other <strong>Collection</strong> objects as well:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Use with ArrayList</span></span><br><span class="line">NewBox box1 = <span class="keyword">new</span> NewBox(<span class="string">"New Box 3"</span>, <span class="number">10</span>, <span class="number">20</span>); </span><br><span class="line">NewBox box2 = <span class="keyword">new</span> NewBox(<span class="string">"New Box 4"</span>, <span class="number">20</span>, <span class="number">28</span>); </span><br><span class="line">NewBox box3 = <span class="keyword">new</span> NewBox(<span class="string">"New Box 2"</span>, <span class="number">20</span>, <span class="number">20</span>); </span><br><span class="line">NewBox box4 = <span class="keyword">new</span> NewBox(<span class="string">"New Box 1"</span>, <span class="number">25</span>, <span class="number">20</span>);</span><br><span class="line"></span><br><span class="line">ArrayList lotsOfBoxes = <span class="keyword">new</span> ArrayList(); lotsOfBoxes.add(box1); </span><br><span class="line">lotsOfBoxes.add(box2); </span><br><span class="line">lotsOfBoxes.add(box3); </span><br><span class="line">lotsOfBoxes.add(box4);</span><br><span class="line">System.out.println(<span class="string">"In the order of creation:\n"</span>); </span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; lotsOfBoxes.size(); i++) &#123; </span><br><span class="line">    NewBox nBox = (NewBox)lotsOfBoxes.get(i);</span><br><span class="line">    System.out.println(nBox.getBoxName()); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Extend to another collection:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Continued from previous code block</span></span><br><span class="line"><span class="comment">//sort natually - provided by the object </span></span><br><span class="line">System.out.println(<span class="string">"\nIn the order of natural sorting:\n"</span>);</span><br><span class="line">Collections.sort(lotsOfBoxes);<span class="comment">//sort by area</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; lotsOfBoxes.size(); i++) &#123;</span><br><span class="line">	NewBox nBox = (NewBox)lotsOfBoxes.get(i);</span><br><span class="line">	System.out.println(nBox.getBoxName() + <span class="string">" Area: "</span> + nBox.getHeight() * nBox.getWidth()); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">System.out.println(<span class="string">"\nIn the order of Comparator sorting Implementation:\n"</span>); </span><br><span class="line">Collections.sort(lotsOfBoxes,<span class="keyword">new</span> CompareBoxNames());<span class="comment">//sort by name</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; lotsOfBoxes.size(); i++) &#123;</span><br><span class="line">	NewBox nBox = (NewBox)lotsOfBoxes.get(i);</span><br><span class="line">	System.out.println(nBox.getBoxName() + <span class="string">" Area: "</span> + nBox.getHeight() * nBox.getWidth());</span><br></pre></td></tr></table></figure>
+<p><strong>Map Interface</strong>: Maps a key to the elements – instead of index </p>
+<p><strong>HashMap</strong>: Implements Map interface, uses hash to get unique key value.</p>
+<p><strong>SortedMap</strong> interface extends Map and maintains its keys in sorted order. </p>
+<p><strong>TreeMap</strong>: Implements SortedMap, uses tree for storage and traversing efficiently. </p>
+<p>Basic operations:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Object <span class="title">put</span><span class="params">(Object key, Object value)</span></span>; </span><br><span class="line"><span class="function">Object <span class="title">get</span><span class="params">(Object key)</span></span>;</span><br><span class="line"><span class="function">Object <span class="title">remove</span><span class="params">(Object key)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+<p><strong>TreeMap</strong>: TreeMap does not contain an iterator method. However, it contains Set <code>keySet()</code> method which is used to get the set of keys and then <u>iterate through it.</u> No ordering of the values, the tree is arranged according to he order of keys. </p>
+<p><strong>TreeSet</strong>: TreeSet is more specific than TreeMap. TreeSet values are compared with each other, so, make sure to only put those which can be compared. Guaranteed to keep the elements in ascending order or through <strong>Comparator</strong>. </p>
+<hr>
+<p><strong>Iterator</strong>: Collection interface defines an <strong>iterator</strong> method which returns an object implementing the <strong>Interator</strong> interface </p>
+<p><strong>Iterator</strong> is used to access elements of a collection, without exposing internal details. Order is not guaranteed </p>
+<p>Iterator Interface: Defines these methods </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasNext</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">public</span> Object <span class="title">next</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">remove</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<p>Using <strong>Iterator</strong>: You can use iterator with any collection class which implements Iterator interface</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">"\nUsing Iterator:\n"</span>); <span class="comment">//using</span></span><br><span class="line">Iterator it = lotsOfBoxes.iterator(); </span><br><span class="line"><span class="keyword">while</span>(it.hasNext()) &#123;</span><br><span class="line">	NewBox box = (NewBox)(it.next());</span><br><span class="line">	System.out.println(box.getBoxName()); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Generics"><a href="#Generics" class="headerlink" title="Generics"></a>Generics</h2><p>Enhanced <strong>for</strong> Loop: New syntax is more compact, and it is easier to use with collection:<br><strong>for</strong> (variable-type variable-name: range-of-values)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//enhanced for loop</span></span><br><span class="line"><span class="keyword">int</span> [] weeklyTemp = &#123;<span class="number">69</span>, <span class="number">70</span>, <span class="number">71</span>, <span class="number">68</span>, <span class="number">66</span>, <span class="number">71</span>, <span class="number">70</span>&#125;;</span><br><span class="line"><span class="comment">//instead of</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> day=<span class="number">0</span>; day &lt; weeklyTemp.length; day++)</span><br><span class="line">System.out.printf(<span class="string">"The temperature on day %d was %d\n"</span>, day+<span class="number">1</span>,</span><br><span class="line">weeklyTemp[day]);</span><br><span class="line">System.out.println();</span><br><span class="line"><span class="comment">//use this</span></span><br><span class="line"><span class="keyword">int</span> day=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> dayTemp : weeklyTemp)</span><br><span class="line">System.out.printf(<span class="string">"The temperature on day %d was %d\n"</span>, ++day, dayTemp); </span><br><span class="line">System.out.println();</span><br></pre></td></tr></table></figure>
+<p><strong>Introducing Generics</strong>: Generic allows generalized Types. <em>Generics</em> abstract over Types and provides readability and type safety during compile time </p>
+<p>You can use generics with Methods, Classes and Interfaces as well </p>
+<p>Use the “<strong>&lt;&gt;</strong>“ characters to designate the type to be used </p>
+<p><strong>Generics Rationale</strong>: Suppose you needed to write a method to find out if an array contains a certain value (integer for example), then you would write like this:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">contains</span><span class="params">(Integer [] array, Integer intObject)</span> </span>&#123; </span><br><span class="line">    <span class="keyword">for</span> (Integer value : array) &#123;</span><br><span class="line">        <span class="keyword">if</span> (intObject.equals(value))</span><br><span class="line">          	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">false</span>; <span class="comment">//did not find it &#125;</span></span><br></pre></td></tr></table></figure>
+<p>You will write the same function again for other objects, for example String</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">contains</span><span class="params">(String [] array, String strObject)</span> </span>&#123; </span><br><span class="line">    <span class="keyword">for</span> (String value : array) &#123;</span><br><span class="line">		<span class="keyword">if</span> (strObject.equals(value)) </span><br><span class="line">        	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">false</span>; <span class="comment">//did not find it </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Now with <strong>generics</strong>, you need to write only one method, use an abstract type T:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function"><span class="keyword">boolean</span> <span class="title">contains</span><span class="params">(T[] array,T anyObject)</span> </span>&#123; <span class="keyword">for</span> (T value : array) &#123;</span><br><span class="line"><span class="keyword">if</span> (anyObject.equals(value)) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Integer[] array = <span class="keyword">new</span> Integer[<span class="number">5</span>]; </span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++) &#123; array[j] =j * j; &#125;</span><br><span class="line"><span class="keyword">if</span> (contains(array, <span class="keyword">new</span> Integer(<span class="number">16</span>))) &#123; System.out.println(<span class="string">"Found the value"</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">System.out.println(<span class="string">"Value not found"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">String[] strArray = <span class="keyword">new</span> String[<span class="number">5</span>]; </span><br><span class="line">String strTemp;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">strTemp = String.format(<span class="string">"This is string %d"</span>, i*i); </span><br><span class="line">    strArray[i] = strTemp;</span><br><span class="line">&#125;    </span><br><span class="line"><span class="keyword">if</span> (contains(strArray, <span class="keyword">new</span> String(<span class="string">"This is string 18"</span>))) &#123;</span><br><span class="line">    System.out.println(<span class="string">"Found the value"</span>); &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">	System.out.println(<span class="string">"Value not found"</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p><strong>Generics Types</strong>: All collection classes are re-written to accommodate Generics</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">List</span>&lt;<span class="title">E</span>&gt; </span>&#123; </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(E x)</span></span>;</span><br><span class="line"><span class="function">Iterator&lt;E&gt; <span class="title">iterator</span><span class="params">()</span></span>; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Iterator</span>&lt;<span class="title">E</span>&gt; </span>&#123; </span><br><span class="line">    <span class="function">E <span class="title">next</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">hasNext</span><span class="params">()</span></span>; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Map</span>&lt;<span class="title">K</span>,<span class="title">V</span>&gt; </span>&#123;</span><br><span class="line"><span class="function">V <span class="title">put</span><span class="params">(K key,V Value)</span></span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>Generics</strong>:Allows compile time type safety. Here is ArrayList example. This is true for rest of the collections as well.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Before:</span></span><br><span class="line">ArrayList lotsOfBoxes = <span class="keyword">new</span> ArrayList(); lotsOfBoxes.add(box1); <span class="comment">//add more boxes....</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; lotsOfBoxes.size(); i++) &#123;</span><br><span class="line">NewBox nBox = (NewBox)lotsOfBoxes.get(i); </span><br><span class="line">    System.out.println(nBox.getBoxName());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//After:</span></span><br><span class="line">ArrayList&lt;NewBox&gt; lotsOfBoxes = <span class="keyword">new</span> ArrayList&lt;NewBox&gt;(); </span><br><span class="line"><span class="comment">//add more boxes ..</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; lotsOfBoxes.size(); i++) &#123; </span><br><span class="line">    NewBox nBox = lotsOfBoxes.get(i);<span class="comment">//no casting</span></span><br><span class="line">System.out.println(nBox.getBoxName()); &#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/JiamingXie.github.io/tags/coding/" rel="tag"><i class="fa fa-tag"></i> coding</a>
+          
+            <a href="/JiamingXie.github.io/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/JiamingXie.github.io/2018/11/12/Advanced Object Oriented Programming/" rel="next" title="Advanced Object Oriented Programming">
+                <i class="fa fa-chevron-left"></i> Advanced Object Oriented Programming
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/JiamingXie.github.io/2018/12/04/Graphic Programming/" rel="prev" title="Graphic Programming">
+                Graphic Programming <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ba9bf633831a3a3" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/JiamingXie.github.io/images/avatar.jpg"
+                alt="Jiaming Xie" />
+            
+              <p class="site-author-name" itemprop="name">Jiaming Xie</p>
+              <p class="site-description motion-element" itemprop="description">谢·什么都想学·小铭</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/JiamingXie.github.io/archives/">
+              
+                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/JiamingXie.github.io/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/JiamingXie.github.io/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/JiamingXie.github.io/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/JiamingXie" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:xjm3225@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-google"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.linkedin.com/in/jiaming-xie-818491119" target="_blank" title="LinkedIn">
+                      
+                        <i class="fa fa-fw fa-linkedin"></i>LinkedIn</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://space.bilibili.com/15042837/#/" title="西瓜额啊" target="_blank">西瓜额啊</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Exception-Handling-Advanced"><span class="nav-number">1.</span> <span class="nav-text">Exception Handling (Advanced)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-Input-Output"><span class="nav-number">2.</span> <span class="nav-text">Java Input/Output</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Collection-Generics"><span class="nav-number">3.</span> <span class="nav-text">Collection/ Generics</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Collection"><span class="nav-number">3.1.</span> <span class="nav-text">Collection</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Generics"><span class="nav-number">3.2.</span> <span class="nav-text">Generics</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jiaming Xie</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/JiamingXie.github.io/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/JiamingXie.github.io/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/JiamingXie.github.io/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/JiamingXie.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/JiamingXie.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/JiamingXie.github.io/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/JiamingXie.github.io/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/JiamingXie.github.io/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/JiamingXie.github.io/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/JiamingXie.github.io/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/JiamingXie.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/JiamingXie.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/JiamingXie.github.io/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'DrGhCclhW3zDVdhr3scdji9s-gzGzoHsz',
+        appKey: 'VgAUnVftM66OIHl1ClIIzijV',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/JiamingXie.github.io/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+
+
+
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+</body>
+</html>

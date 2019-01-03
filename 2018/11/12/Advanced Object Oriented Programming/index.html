@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/JiamingXie.github.io/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/JiamingXie.github.io/lib/pace/pace-theme-big-counter.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/JiamingXie.github.io/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/JiamingXie.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/JiamingXie.github.io/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/JiamingXie.github.io/images/apple-touch-icon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/JiamingXie.github.io/images/favicon-32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/JiamingXie.github.io/images/favicon-16x16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/JiamingXie.github.io/images/favicon.ico?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="coding,Java," />
+
+
+
+
+
+  <link rel="alternate" href="/JiamingXie.github.io/atom.xml" title="Mentality" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="Encapsulation &amp;amp; Access ControlHiding the internal state of an object is known as data encapsulation. Field declaration can be preceded by different modifiers to provide different level of access t">
+<meta name="keywords" content="coding,Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Advanced Object Oriented Programming">
+<meta property="og:url" content="https://github.com/JiamingXie/2018/11/12/Advanced Object Oriented Programming/index.html">
+<meta property="og:site_name" content="Mentality">
+<meta property="og:description" content="Encapsulation &amp;amp; Access ControlHiding the internal state of an object is known as data encapsulation. Field declaration can be preceded by different modifiers to provide different level of access t">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-11-23T12:06:13.674Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Advanced Object Oriented Programming">
+<meta name="twitter:description" content="Encapsulation &amp;amp; Access ControlHiding the internal state of an object is known as data encapsulation. Field declaration can be preceded by different modifiers to provide different level of access t">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/JiamingXie.github.io/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://github.com/JiamingXie/2018/11/12/Advanced Object Oriented Programming/"/>
+
+
+
+
+
+  <title>Advanced Object Oriented Programming | Mentality</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/JiamingXie.github.io/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mentality</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">精诚所至，金石为开</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/JiamingXie.github.io/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/JiamingXie.github.io/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/JiamingXie.github.io/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/JiamingXie.github.io/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/JiamingXie.github.io/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/JiamingXie/JiamingXie.github.io/2018/11/12/Advanced Object Oriented Programming/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiaming Xie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/JiamingXie.github.io/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mentality">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Advanced Object Oriented Programming</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-12T21:38:11+08:00">
+                2018-11-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/JiamingXie.github.io/categories/Java-for-Dummies/" itemprop="url" rel="index">
+                    <span itemprop="name">Java for Dummies</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/JiamingXie.github.io/2018/11/12/Advanced Object Oriented Programming/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/JiamingXie.github.io/2018/11/12/Advanced Object Oriented Programming/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Encapsulation-amp-Access-Control"><a href="#Encapsulation-amp-Access-Control" class="headerlink" title="Encapsulation &amp; Access Control"></a>Encapsulation &amp; Access Control</h1><p>Hiding the internal state of an object is known as <em>data encapsulation</em>.</p>
+<p>Field declaration can be preceded by different modifiers to provide different level of access to that field:</p>
+<ul>
+<li>Access control modifiers (public, private, protected and default/package)</li>
+<li>Static</li>
+<li>Final</li>
+</ul>
+<p>Access modifiers can be applied to field, method and even class</p>
+<ul>
+<li>Access Modifier: You can completely encapsulate a member (field or method) by using the <em>private</em> keyword. You can achieve a lesser degree of encapsulation by using the access modifiers <em>protected</em> or <em>public</em>.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Box</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Box</span><span class="params">()</span></span>&#123;&#125; <span class="comment">//everywhere class is accessible</span></span><br><span class="line">    <span class="keyword">int</span> hSize; <span class="comment">//default accessibility = package</span></span><br><span class="line">    <span class="keyword">int</span> vSize; <span class="comment">//also known as Package Friendly members</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">char</span> flChar; <span class="comment">//in subclasses as well, private to others [it is available to subclasses]</span></span><br><span class="line">    <span class="keyword">private</span> String name; <span class="comment">//accessible only in the class[not available to subclass]</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>static: There is only one copy of static variable exists to share among all objects of this class. That is why a static member can be accessed without an instance of a class. Also known as <strong>class variable</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Box</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">private</span> <span class="keyword">int</span> hSize;</span><br><span class="line">    <span class="comment">//I must use static method to get access to static variable</span></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">public</span> <span class="title">gethSize</span><span class="params">()</span></span>&#123;<span class="keyword">return</span> hSize;&#125;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">public</span> String name=<span class="string">"I am a box"</span>; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//outside world where the Box class is accessible</span></span><br><span class="line"><span class="keyword">int</span> horizontalSize = Box.gethSize();</span><br><span class="line">String boxName=Box.name;</span><br></pre></td></tr></table></figure>
+<p>You don’t need an object to get that variable. You just need the class.</p>
+</li>
+<li><p>final: Many times you need a variable whose value should not be changed.</p>
+<p>You can make:</p>
+<ul>
+<li>a reference</li>
+<li>a method</li>
+<li>a class</li>
+<li>a vairable</li>
+</ul>
+<p>a final.</p>
+<ul>
+<li><p>Initializing final variable: Usually the final variables are initialized right where it is declared, however, you can differ that for run time - <strong>blank-final</strong>.</p>
+<p>(you don’t need to assign the value when the variable is initialized.)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Box</span></span>&#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">int</span> hSize;</span><br><span class="line">    <span class="keyword">int</span> vSize;</span><br><span class="line">    </span><br><span class="line">    Box(<span class="keyword">int</span> h)&#123;</span><br><span class="line">        <span class="comment">//you want the user to decide what should be the value of the constant</span></span><br><span class="line">        hSize=h;</span><br><span class="line">        vSize=<span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SethSize</span><span class="params">(<span class="keyword">int</span> h)</span></span>&#123;</span><br><span class="line">        hSize=h;<span class="comment">//you cannot do this, because hSize has been set through the constructor.</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Final and <strong><u>reference</u></strong> types:</p>
+<p>If you make a reference as final then this reference can’t refer to any other references.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> Box defaultBox= <span class="keyword">new</span> Box();</span><br><span class="line">Box bigBox=<span class="keyword">new</span> Box(<span class="number">20</span>,<span class="number">30</span>);</span><br><span class="line"></span><br><span class="line">defaultBox=bigBox; <span class="comment">//error- defaultBox is final</span></span><br><span class="line">bigBox=defaultBox;</span><br><span class="line"></span><br><span class="line">defaultBox.vSize=<span class="number">20</span>;<span class="comment">// OK; box reference is final, not members</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Final <u><strong>method</strong></u> arguments: You can have a method arguments which are final. A final method cannot be overridden in subclasses.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setvSize</span><span class="params">(<span class="keyword">final</span> Box b)</span></span>&#123;</span><br><span class="line">    b=<span class="keyword">new</span> Box(<span class="number">5</span>);<span class="comment">// error- b is final</span></span><br><span class="line">    b.vSize=<span class="number">20</span>; <span class="comment">//fine, b is final, the member of b is not final</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Final class: A final class can no longer be in herited to create subclasses. All methods of a final class is implicitly final.</p>
+</li>
+<li><p><code>this</code> keyword: Java has a concept of referring to itself (same object). You use <code>this</code> keyword in same object to refer itself. You can use them for:</p>
+<ol>
+<li><p>Resolving name conflict where the field name and method arguments are same.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Box</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> hSize;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">sethSize</span><span class="params">(<span class="keyword">int</span> hSize)</span></span>&#123;</span><br><span class="line">        hSize=hSize; <span class="comment">//Error</span></span><br><span class="line">        <span class="keyword">this</span>.hSize=hSize;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To pass reference to the current object as a parameter to other methods</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Box</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> hSize;</span><br><span class="line">    Box(<span class="keyword">int</span> hSize)&#123;</span><br><span class="line">        Box(<span class="keyword">this</span>);<span class="comment">//call another constructor</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>Initializer in Jave: It is block of instructions which are performed right after the fields that are created and just beforet the constructors are called.</p>
+<p>This is confusing though, so <strong>a constructor is a better way</strong> to initialize fields.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Box</span></span>&#123;</span><br><span class="line">    <span class="comment">//you can initialize like this</span></span><br><span class="line">    <span class="keyword">int</span> h=<span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> w=<span class="number">20</span>;</span><br><span class="line">    String hC=<span class="string">"-"</span>;</span><br><span class="line">    String vC;</span><br><span class="line">    <span class="keyword">static</span> String boxName;</span><br><span class="line">    &#123;vC=<span class="string">"$"</span>;&#125;</span><br><span class="line">    <span class="comment">//static initializer</span></span><br><span class="line">    <span class="keyword">static</span> &#123;boxName= <span class="string">"Default Box"</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Method <em>overloading</em>: A class can have more than one method with the same name as long as they have different parameter list.</p>
+<p>Compiler calls the right method by matching the name and parameter lists.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">changeDimension</span><span class="params">(<span class="keyword">char</span> vChar)</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">changeDimension</span><span class="params">(<span class="keyword">char</span> vChar, <span class="keyword">int</span> vSize)</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>You can also overload constructors as well.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Demo:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> utility;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OOPBox</span></span>&#123;</span><br><span class="line">    <span class="comment">//blank-final</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">int</span> hSize;</span><br><span class="line">    <span class="keyword">int</span> vSize;</span><br><span class="line">    <span class="comment">//int height=10; //it can also be initialized in this way</span></span><br><span class="line">    <span class="comment">//int width=20;</span></span><br><span class="line">    String hChar=<span class="string">"*"</span>;</span><br><span class="line">    String vChar;</span><br><span class="line">    <span class="keyword">static</span> String boxName;</span><br><span class="line">    </span><br><span class="line">    &#123;</span><br><span class="line">        vChar=<span class="string">"%"</span>; <span class="comment">//you can also initialize the variable by putting it in the block.</span></span><br><span class="line">        <span class="comment">//should be put before the constructor</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        boxName=<span class="string">"I am an OOPBOX."</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    OOPBox(<span class="keyword">int</span> h)&#123;<span class="comment">//this is the constructor</span></span><br><span class="line">        hSize=h;</span><br><span class="line">        vSize=<span class="number">10</span>; <span class="comment">//default value</span></span><br><span class="line">        <span class="comment">//initializer</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sethSize</span><span class="params">(<span class="keyword">int</span> h)</span></span>&#123;</span><br><span class="line">        hSize=h; <span class="comment">//error. because it has been already assigned in OOPBox before</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">final</span> OOPBox defaultBox= <span class="keyword">new</span> OOPBox(<span class="number">10</span>);</span><br><span class="line">        <span class="comment">//set defaultBox as final</span></span><br><span class="line">        OOPBox bigBox = <span class="keyword">new</span> OOPBox(<span class="number">5</span>);</span><br><span class="line">        OOPBox smallBox;</span><br><span class="line">        smallBox = defaultBox;<span class="comment">//OK</span></span><br><span class="line">        defaultBox = smallBox; <span class="comment">//Error. defaultBox is final</span></span><br><span class="line">        defaultBox.vSize=<span class="number">20</span>; <span class="comment">//OK. coz vSize is not final</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Override and Overload</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Superclass</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> class <span class="title">Box</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">drawYourself</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//default</span></span><br><span class="line">        drawhLine(hSize,hString);</span><br><span class="line">        System.out.printf(<span class="string">"\n"</span>);</span><br><span class="line">        drawvLine(hSize,vSize,fillerStr,vStr);</span><br><span class="line">        drawhLine(hSize, hStr);</span><br><span class="line">        System.out.printf(<span class="string">"\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//subclass</span></span><br><span class="line">	<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FancyBox</span> <span class="keyword">extends</span> <span class="title">Box</span></span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">drawYourself</span><span class="params">(<span class="keyword">int</span> howBig)</span></span>&#123;</span><br><span class="line">            <span class="keyword">super</span>.sethSize(<span class="keyword">super</span>.gethSize()*howBig);</span><br><span class="line">            <span class="keyword">super</span>.setvSize(<span class="keyword">super</span>.getvSize()*howBig);</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">super</span>.drawYourself();</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//Override drawYourself</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> drawYourself&#123;</span><br><span class="line">            drawhLine(<span class="keyword">super</span>.gethSize(),<span class="keyword">super</span>.gethStr());</span><br><span class="line">            System.out.print(<span class="string">"\n"</span>);</span><br><span class="line">         drawvLine(<span class="keyword">super</span>.gethSize(),<span class="keyword">super</span>.gethSize(),<span class="keyword">super</span>.getFillerStr(),<span class="keyword">super</span>.getvStr());</span><br><span class="line">            drawHLine(<span class="keyword">super</span>.gethSize,<span class="keyword">super</span>.gethStr());</span><br><span class="line">            System.out.print(<span class="string">"\n"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//Overload - Same method name but different parameters</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FancyBox</span><span class="params">()</span></span>&#123;<span class="comment">//default constructor must be offered</span></span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FancyBox</span><span class="params">(<span class="keyword">int</span> hSize, <span class="keyword">int</span> vSize, String hStr, String vStr, String fillerStr)</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(hSize,vSize,hStr,vStr,fillerStr);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FancyBox</span><span class="params">(<span class="keyword">int</span> h,<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(h,v);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Inheritance"><a href="#Inheritance" class="headerlink" title="Inheritance"></a>Inheritance</h1><p>One of the advantage of OOP is code re-use</p>
+<p>Java allows multiple ways for you to re-use already developed and time tested class in your own code.</p>
+<ul>
+<li>By way of <strong>composition</strong>: Embed one class into another.</li>
+<li><p>Another way is through <strong>inheritance</strong>. Here one class inherits all the properties of another class.</p>
+</li>
+<li><p>Composition defines ‘<strong>has-a</strong>‘ relationship.</p>
+<ul>
+<li>When you add a reference to another class you are already using the composition.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Box</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> height;</span><br><span class="line">    String name;<span class="comment">//this class use string class</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Here Box ‘has-a’ String, so we are already using composition relationship.</p>
+</li>
+<li><p>Inheritance defines ‘<strong>is-a</strong>‘ relationship.</p>
+<ul>
+<li>Process of inheriting state and behavior from another class</li>
+<li>Every class in java has one and only one parent</li>
+<li>Only object class has no parent</li>
+<li>if you don’t derive a class from another, it is implicitly derived from java.lang.Object class</li>
+<li>You can have a chain of derivations</li>
+</ul>
+</li>
+</ul>
+<p>What is a <strong>Subclass</strong>？</p>
+<p>Sub-class can be thought of as a class which also contains(like in composition) the superclass.</p>
+<p>During the creation of Fancy Box, a Box of object needs to be created as well, and Box needs to be created first.</p>
+<p>Use keyword <code>extends</code> to derive one class from another.</p>
+<ul>
+<li>Inheritance is always public, there is no access modifier for it.</li>
+<li>You can access base class functionality by using <code>super</code> keyword.</li>
+<li>Derived class can call the base class constructors by using <code>super</code> keyword (it has to be first instruction.)</li>
+<li>You have to call base constructor which exists if the base class does not have an empty constructor.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Box</span></span>&#123;</span><br><span class="line"> 	<span class="function"><span class="keyword">public</span> <span class="title">Box</span><span class="params">()</span></span>&#123;&#125;;<span class="comment">//you must define this, or super(); will fail in subclass</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Box</span><span class="params">(<span class="keyword">int</span> hSize,...)</span></span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FancyBox</span> <span class="keyword">extends</span> <span class="title">Box</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">FancyBox</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();<span class="comment">//it calls Box()&#123;&#125;;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Abstract-Class"><a href="#Abstract-Class" class="headerlink" title="Abstract Class"></a>Abstract Class</h1><p>Abstraction: It is the modeling, representation of an element of the problem domain in a program.</p>
+<p>Abstraction is the process of identifying and grouping attributes and behavior of an entity.</p>
+<p>Allows architect to focus on <strong>important attributes</strong>.</p>
+<p><strong><u>Abstract method</u></strong>: Java allows you to declare an object without defining it first:</p>
+<p><code>Box b;</code></p>
+<p>Similarly java allows you to declare a method without really defining it - meaning without body</p>
+<p><code>public abstract void draw();//missing{}</code></p>
+<p><code>draw</code> is called abstract method.</p>
+<p><u><strong>Abstract class</strong></u>: A class which has at least one abstract method is called an abstract class.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">myBox</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getHeight</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> hHeight;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setHight</span><span class="params">(<span class="keyword">int</span> h)</span></span>&#123;</span><br><span class="line">        hHeight=h;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="comment">// we want this method to be implemented by a concrete class</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Abstract class provides an empty class, with empty behaviors and kind of enforce that this class can <strong><u>only be used for inheritance</u></strong> and <u>not for instantiating</u> any objects as this <u>object can’t do anything</u>.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Shape</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Shape</span><span class="params">()</span></span>&#123;&#125;;</span><br><span class="line">    <span class="function"><span class="keyword">abstract</span> <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">abstract</span> <span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Box</span> <span class="keyword">extends</span> <span class="title">Shape</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Box</span><span class="params">()</span></span>&#123;&#125;;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Complete."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span></span>&#123;<span class="keyword">return</span> name&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Shape myShape = <span class="keyword">new</span> Shape(); <span class="comment">// it is not allowed</span></span><br><span class="line">Shape yourShape = <span class="keyword">new</span> Box();<span class="comment">//this is allowed. </span></span><br><span class="line"><span class="comment">//You can assign the reference, but not create it.</span></span><br><span class="line"></span><br><span class="line">String strName=yourShape.getName();</span><br><span class="line">Box defaultBox = <span class="keyword">new</span> Box(); <span class="comment">//you can create Box class</span></span><br></pre></td></tr></table></figure>
+<h1 id="Interface"><a href="#Interface" class="headerlink" title="Interface"></a>Interface</h1><p>A Problem: At times during design you will run into a situation where you wish you could provide a uniform functionality across different classes, which may not be directly related by inheritance.</p>
+<p>Java does not allow inheritance from multiple classes, so they provide <strong>interface</strong> mechanism which comes very close to multiple inheritance.</p>
+<p>Interface is really a promise to outside world to guarantee a certain behavior by a class which will implement this interface, a contract.</p>
+<p>While there are differences, however, <strong>interface</strong> is very much look like <strong>abstract class</strong>.</p>
+<p>You declare an interface using a keyword <code>interface</code>, give it a name and its members. Interface can have three types of members:</p>
+<ul>
+<li>Constant fields</li>
+<li>Methods</li>
+<li>Nested classes and interfaces</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">IShape</span></span>&#123;<span class="comment">//put I here to say it is an interface</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span></span>; <span class="comment">//it contains method signatures without body</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setFillCharacter</span><span class="params">(String str)</span></span>;</span><br><span class="line">    <span class="comment">//all methods are abstract, so no need to specify abstract</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Interface can have only named constants, <code>public</code>, <code>static</code>, <code>final</code>. It can have <strong>only abstract methods</strong>, however all these modifiers are omitted by convention.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">IDog</span></span>&#123;<span class="comment">//implicitly abstract. can have a public/package/(default) modifier</span></span><br><span class="line">    <span class="keyword">int</span> LIFE_EXPECTANCY =<span class="number">15</span>;</span><br><span class="line">    <span class="keyword">int</span> MAX_SPEED =<span class="number">30</span>;<span class="comment">//implicitly public, void and final</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">fetch</span><span class="params">()</span></span>;<span class="comment">//methods are implicitly abstract and public</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">wagTail</span><span class="params">()</span></span>;<span class="comment">//they cannot be final or static</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>You cannot instantiate an interface</li>
+<li>interface is implemented by a class or extended by another interface</li>
+<li>a concrete class implements all the interfaces. <strong>Abstract class</strong> can implement part of the methods. Ultimately all methods need to be implemented in the hierarchy of derivation chain.</li>
+<li>Interface allows classes to implement certain behavior irrespective of their locations in the class hierarchy.</li>
+<li>One class can implement several interfaces, providing a way for multiple inheritance.</li>
+</ul>
+<p>A class implements an interface by providing concrete methods；</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">implements</span> <span class="title">IDog</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> String breed;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">fetch</span><span class="params">()</span></span>&#123;System.out.println(<span class="string">"Fetch"</span>);&#125;<span class="comment">//concrete methods</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">wagTail</span><span class="params">()</span></span>&#123;System.out.println(<span class="string">"Wag Tail"</span>);&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>If you want to <strong><u>implement multiple interface</u></strong>:</p>
+<p>You can write a concrete class which can extend one super class.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">implements</span> <span class="title">IDog</span>, <span class="title">IAnimal</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> String breed;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">walk</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Walk."</span>);&#125;<span class="comment">//Dog and Animal</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">fetch</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Fetch"</span>);&#125;<span class="comment">//Dog</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">wagTail</span><span class="params">()</span></span>&#123;System.out.println(<span class="string">"Wag tail"</span>);&#125;<span class="comment">//Dog</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Just like classes, <strong><u>interfaces can be inherited also</u></strong> and can have hierarchy, even though interface is not party of class hierarchy.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">IK9</span> <span class="keyword">extends</span> <span class="title">IDog</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> SERVICE_LIFE =<span class="number">5</span>;</span><br><span class="line">    <span class="keyword">int</span> TOP_SPEED=<span class="number">40</span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">attack</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">findPeople</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Interface Releases(how do you version it?): Once the interfaces are made public, any changes made in the interface itself will break the original contract.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">IDog</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> LIFE_EXPECTANCY =<span class="number">15</span>;</span><br><span class="line">    <span class="keyword">int</span> MAX_SPEED=<span class="number">30</span>;</span><br><span class="line">    <span class="comment">//methods are implicitly abstract and public</span></span><br><span class="line">    <span class="comment">//they can't be final or static</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">fetch</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">wagTail</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">wait</span><span class="params">()</span></span>;<span class="comment">//will break all callers using IDog before</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>You can always write a new interface by extending the old one. This will allow the old code work just fine, and whoever has knowledge of new interface will implement the newer version.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">INewDog</span> <span class="keyword">extends</span> <span class="title">IDog</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">wait</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>You cannot instantiate an object from an interface. When you define a reference variable of interface type, they must be assigned to <strong>an object of the class that implemented that interface</strong>.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IBox iP4 = <span class="keyword">new</span> IBox(); <span class="comment">//Error</span></span><br></pre></td></tr></table></figure>
+<p><code>instanceof</code> operator: Allows you to find out if a reference is a type of particular interface or a class.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">K9</span> <span class="keyword">extends</span> <span class="title">Dog</span> <span class="keyword">implements</span> <span class="title">INewDog</span>, <span class="title">IK9</span></span>&#123;...&#125;</span><br><span class="line">Dog myLab = <span class="keyword">new</span> K9();</span><br><span class="line"></span><br><span class="line"><span class="comment">//Then all these followings are going to be true:</span></span><br><span class="line">myLab instance of Dog</span><br><span class="line">myLab instance of K9</span><br><span class="line">myLab instance of INewDo</span><br><span class="line">myLab instance of IK9</span><br></pre></td></tr></table></figure>
+<p>The use of <code>instanceof</code> is not really recommended. You may be able to improve your design.</p>
+<p>Advantages of Interface:</p>
+<ul>
+<li>used for encapsulation/flexibilities</li>
+<li>Allows implementation changes without affecting the caller</li>
+<li>Unrelated classes can implement similar behavior</li>
+<li>Allows multiple inheritances</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/JiamingXie.github.io/tags/coding/" rel="tag"><i class="fa fa-tag"></i> coding</a>
+          
+            <a href="/JiamingXie.github.io/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/JiamingXie.github.io/2018/10/23/Class, Exceptions, Scope/" rel="next" title="Class, Exceptions, Scope">
+                <i class="fa fa-chevron-left"></i> Class, Exceptions, Scope
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/JiamingXie.github.io/2018/11/27/Input:Output & Collection/" rel="prev" title="Input/Output & Collection">
+                Input/Output & Collection <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ba9bf633831a3a3" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/JiamingXie.github.io/images/avatar.jpg"
+                alt="Jiaming Xie" />
+            
+              <p class="site-author-name" itemprop="name">Jiaming Xie</p>
+              <p class="site-description motion-element" itemprop="description">谢·什么都想学·小铭</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/JiamingXie.github.io/archives/">
+              
+                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/JiamingXie.github.io/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/JiamingXie.github.io/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/JiamingXie.github.io/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/JiamingXie" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:xjm3225@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-google"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.linkedin.com/in/jiaming-xie-818491119" target="_blank" title="LinkedIn">
+                      
+                        <i class="fa fa-fw fa-linkedin"></i>LinkedIn</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://space.bilibili.com/15042837/#/" title="西瓜额啊" target="_blank">西瓜额啊</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Encapsulation-amp-Access-Control"><span class="nav-number">1.</span> <span class="nav-text">Encapsulation &amp; Access Control</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Inheritance"><span class="nav-number">2.</span> <span class="nav-text">Inheritance</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Abstract-Class"><span class="nav-number">3.</span> <span class="nav-text">Abstract Class</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Interface"><span class="nav-number">4.</span> <span class="nav-text">Interface</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jiaming Xie</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/JiamingXie.github.io/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/JiamingXie.github.io/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/JiamingXie.github.io/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/JiamingXie.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/JiamingXie.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/JiamingXie.github.io/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/JiamingXie.github.io/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/JiamingXie.github.io/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/JiamingXie.github.io/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/JiamingXie.github.io/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/JiamingXie.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/JiamingXie.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/JiamingXie.github.io/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'DrGhCclhW3zDVdhr3scdji9s-gzGzoHsz',
+        appKey: 'VgAUnVftM66OIHl1ClIIzijV',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/JiamingXie.github.io/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+
+
+
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/JiamingXie.github.io/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/JiamingXie.github.io/lib/pace/pace-theme-big-counter.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/JiamingXie.github.io/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/JiamingXie.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/JiamingXie.github.io/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/JiamingXie.github.io/images/apple-touch-icon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/JiamingXie.github.io/images/favicon-32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/JiamingXie.github.io/images/favicon-16x16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/JiamingXie.github.io/images/favicon.ico?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="coding,Java," />
+
+
+
+
+
+  <link rel="alternate" href="/JiamingXie.github.io/atom.xml" title="Mentality" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="Introducing GUISo far our program has been console program. Which runs in a command window. It did not know how to:   Show or handle graphics Process mouse events Let user type in an window Provide a">
+<meta name="keywords" content="coding,Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Graphic Programming">
+<meta property="og:url" content="https://github.com/JiamingXie/2018/12/04/Graphic Programming/index.html">
+<meta property="og:site_name" content="Mentality">
+<meta property="og:description" content="Introducing GUISo far our program has been console program. Which runs in a command window. It did not know how to:   Show or handle graphics Process mouse events Let user type in an window Provide a">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-12-08T11:35:31.286Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Graphic Programming">
+<meta name="twitter:description" content="Introducing GUISo far our program has been console program. Which runs in a command window. It did not know how to:   Show or handle graphics Process mouse events Let user type in an window Provide a">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/JiamingXie.github.io/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://github.com/JiamingXie/2018/12/04/Graphic Programming/"/>
+
+
+
+
+
+  <title>Graphic Programming | Mentality</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/JiamingXie.github.io/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mentality</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">精诚所至，金石为开</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/JiamingXie.github.io/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/JiamingXie.github.io/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/JiamingXie.github.io/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/JiamingXie.github.io/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/JiamingXie.github.io/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/JiamingXie/JiamingXie.github.io/2018/12/04/Graphic Programming/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiaming Xie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/JiamingXie.github.io/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mentality">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Graphic Programming</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-04T08:23:48+08:00">
+                2018-12-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/JiamingXie.github.io/categories/Java-for-Dummies/" itemprop="url" rel="index">
+                    <span itemprop="name">Java for Dummies</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/JiamingXie.github.io/2018/12/04/Graphic Programming/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/JiamingXie.github.io/2018/12/04/Graphic Programming/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Introducing-GUI"><a href="#Introducing-GUI" class="headerlink" title="Introducing GUI"></a>Introducing GUI</h1><p>So far our program has been console program. Which runs in a command window. It did not know how to: </p>
+<ul>
+<li>Show or handle graphics</li>
+<li>Process mouse events</li>
+<li>Let user type in an window</li>
+<li>Provide a list box, or a drop down</li>
+<li>Give multiple choices with check boxes • Give single choice with radio buttons </li>
+</ul>
+<p>And many more using <u>Graphical User Interface</u> (GUI). It is about time. </p>
+<p>Java provides multiple different ways to build solid GUI application (desktop application and applets as well). </p>
+<p>One of the oldest way is by AWT (Abstract Window Toolkit).API Another way is using SwingAPI. </p>
+<hr>
+<p><strong>AWT (Advanced Window Toolkit)</strong>: is a java package which can be used in any Java program. </p>
+<p><code>import java.awt.*;</code></p>
+<p>It provides many classes to be used for different OS, or as applet in browser. Adequate for many applications. </p>
+<p>It uses controls defined by your OS: it uses the lowest common denominator for portability. </p>
+<p>It is lighter and faster. Good way to start learning GUI.</p>
+<hr>
+<p><strong>Swing</strong>: Similar concept as AWT. Newer than AWT. More controls to make richer GUI (JSlider, JColorChooser, JSpinner) </p>
+<p><code>import javax.swing.*;</code></p>
+<p>Many of the common controls are used in both: </p>
+<p>AWT </p>
+<p>Buttons Frames CheckBox Label </p>
+<p>Swing </p>
+<p>Jbuttons Jframes JCheckBox JLabel </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.awt.*;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestGraphics</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123; </span><br><span class="line">    <span class="comment">//A frame with "Title", "Minimize Bottom", "Maximize Bottom", "Close Bottom"</span></span><br><span class="line">    Frame newFrame = <span class="keyword">new</span> Frame(); </span><br><span class="line">    newFrame.setSize(<span class="number">550</span>, <span class="number">200</span>); </span><br><span class="line">    newFrame.setVisible(<span class="keyword">true</span>);</span><br><span class="line">&#125; &#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>Your application usually first displays something. So, you need a <strong>Frame</strong> or <strong>Dialog</strong> to display (e.g. text, image, input/output widgets – called <strong>components</strong>) You arrange these components using <strong>layout</strong>. </p>
+<p>All these components interact with each other to solve your programming needs.<br>They listen to each other, so, you need to attach <strong>listeners</strong> to these components. </p>
+<p>When an user interacts with these components an event is generated by OS and captured by listening components. </p>
+<p><strong>Container</strong>:A container holds and displays </p>
+<p><strong>Components</strong>. Examples of container include:  Panel,Window and Frame </p>
+<p><strong>Component</strong>: Components are widgets you use to get input/output from users. Examples of component include:  Checkbox, Label, Scrollbar, Menu,TextField </p>
+<p>*Remember that a <strong>Container</strong> is also a <strong>Component</strong>. This is a clever way to nest containers. </p>
+<p><strong>Frame</strong>: A frame is a subclass of Container class. It has a title bar and a border around. </p>
+<p>You can create multiple components and add to a container like Frame.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> Frame frame = <span class="keyword">new</span> Frame();</span><br><span class="line"><span class="keyword">final</span> TextField textField = <span class="keyword">new</span> TextField(<span class="string">"Hello World"</span>); frame.add(textField);</span><br><span class="line">frame.setSize(<span class="number">550</span>, <span class="number">200</span>);</span><br><span class="line">frame.setVisible(<span class="keyword">true</span>);</span><br></pre></td></tr></table></figure>
+<p>All <strong>container</strong> has common functionality – as they are derived from Component. </p>
+<p>Container provides <strong>event-handling</strong> methods. </p>
+<p>All containers have these <strong>functionalities</strong>: </p>
+<p>add(Component) </p>
+<p>remove(Component) </p>
+<p>getComponents() </p>
+<p>setLayout(LayoutManager) </p>
+<p>getLayout() </p>
+<p><strong>Layout Manager</strong>: Use a layout manager to arrange components inside a Container.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Frame content = <span class="keyword">new</span> Frame(<span class="string">"This is an introduction to graphics programming"</span>); </span><br><span class="line">content.setBackground(Color.CYAN);</span><br><span class="line">content.setLayout(<span class="keyword">new</span> FlowLayout());</span><br><span class="line">content.add(<span class="keyword">new</span> Label(<span class="string">"Day1:"</span>));</span><br><span class="line">content.add(<span class="keyword">new</span> Button(<span class="string">"Monday"</span>)); </span><br><span class="line">content.add(<span class="keyword">new</span> Label(<span class="string">"Day2:"</span>)); </span><br><span class="line">content.add(<span class="keyword">new</span> Button(<span class="string">"Tuesday"</span>)); </span><br><span class="line">content.add(<span class="keyword">new</span> Button(<span class="string">"Wednesday"</span>));</span><br><span class="line">...</span><br><span class="line">content.add(<span class="keyword">new</span> Checkbox(<span class="string">"Check Me"</span>)); </span><br><span class="line">content.add(<span class="keyword">new</span> TextField(<span class="string">"Write Here"</span>, <span class="number">30</span>)); content.setSize(<span class="number">550</span>, <span class="number">200</span>); <span class="comment">// width, height</span></span><br><span class="line">content.setVisible(<span class="keyword">true</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>LayoutManager</strong>: Is a abstract class, you must subclass it or use these derived classes (More Layout Managers): </p>
+<ul>
+<li><p><strong>BorderLayout</strong>: Arrange in North, East, Center,West, South direction (maximum five comonents) </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">content.setLayout(<span class="keyword">new</span> BorderLayout()); </span><br><span class="line">content.add(<span class="keyword">new</span> Button(<span class="string">"Monday"</span>), BorderLayout.NORTH); content.add(<span class="keyword">new</span> Button(<span class="string">"Tuesday"</span>), BorderLayout.WEST);</span><br><span class="line">content.add(<span class="keyword">new</span> Button(<span class="string">"Wednesday"</span>), BorderLayout.CENTER); </span><br><span class="line">content.add(<span class="keyword">new</span> Button(<span class="string">"Thursday"</span>), BorderLayout.EAST);</span><br><span class="line">content.add(<span class="keyword">new</span> Button(<span class="string">"Friday"</span>), BorderLayout.SOUTH);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>CardLayout</strong>: Like tabbed dialogs </p>
+</li>
+<li><p><strong>GridLayout</strong>:Arrange in grid of fixed size. Components are placed in left to right and top to down </p>
+</li>
+<li><p><strong>FlowLayout</strong>: Default frame layout. Arrange in a row and aligned, place on new line when needed </p>
+</li>
+</ul>
+<h1 id="Event-Handling"><a href="#Event-Handling" class="headerlink" title="Event Handling"></a>Event Handling</h1><p>Java GUI and Windowing systems use the <strong>event-driven</strong> model to interact with the user. </p>
+<p>OS is constantly polling for these events. When it finds one, it tells you the (program), what just happened. </p>
+<p>You can chose not to care about that event, in that case, OS handles with default behavior, or you (your program) do something with that event – you can take it and ignore it as well. </p>
+<p><strong>What are these events?</strong> </p>
+<p>A window is closed, maximized, minimized </p>
+<p>A mouse is moved, clicked or dragged</p>
+<p>A button is clicked</p>
+<p>A value is selected from list box </p>
+<p>A radio button is pressed</p>
+<p>A text is typed in a text box </p>
+<p>All of these generates events and OS first grabs it and then sends to those components which generated it. </p>
+<p><strong>How do you handle them in Java GUI?</strong> </p>
+<p>Most components (button, textbox), already handle some events, e.g. button click, check mark display. </p>
+<p>Components send the event and listeners listen for such event. Different components send different event </p>
+<p>You can attach a listener to a component to associate an action with a component. </p>
+<ul>
+<li><strong>Window</strong>: Handle a window close event.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Frame content = <span class="keyword">new</span> Frame(<span class="string">"This is a frame"</span>);</span><br><span class="line">content.add(<span class="keyword">new</span> Button(<span class="string">"Monday"</span>), BorderLayout.NORTH); content.addWindowListener(</span><br><span class="line">    <span class="keyword">new</span> WindowAdapter()&#123;</span><br><span class="line">    <span class="comment">//add a listener</span></span><br><span class="line"><span class="comment">//inner anonymous class</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">windowClosing</span><span class="params">(WindowEvent e)</span> </span>&#123;</span><br><span class="line">System.exit(<span class="number">0</span>); &#125;</span><br><span class="line">&#125; </span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>Window</strong>: Implement WindowListener and define the method windowClosing </li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestGraphics</span> <span class="keyword">extends</span> <span class="title">Frame</span> <span class="keyword">implements</span> <span class="title">WindowListener</span> </span>&#123; <span class="function"><span class="keyword">public</span> <span class="title">TestGraphics</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">addWindowListener(<span class="keyword">this</span>); <span class="comment">// listen for events on this Window</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">paint</span><span class="params">(Graphics g)</span></span>&#123; </span><br><span class="line">    g.drawString(<span class="string">"Hello World"</span>, <span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// define methods in WindowListener interface public void </span></span><br><span class="line">                                                         windowClosing(WindowEvent event) &#123; System.exit(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>Button</strong>: You need a <code>ActionListener</code>, which must have a matching <code>actionPerformed(ActionEvent)</code> method </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">publicTestGraphics(String s) &#123;</span><br><span class="line">	add(pushButton); </span><br><span class="line">    pushButton.addActionListener(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// define action for Button press</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent event)</span> </span>&#123;</span><br><span class="line"><span class="keyword">if</span> (event.getActionCommand().equals(<span class="string">"Click Me"</span>)) &#123;</span><br><span class="line">System.out.println(<span class="string">"ouch!"</span>);&#125;&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>TextField</strong>: You need a <code>ActionListener</code> – waiting for enter key pressed, which must have a matching<code>actionPerformed(ActionEvent)</code> method. </p>
+<p>A TextListner listens for any and all keys. This requires a textValueChanged method implemented </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> TextField textfield = <span class="keyword">new</span> TextField(<span class="string">"Type something"</span>); </span><br><span class="line">textfield.setEnabled(<span class="keyword">true</span>);</span><br><span class="line">textfield.setEditable(<span class="keyword">true</span>);</span><br><span class="line">textfield.addTextListener(<span class="keyword">new</span> TextListener() &#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">textValueChanged</span><span class="params">(TextEvent e)</span></span>&#123; System.out.println(textfield.getText());</span><br><span class="line">&#125; </span><br><span class="line">&#125;);</span><br><span class="line">frame.add(textfield);</span><br><span class="line">frame.setSize(<span class="number">550</span>, <span class="number">200</span>); </span><br><span class="line">frame.addWindowListener(<span class="keyword">new</span> WindowAdapter() &#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">windowClosing</span><span class="params">(WindowEvent e)</span> </span>&#123; System.exit(<span class="number">0</span>);</span><br><span class="line">&#125; </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Graphics</strong>: Use this abstract class for drawing<br>graphics.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">drawString(str, x, y);</span><br><span class="line">drawRect(x1, y1, width, height);</span><br><span class="line">drawRoundRect(x1, y1, width, height, arcWidth,</span><br><span class="line">arcHeight);</span><br><span class="line">drawRect3D(x1, y1, width, height, raised);</span><br><span class="line">Image img = getImage(getDocumentBase(),“hello.gif”); g.drawImage(img, <span class="number">0</span>, <span class="number">0</span>, <span class="keyword">this</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/JiamingXie.github.io/tags/coding/" rel="tag"><i class="fa fa-tag"></i> coding</a>
+          
+            <a href="/JiamingXie.github.io/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/JiamingXie.github.io/2018/11/27/Input:Output & Collection/" rel="next" title="Input/Output & Collection">
+                <i class="fa fa-chevron-left"></i> Input/Output & Collection
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ba9bf633831a3a3" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/JiamingXie.github.io/images/avatar.jpg"
+                alt="Jiaming Xie" />
+            
+              <p class="site-author-name" itemprop="name">Jiaming Xie</p>
+              <p class="site-description motion-element" itemprop="description">谢·什么都想学·小铭</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/JiamingXie.github.io/archives/">
+              
+                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/JiamingXie.github.io/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/JiamingXie.github.io/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/JiamingXie.github.io/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/JiamingXie" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:xjm3225@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-google"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.linkedin.com/in/jiaming-xie-818491119" target="_blank" title="LinkedIn">
+                      
+                        <i class="fa fa-fw fa-linkedin"></i>LinkedIn</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://space.bilibili.com/15042837/#/" title="西瓜额啊" target="_blank">西瓜额啊</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Introducing-GUI"><span class="nav-number">1.</span> <span class="nav-text">Introducing GUI</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Event-Handling"><span class="nav-number">2.</span> <span class="nav-text">Event Handling</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jiaming Xie</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/JiamingXie.github.io/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/JiamingXie.github.io/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/JiamingXie.github.io/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/JiamingXie.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/JiamingXie.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/JiamingXie.github.io/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/JiamingXie.github.io/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/JiamingXie.github.io/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/JiamingXie.github.io/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/JiamingXie.github.io/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/JiamingXie.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/JiamingXie.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/JiamingXie.github.io/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'DrGhCclhW3zDVdhr3scdji9s-gzGzoHsz',
+        appKey: 'VgAUnVftM66OIHl1ClIIzijV',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/JiamingXie.github.io/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+
+
+
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+</body>
+</html>
